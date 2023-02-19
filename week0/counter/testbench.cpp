@@ -23,16 +23,24 @@ int main ()
 	top->rst = 0;
 	top->eval();
 
-	while(sc_time_stamp(20) < 19 && !Verilated::gotFinish())
+	while(main_time < 40 && !Verilated::gotFinish())
 	{
-		top->clk = 1;
-		top->rst = 0;
-		top->eval();
-		printf("%d\n", top->q);
-		tfp->dump(main_time);
-		top->clk = 0;
-		top->eval();
-		main_time++;
+		if(main_time % 2 == 1)
+		{
+			top->clk = 1;
+			top->rst = 0;
+			top->eval();
+			printf("%d\n", top->q);
+			tfp->dump(main_time);
+			main_time++;
+		}
+		else
+		{
+			top->clk = 0;
+			top->eval();
+			tfp->dump(main_time);
+			main_time++;
+		}
 	}
 	top->clk = 1;
 	top->rst = 1;
