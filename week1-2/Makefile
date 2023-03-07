@@ -8,9 +8,9 @@ INC = -Ivsrc
 PROG = test
 
 .DEFAULT_GOAL := all
-all:vhdlmake
+all:vhdl
 
-vhdlmake: test_src/$(PROG).bin  obj_dir/V$(TOP)
+vhdl:
 
 obj_dir/V$(TOP).mk: $(V_SRC) $(TESTBENCH_SRC)
 	verilator --cc --exe --build $(TESTBENCH_SRC) $(INC) $(VTOP) --trace
@@ -30,8 +30,8 @@ run: test_src/$(PROG).bin obj_dir/V$(TOP)
 wave: run
 	$(GTKWAVE) wave.vcd
 
-vhdl: 
-	make -C obj_dir/ -f V$(TOP).mk
+vhdl: obj_dir/V$(TOP).mk
+#make -C obj_dir/ -f V$(TOP).mk
 
 clean:
 	rm -rf obj_dir wave.vcd
