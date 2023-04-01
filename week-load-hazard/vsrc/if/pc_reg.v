@@ -30,7 +30,7 @@ module pc_reg(
 		end
 	else if(stall_i[0] == `STOP)
 		begin
-		pc_o = pc_o;
+		pc_o <= pc_o;
 		end
 	else
 		begin

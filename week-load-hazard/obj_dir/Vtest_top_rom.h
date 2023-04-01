@@ -45,7 +45,6 @@ VL_MODULE(Vtest_top_rom) {
   private:
     void _ctor_var_reset() VL_ATTR_COLD;
   public:
-    static void _sequent__TOP__test_top__rom0__1(Vtest_top__Syms* __restrict vlSymsp);
     void writeByte(uint32_t byte_addr, uint32_t val);
   private:
     static void traceInit(void* userp, VerilatedVcd* tracep, uint32_t code) VL_ATTR_COLD;

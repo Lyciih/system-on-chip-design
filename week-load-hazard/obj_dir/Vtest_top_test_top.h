@@ -80,10 +80,7 @@ VL_MODULE(Vtest_top_test_top) {
     IData/*31:0*/ __PVT__id0__DOT__i_op2_o;
     IData/*31:0*/ __PVT__exe0__DOT__compare_sub_type_i;
     IData/*31:0*/ __PVT__exe0__DOT__compare_sub_type_r;
-    IData/*31:0*/ __PVT__ram0__DOT__mem[2];
-    
-    // LOCAL VARIABLES
-    IData/*31:0*/ __Vdly__pc_wire;
+    IData/*31:0*/ __PVT__ram0__DOT__mem[268435456];
     
     // INTERNAL VARIABLES
   private:

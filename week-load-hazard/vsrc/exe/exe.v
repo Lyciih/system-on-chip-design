@@ -70,6 +70,7 @@ module exe(
 		end
 		else begin
 			reg_we_o = reg_we_i;
+			mem_op_o = `MEM_NOP;
 			case(opcode)
 				`INST_TYPE_I: begin
 					case(funct3)
@@ -200,6 +201,12 @@ module exe(
 						`INST_SB:begin
 							mem_op_o = `SB;
 						end
+						`INST_SH:begin
+							mem_op_o = `SH;
+						end
+						`INST_SW:begin
+							mem_op_o = `SW;
+						end
 						default:begin
 							mem_op_o = `MEM_NOP;
 						end
@@ -215,6 +222,18 @@ module exe(
 					case(funct3)
 						`INST_LB:begin
 							mem_op_o = `LB;
+						end
+						`INST_LH:begin
+							mem_op_o = `LH;
+						end
+						`INST_LW:begin
+							mem_op_o = `LW;
+						end
+						`INST_LBU:begin
+							mem_op_o = `LBU;
+						end
+						`INST_LHU:begin
+							mem_op_o = `LHU;
 						end
 						default:begin
 							mem_op_o = `MEM_NOP;

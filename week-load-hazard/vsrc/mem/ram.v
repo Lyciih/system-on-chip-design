@@ -11,7 +11,7 @@ module ram(
 		output	reg[`DATA_WIDTH-1:0]	data_o
 		);
 
-	reg[`DATA_WIDTH-1:0]	mem[0:28'h0000000-1];
+	reg[`DATA_WIDTH-1:0]	mem[0:28'hfffffff];
 
 	always@(posedge clk_i)begin
 		if(we_i == `WRITE_ENABLE && rst_i == 1'b0)begin
