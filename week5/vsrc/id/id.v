@@ -41,6 +41,8 @@ module	id(
 
 	wire[6:0]		opcode = inst_i[6:0];
 	wire[4:0]		rd = inst_i[11:7];
+	wire[4:0]		rs1 = inst_i[19:15];
+	wire[4:0]		rs2 = inst_i[24:20];
 
 	wire[`RADDR_WIDTH-1:0]	i_reg1_raddr_o;
 	wire[`RADDR_WIDTH-1:0]	i_reg2_raddr_o;
@@ -159,6 +161,30 @@ module	id(
 					reg_waddr_o = rd;
 					op1_o_final = inst_addr_i;	//該指令當下的PC值
 					op2_o_final = {inst_i[31:12],{12{1'b0}}};
+					end
+				`INST_TYPE_S:
+					begin
+					inst_o = inst_i;
+					reg1_raddr_o = rs1;
+					reg2_raddr_o = rs2;
+					reg1_re_o = `READ_ENABLE;
+					reg2_re_o = `READ_ENABLE;
+					reg_we_o = `WRITE_DISABLE;
+					reg_waddr_o = `ZERO_REG;
+					op1_o_final = reg1_rdata_i;
+					op2_o_final = reg2_rdata_i;
+					end
+				`INST_TYPE_L:
+					begin
+					inst_o = inst_i;
+					reg1_raddr_o = rs1;
+					reg2_raddr_o = `ZERO_REG;
+					reg1_re_o = `READ_ENABLE;
+					reg2_re_o = `READ_DISABLE;
+					reg_we_o = `WRITE_ENABLE;
+					reg_waddr_o = rd;
+					op1_o_final = reg1_rdata_i;
+					op2_o_final = `ZERO;
 					end
 				default:
 					begin

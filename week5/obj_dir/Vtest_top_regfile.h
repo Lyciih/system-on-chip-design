@@ -53,9 +53,9 @@ VL_MODULE(Vtest_top_regfile) {
   private:
     void _ctor_var_reset() VL_ATTR_COLD;
   public:
-    static void _initial__TOP__test_top__regfile0__2(Vtest_top__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _sequent__TOP__test_top__regfile0__1(Vtest_top__Syms* __restrict vlSymsp);
-    static void _settle__TOP__test_top__regfile0__3(Vtest_top__Syms* __restrict vlSymsp);
+    static void _initial__TOP__test_top__regfile0__1(Vtest_top__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+    static void _sequent__TOP__test_top__regfile0__3(Vtest_top__Syms* __restrict vlSymsp);
+    static void _settle__TOP__test_top__regfile0__2(Vtest_top__Syms* __restrict vlSymsp);
     void readRegister(uint32_t raddr, uint32_t& val);
   private:
     static void traceInit(void* userp, VerilatedVcd* tracep, uint32_t code) VL_ATTR_COLD;

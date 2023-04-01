@@ -19,8 +19,36 @@ void Vtest_top_regfile::readRegister(uint32_t raddr, uint32_t& val) {
         [(0x1fU & raddr)];
 }
 
-VL_INLINE_OPT void Vtest_top_regfile::_sequent__TOP__test_top__regfile0__1(Vtest_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+        Vtest_top_regfile::_sequent__TOP__test_top__regfile0__1\n"); );
+VL_INLINE_OPT void Vtest_top_regfile::_settle__TOP__test_top__regfile0__2(Vtest_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+        Vtest_top_regfile::_settle__TOP__test_top__regfile0__2\n"); );
+    Vtest_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlSymsp->TOP__test_top__regfile0.__PVT__rdata1_o 
+        = ((0U == (IData)(vlSymsp->TOP__test_top.__PVT__id_reg1_addr_o))
+            ? 0U : (((((IData)(vlSymsp->TOP__test_top.__PVT__id_reg1_addr_o) 
+                       == (IData)(vlSymsp->TOP__test_top.__PVT__mem_wb_reg_waddr_o)) 
+                      & (IData)(vlSymsp->TOP__test_top.__PVT__mem_wb_reg_we_o)) 
+                     & (IData)(vlSymsp->TOP__test_top.__PVT__id_reg1_re_o))
+                     ? vlSymsp->TOP__test_top.__PVT__mem_wb_reg_wdata_o
+                     : ((IData)(vlSymsp->TOP__test_top.__PVT__id_reg1_re_o)
+                         ? vlSymsp->TOP__test_top__regfile0.__PVT__regs
+                        [vlSymsp->TOP__test_top.__PVT__id_reg1_addr_o]
+                         : 0U)));
+    vlSymsp->TOP__test_top__regfile0.__PVT__rdata2_o 
+        = ((0U == (IData)(vlSymsp->TOP__test_top.__PVT__id_reg2_addr_o))
+            ? 0U : (((((IData)(vlSymsp->TOP__test_top.__PVT__id_reg2_addr_o) 
+                       == (IData)(vlSymsp->TOP__test_top.__PVT__mem_wb_reg_waddr_o)) 
+                      & (IData)(vlSymsp->TOP__test_top.__PVT__mem_wb_reg_we_o)) 
+                     & (IData)(vlSymsp->TOP__test_top.__PVT__id_reg2_re_o))
+                     ? vlSymsp->TOP__test_top.__PVT__mem_wb_reg_wdata_o
+                     : ((IData)(vlSymsp->TOP__test_top.__PVT__id_reg2_re_o)
+                         ? vlSymsp->TOP__test_top__regfile0.__PVT__regs
+                        [vlSymsp->TOP__test_top.__PVT__id_reg2_addr_o]
+                         : 0U)));
+}
+
+VL_INLINE_OPT void Vtest_top_regfile::_sequent__TOP__test_top__regfile0__3(Vtest_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+        Vtest_top_regfile::_sequent__TOP__test_top__regfile0__3\n"); );
     Vtest_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Variables
     CData/*4:0*/ __Vdlyvdim0__regs__v0;
@@ -40,21 +68,4 @@ VL_INLINE_OPT void Vtest_top_regfile::_sequent__TOP__test_top__regfile0__1(Vtest
         vlSymsp->TOP__test_top__regfile0.__PVT__regs[__Vdlyvdim0__regs__v0] 
             = __Vdlyvval__regs__v0;
     }
-}
-
-VL_INLINE_OPT void Vtest_top_regfile::_settle__TOP__test_top__regfile0__3(Vtest_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+        Vtest_top_regfile::_settle__TOP__test_top__regfile0__3\n"); );
-    Vtest_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    vlSymsp->TOP__test_top__regfile0.__PVT__rdata1_o 
-        = ((0U == (IData)(vlSymsp->TOP__test_top.__PVT__id_reg1_addr_o))
-            ? 0U : (((((IData)(vlSymsp->TOP__test_top.__PVT__id_reg1_addr_o) 
-                       == (IData)(vlSymsp->TOP__test_top.__PVT__mem_wb_reg_waddr_o)) 
-                      & (IData)(vlSymsp->TOP__test_top.__PVT__mem_wb_reg_we_o)) 
-                     & (IData)(vlSymsp->TOP__test_top.__PVT__id_reg1_re_o))
-                     ? vlSymsp->TOP__test_top.__PVT__mem_wb_reg_wdata_o
-                     : ((IData)(vlSymsp->TOP__test_top.__PVT__id_reg1_re_o)
-                         ? vlSymsp->TOP__test_top__regfile0.__PVT__regs
-                        [vlSymsp->TOP__test_top.__PVT__id_reg1_addr_o]
-                         : 0U)));
 }

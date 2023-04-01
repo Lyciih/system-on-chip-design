@@ -24,8 +24,8 @@ void Vtest_top_regfile::__Vconfigure(Vtest_top__Syms* vlSymsp, bool first) {
 Vtest_top_regfile::~Vtest_top_regfile() {
 }
 
-void Vtest_top_regfile::_initial__TOP__test_top__regfile0__2(Vtest_top__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+        Vtest_top_regfile::_initial__TOP__test_top__regfile0__2\n"); );
+void Vtest_top_regfile::_initial__TOP__test_top__regfile0__1(Vtest_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+        Vtest_top_regfile::_initial__TOP__test_top__regfile0__1\n"); );
     Vtest_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlSymsp->TOP__test_top__regfile0.__PVT__regs[0U] = 0U;

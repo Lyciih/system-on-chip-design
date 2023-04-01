@@ -61,6 +61,9 @@ module	test_top(
 	wire			mem_wb_reg_we_o;
 	wire[`RDATA_WIDTH-1:0]	mem_wb_reg_wdata_o;
 
+	//mem to ram
+
+
 
 	pc_reg	pc_reg0(
 			.rst_i(rst_i),
@@ -185,6 +188,25 @@ module	test_top(
 	mem mem0(
 			.rst_i(rst_i),
 
+			//from ram
+			.ram_data_i(),
+			//to ram
+			.ram_addr_o(),
+			.ram_w_request_o(),
+			.ram_data_o(),
+
+			//from exe exe_mem
+			.mem_we_i(),
+			.mem_addr_i(),
+			.mem_data_i(),
+			.mem_op_i(),
+
+			.mem_we_o(),
+			.mem_addr_o(),
+			.mem_data_o(),
+			.mem_op_o(),
+			
+			//
 			.reg_waddr_i(exe_mem_reg_waddr_o),
 			.reg_we_i(exe_mem_reg_we_o),
 			.reg_wdata_i(exe_mem_reg_wdata_o),
@@ -192,6 +214,16 @@ module	test_top(
 			.reg_waddr_o(mem_reg_waddr_o),
 			.reg_we_o(mem_reg_we_o),
 			.reg_wdata_o(mem_reg_wdata_o)
+		);
+
+	ram ram0(
+			.clk_i(rst_i),
+			.rst_i(clk_i),
+
+			.we_i(),
+			.addr_i(),
+			.data_i(),
+			.data_o(),
 		);
 
 	mem_wb	mem_wb0(

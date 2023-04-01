@@ -25,10 +25,11 @@ module exe(
 	wire[31:0]	shift_result_type_i;
 	wire[31:0]	shift_result_type_r;
 
+	wire[]
 
 	reg[31:0] 	compare_sub_type_i;
-
 	reg[31:0] 	compare_sub_type_r;
+
 	wire		r_type_add_or_sub = inst_i[30];
 	wire		r_type_sl_or_sr = inst_i[14];
 	wire		r_type_arithmetic = inst_i[30];
@@ -51,6 +52,20 @@ module exe(
 			.arithmetic_i(r_type_arithmetic),
 			.value_o(shift_result_type_r)
 		    );
+
+	exe_type_s_l exe_type_s_l_0(
+			.rst_i(rsr_i),
+			.op1_i(op1_i),
+			.op2_i(op2_i),
+			.inst_i(inst_i),
+
+			.reg_wdata_o(),
+			.reg_we_o(),
+			.mem_addr_o(),
+			.mem_data_o(),
+			.mem_we_o(),
+			.mem_op_o()
+			);
 
 	always@(*) begin
 		if(rst_i == 1) begin
@@ -175,6 +190,11 @@ module exe(
 					endcase
 				end
 				`INST_TYPE_LUI, `INST_TYPE_AUIPC:begin //type u
+					reg_waddr_o = reg_waddr_i;
+					reg_wdata_o = op1_i + op2_i;
+					reg_we_o = reg_we_i;
+				end
+				`INST_TYPE_S, `INST_TYPE_L:begin //type S L
 					reg_waddr_o = reg_waddr_i;
 					reg_wdata_o = op1_i + op2_i;
 					reg_we_o = reg_we_i;
