@@ -256,7 +256,7 @@ module exe(
 					reg_waddr_o = reg_waddr_i;
 					reg_wdata_o = inst_addr_i + 4;
 
-					stallreq_o = 1;
+					//stallreq_o = 1;
 					jump_enable_o = 1'b1;
 					jump_addr_o = inst_addr_i + {{12{inst_i[31]}}, inst_i[31:12]}; 
 				end
@@ -264,7 +264,7 @@ module exe(
 					reg_waddr_o = reg_waddr_i;
 					reg_wdata_o = inst_addr_i + 4;
 
-					stallreq_o = 1;
+					//stallreq_o = 1;
 					jump_enable_o = 1'b1;
 					jump_addr_o = (op1_i + {{20{inst_i[31]}}, inst_i[31:20]}) & -1; 
 				end
@@ -275,48 +275,41 @@ module exe(
 					case(funct3)
 						`INST_BEQ:begin
 							if(op1_i == op2_i)begin
-								stallreq_o = 1'b1;
 								jump_enable_o = 1'b1;
 								jump_addr_o = b_type_offset;
 							end
 						end
 						`INST_BNE:begin
 							if(op1_i != op2_i)begin
-								stallreq_o = 1'b1;
 								jump_enable_o = 1'b1;
 								jump_addr_o = b_type_offset;
 							end
 						end
 						`INST_BLT:begin
 							if($signed(op1_i) < $signed(op2_i))begin
-								stallreq_o = 1'b1;
 								jump_enable_o = 1'b1;
 								jump_addr_o = b_type_offset;
 							end
 						end
 						`INST_BGE:begin
 							if($signed(op1_i) >= $signed(op2_i))begin
-								stallreq_o = 1'b1;
 								jump_enable_o = 1'b1;
 								jump_addr_o = b_type_offset;
 							end
 						end
 						`INST_BLTU:begin
 							if(op1_i < op2_i)begin
-								stallreq_o = 1'b1;
 								jump_enable_o = 1'b1;
 								jump_addr_o = b_type_offset;
 							end
 						end
 						`INST_BGEU:begin
 							if(op1_i >= op2_i)begin
-								stallreq_o = 1'b1;
 								jump_enable_o = 1'b1;
 								jump_addr_o = b_type_offset;
 							end
 						end
 						default:begin
-							stallreq_o = 1'b0;
 							jump_enable_o = 1'b0;
 							jump_addr_o = `ZERO;
 						end

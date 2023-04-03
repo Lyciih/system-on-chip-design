@@ -100,14 +100,15 @@ VL_MODULE(Vtest_top_test_top) {
     
     // INTERNAL METHODS
     void __Vconfigure(Vtest_top__Syms* symsp, bool first);
-    static void _combo__TOP__test_top__5(Vtest_top__Syms* __restrict vlSymsp);
+    static void _combo__TOP__test_top__1(Vtest_top__Syms* __restrict vlSymsp);
+    static void _combo__TOP__test_top__6(Vtest_top__Syms* __restrict vlSymsp);
   private:
     void _ctor_var_reset() VL_ATTR_COLD;
   public:
-    static void _sequent__TOP__test_top__1(Vtest_top__Syms* __restrict vlSymsp);
-    static void _sequent__TOP__test_top__2(Vtest_top__Syms* __restrict vlSymsp);
-    static void _settle__TOP__test_top__3(Vtest_top__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _settle__TOP__test_top__4(Vtest_top__Syms* __restrict vlSymsp);
+    static void _sequent__TOP__test_top__4(Vtest_top__Syms* __restrict vlSymsp);
+    static void _sequent__TOP__test_top__5(Vtest_top__Syms* __restrict vlSymsp);
+    static void _settle__TOP__test_top__2(Vtest_top__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+    static void _settle__TOP__test_top__3(Vtest_top__Syms* __restrict vlSymsp);
   private:
     static void traceInit(void* userp, VerilatedVcd* tracep, uint32_t code) VL_ATTR_COLD;
 } VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);

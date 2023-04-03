@@ -72,20 +72,21 @@ void Vtest_top::_eval(Vtest_top__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtest_top::_eval\n"); );
     Vtest_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
+    vlSymsp->TOP__test_top._combo__TOP__test_top__1(vlSymsp);
+    vlTOPp->__Vm_traceActivity[1U] = 1U;
     if (((IData)(vlTOPp->clk_i) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk_i)))) {
-        vlSymsp->TOP__test_top._sequent__TOP__test_top__1(vlSymsp);
-        vlTOPp->__Vm_traceActivity[1U] = 1U;
-        vlSymsp->TOP__test_top__dpram0._sequent__TOP__test_top__dpram0__1(vlSymsp);
-        vlSymsp->TOP__test_top__regfile0._sequent__TOP__test_top__regfile0__2(vlSymsp);
-        vlSymsp->TOP__test_top._sequent__TOP__test_top__2(vlSymsp);
+        vlSymsp->TOP__test_top._sequent__TOP__test_top__4(vlSymsp);
+        vlTOPp->__Vm_traceActivity[2U] = 1U;
+        vlSymsp->TOP__test_top__dpram0._sequent__TOP__test_top__dpram0__2(vlSymsp);
+        vlSymsp->TOP__test_top__regfile0._sequent__TOP__test_top__regfile0__3(vlSymsp);
+        vlSymsp->TOP__test_top._sequent__TOP__test_top__5(vlSymsp);
     }
-    vlSymsp->TOP__test_top._combo__TOP__test_top__5(vlSymsp);
-    vlTOPp->__Vm_traceActivity[2U] = 1U;
+    vlSymsp->TOP__test_top._combo__TOP__test_top__6(vlSymsp);
     vlSymsp->TOP__test_top__exe0__DOT__shift_i_type._settle__TOP__test_top__exe0__DOT__shift_i_type__1(vlSymsp);
     vlSymsp->TOP__test_top__exe0__DOT__shift_r_type._settle__TOP__test_top__exe0__DOT__shift_i_type__1(vlSymsp);
-    vlSymsp->TOP__test_top__regfile0._settle__TOP__test_top__regfile0__3(vlSymsp);
-    vlSymsp->TOP__test_top__dpram0._settle__TOP__test_top__dpram0__2(vlSymsp);
-    vlSymsp->TOP__test_top._settle__TOP__test_top__4(vlSymsp);
+    vlSymsp->TOP__test_top__regfile0._settle__TOP__test_top__regfile0__2(vlSymsp);
+    vlSymsp->TOP__test_top__dpram0._settle__TOP__test_top__dpram0__1(vlSymsp);
+    vlSymsp->TOP__test_top._settle__TOP__test_top__3(vlSymsp);
     // Final
     vlTOPp->__Vclklast__TOP__clk_i = vlTOPp->clk_i;
 }

@@ -4,6 +4,7 @@ module	id_exe(
 		input	wire 		rst_i,
 		input	wire		clk_i,
 		input	wire[5:0]	stall_i,
+		input	wire		flush_jump_i,
 
 		input	wire[`RDATA_WIDTH-1:0]	op1_i,
 		input	wire[`RDATA_WIDTH-1:0]	op2_i,
@@ -51,6 +52,17 @@ module	id_exe(
 			rd_o		<=	rd_o;
 			end
 		else if(stall_i[2] == `STOP && stall_i[3] == `NOSTOP)
+			begin
+			inst_o		<=	`NOP;
+			inst_addr_o	<=	`ZERO;
+			op1_o		<=	`ZERO;
+			op2_o		<=	`ZERO;
+			reg_we_o	<=	`WRITE_DISABLE;
+			reg_waddr_o	<=	`ZERO_REG;
+			inst_is_load_o	<=	1'b0;
+			rd_o		<=	`ZERO_REG;
+			end
+		else if(flush_jump_i == 1'b1)
 			begin
 			inst_o		<=	`NOP;
 			inst_addr_o	<=	`ZERO;

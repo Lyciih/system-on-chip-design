@@ -111,6 +111,8 @@ module	test_top(
 			.rst_i(rst_i),
 			.clk_i(clk_i),
 			.stall_i(ctrl_stall_o),
+			.flush_jump_i(ctrl_flush_jump_o),
+			.new_pc_i(ctrl_new_pc_o),
 			.pc_o(pc_wire),
 			.ce_o(ce_wire)
 		       );
@@ -128,6 +130,7 @@ module	test_top(
 			.clk_i(clk_i),
 			.rst_i(rst_i),
 			.stall_i(ctrl_stall_o),
+			.flush_jump_i(ctrl_flush_jump_o),
 			.inst_addr_i(if_inst_addr_o),
 			.inst_i(if_inst_o),
 			.inst_addr_o(if_id_inst_addr_o),
@@ -196,6 +199,7 @@ module	test_top(
 			.rst_i(rst_i),
 			.clk_i(clk_i),
 			.stall_i(ctrl_stall_o),
+			.flush_jump_i(ctrl_flush_jump_o),
 
 			.inst_i(id_inst_o),
 			.inst_addr_i(id_inst_addr_o),
