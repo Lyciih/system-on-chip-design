@@ -31,7 +31,8 @@ test_src/$(PROG).bin:
 .PHONY: clean vhdl run wave
 
 run: test_src/$(PROG).bin obj_dir/V$(TOP)
-	obj_dir/V$(TOP) test_src/$(PROG).bin
+#obj_dir/V$(TOP) test_src/$(PROG).bin
+	obj_dir/V$(TOP) isa/generated/rv32ui-p-and.bin
 wave: run
 	$(GTKWAVE) wave.vcd
 

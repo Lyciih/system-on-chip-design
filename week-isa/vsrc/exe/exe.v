@@ -1,5 +1,4 @@
-`include "defines.v"
-/* verilator lint_off CASEOVERLAP */
+`include "defines.v" 
 
 module exe(
 		input	wire	rst_i,
@@ -20,7 +19,7 @@ module exe(
 		output	reg			mem_we_o,
 		output	reg[3:0]		mem_op_o,
 		
-		output	reg			stallreq_o,
+		//output	reg			stallreq_o,
 		output	reg			jump_enable_o,
 		output	reg[`ADDR_WIDTH-1:0]	jump_addr_o
 	  );
@@ -35,7 +34,8 @@ module exe(
 	wire		arithmetic = inst_i[30];
 	wire[31:0]	shift_result_type_i;
 	wire[31:0]	shift_result_type_r;
-	wire[31:0] 	b_type_offset = inst_addr_i + {{20{inst_i[31]}}, inst_i[31:25], inst_i[11:7]};
+	wire[31:0] 	b_type_offset = inst_addr_i + {{20{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8], 1'b0};
+	wire[31:0] 	jal_type_offset = inst_addr_i + {{12{inst_i[31]}}, inst_i[19:12], inst_i[20], inst_i[30:21], 1'b0};
 
 	wire[`ADDR_WIDTH-1:0]	store_addr_offset;
 	assign store_addr_offset = {{20{inst_i[31]}}, inst_i[31:25], inst_i[11:7]};
@@ -49,7 +49,7 @@ module exe(
 	wire		r_type_add_or_sub = inst_i[30];
 	wire		r_type_sl_or_sr = inst_i[14];
 	wire		r_type_arithmetic = inst_i[30];
-
+	
 
 	shift shift_i_type(
 			.rst_i(rst_i),
@@ -79,7 +79,7 @@ module exe(
 			reg_we_o = reg_we_i;
 			mem_op_o = `MEM_NOP;
 
-			stallreq_o = 1'b0;
+			//stallreq_o = 1'b0;
 			jump_enable_o = 1'b0;
 			jump_addr_o = `ZERO;
 
@@ -94,7 +94,7 @@ module exe(
 							reg_waddr_o = reg_waddr_i;
 
 							compare_sub_type_i = op1_i - op2_i;
-							if(compare_sub_type_i[31] == 1)begin
+							if($signed(op1_i) < $signed(op2_i))begin
 								reg_wdata_o = 1;
 							end
 							else begin
@@ -156,8 +156,7 @@ module exe(
 						`INST_SLT: begin
 							reg_waddr_o = reg_waddr_i;
 							
-							compare_sub_type_r = op1_i - op2_i;
-							if(compare_sub_type_r[31] == 1)begin
+							if($signed(op1_i) < $signed(op2_i))begin
 								reg_wdata_o = 1;
 							end
 							else begin
@@ -258,7 +257,7 @@ module exe(
 
 					//stallreq_o = 1;
 					jump_enable_o = 1'b1;
-					jump_addr_o = inst_addr_i + {{12{inst_i[31]}}, inst_i[31:12]}; 
+					jump_addr_o = jal_type_offset; 
 				end
 				`INST_TYPE_JALR: begin
 					reg_waddr_o = reg_waddr_i;

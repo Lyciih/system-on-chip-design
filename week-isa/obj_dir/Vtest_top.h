@@ -85,7 +85,7 @@ VL_MODULE(Vtest_top) {
   public:
     static void _eval_initial(Vtest_top__Syms* __restrict vlSymsp) VL_ATTR_COLD;
     static void _eval_settle(Vtest_top__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _settle__TOP__1(Vtest_top__Syms* __restrict vlSymsp);
+    static void _sequent__TOP__1(Vtest_top__Syms* __restrict vlSymsp);
   private:
     static void traceChgSub0(void* userp, VerilatedVcd* tracep);
     static void traceChgTop0(void* userp, VerilatedVcd* tracep);

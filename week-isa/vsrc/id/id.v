@@ -72,6 +72,7 @@ module	id(
 	wire			is_load_hazard;
 	assign	is_load_hazard = (pre_inst_is_load_i == 1'b1 && (rs1 == exe_rd_i || rs2 == exe_rd_i));
 
+
 	always@(*)begin
 		if(is_load_hazard)
 			stallreq_o = 1'b1;
@@ -270,11 +271,11 @@ module	id(
 			begin
 			op1_o = `ZERO;
 			end
-		else if(reg1_re_o == `READ_ENABLE && exe_reg_we_i == `WRITE_ENABLE && exe_reg_waddr_i == reg1_raddr_o)
+		else if(reg1_re_o == `READ_ENABLE && exe_reg_we_i == `WRITE_ENABLE && exe_reg_waddr_i == reg1_raddr_o && reg1_raddr_o != 0)
 			begin
 			op1_o = exe_reg_wdata_i;
 			end
-		else if(reg1_re_o == `READ_ENABLE && mem_reg_we_i == `WRITE_ENABLE && mem_reg_waddr_i == reg1_raddr_o)
+		else if(reg1_re_o == `READ_ENABLE && mem_reg_we_i == `WRITE_ENABLE && mem_reg_waddr_i == reg1_raddr_o && reg1_raddr_o != 0)
 			begin
 			op1_o = mem_reg_wdata_i;
 			end

@@ -22,11 +22,11 @@ void one_cycle(Vtest_top * top, VerilatedVcdC * tfp)
 {
 	top->clk_i = 0; 
 	top->eval(); 
-	main_time += 5;
+	main_time += 2;
 	tfp->dump(main_time);
 	top->clk_i = 1; 
 	top->eval(); 
-	main_time += 5;
+	main_time += 2;
 	tfp->dump(main_time);
 }
 
@@ -55,14 +55,11 @@ int main(int argc,char **argv)
     }
     top->rst_i = 0;    
 
-    int j = 0;
-/*
+
     while(!Verilated::gotFinish()){
-	    printf("%d\n", j);
-	    j++;
 	    one_cycle(top, tfp);
 	    int x = top->halt_o;
-	    if(j == 100)
+	    if(x == 1)
 	    {
 		    break;
 	    }
@@ -78,6 +75,7 @@ int main(int argc,char **argv)
 	    printf("PASS\n");
     }
 
+/*
     for( int i=0; i<MAX_SIM_CYCLE;i++) {
 	    one_cycle(top, tfp);
 	    int x = top->halt_o;
@@ -92,8 +90,8 @@ int main(int argc,char **argv)
 	    }
 		    
     }
-*/
-    while(1)
+
+    while(!Verilated::gotFinish())
     {
 	    one_cycle(top, tfp);
 	    int x = top->halt_o;
@@ -102,7 +100,7 @@ int main(int argc,char **argv)
 		    break;
 	    }	    
     }
-
+*/
     for(int i = 0; i < 32; i++)
     {
 	    int x = sim_regs_read(top->test_top->regfile0, i);
