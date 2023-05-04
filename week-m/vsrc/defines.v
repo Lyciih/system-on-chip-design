@@ -37,6 +37,7 @@
 
 `define	INST_TYPE_R_M	7'b0110011	//opcode
 
+`define	R_TYPE		1'b0
 `define	INST_ADD_SUB	3'b000		//fun3 ADD_SUB
 `define	INST_SLL	3'b001		//fun3 SLL
 `define	INST_SLT	3'b010		//fun3 SLT
@@ -45,6 +46,17 @@
 `define	INST_SR		3'b101		//fun3 SR
 `define	INST_OR		3'b110		//fun3 OR
 `define	INST_AND	3'b111		//fun3 AND
+
+`define	M_TYPE		1'b1
+`define	INST_MUL	3'b000
+`define	INST_MULH	3'b001
+`define	INST_MULSU	3'b010
+`define	INST_MULHU	3'b011
+`define	INST_DIV	3'b100
+`define	INST_DIVU	3'b101
+`define	INST_REM	3'b110
+`define	INST_REMU	3'b111
+
 
 //LUI AUIPC
 `define INST_TYPE_LUI	7'b0110111	//opcode
@@ -86,3 +98,5 @@
 `define	INST_BGE	3'b101
 `define	INST_BLTU	3'b110
 `define	INST_BGEU	3'b111
+
+

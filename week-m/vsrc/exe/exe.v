@@ -49,7 +49,7 @@ module exe(
 	wire		r_type_add_or_sub = inst_i[30];
 	wire		r_type_sl_or_sr = inst_i[14];
 	wire		r_type_arithmetic = inst_i[30];
-	
+	wire		r_or_m_type = inst_i[25];	
 
 	shift shift_i_type(
 			.rst_i(rst_i),
@@ -138,61 +138,67 @@ module exe(
 					endcase
 				end
 				`INST_TYPE_R_M: begin
-					case(funct3)
-						`INST_ADD_SUB: begin
-							reg_waddr_o = reg_waddr_i;
+					case(r_or_m_type)
+						`R_TYPE: begin
+							case(funct3)
+								`INST_ADD_SUB: begin
+									reg_waddr_o = reg_waddr_i;
 
-							if(r_type_add_or_sub == 0)begin
-								reg_wdata_o = op1_i + op2_i;
-							end
-							else begin
-								reg_wdata_o = op1_i - op2_i;
-							end
-						end
-						`INST_SLL: begin
-							reg_waddr_o = reg_waddr_i;
-							reg_wdata_o = shift_result_type_r;
-						end
-						`INST_SLT: begin
-							reg_waddr_o = reg_waddr_i;
-							
-							if($signed(op1_i) < $signed(op2_i))begin
-								reg_wdata_o = 1;
-							end
-							else begin
-								reg_wdata_o = 0;
-							end
-						end
-						`INST_SLTU: begin
-							reg_waddr_o = reg_waddr_i;
+									if(r_type_add_or_sub == 0)begin
+										reg_wdata_o = op1_i + op2_i;
+									end
+									else begin
+										reg_wdata_o = op1_i - op2_i;
+									end
+								end
+								`INST_SLL: begin
+									reg_waddr_o = reg_waddr_i;
+									reg_wdata_o = shift_result_type_r;
+								end
+								`INST_SLT: begin
+									reg_waddr_o = reg_waddr_i;
+									
+									if($signed(op1_i) < $signed(op2_i))begin
+										reg_wdata_o = 1;
+									end
+									else begin
+										reg_wdata_o = 0;
+									end
+								end
+								`INST_SLTU: begin
+									reg_waddr_o = reg_waddr_i;
 
-							if(op1_i < op2_i)begin
-								reg_wdata_o = 1;
-							end
-							else begin
-								reg_wdata_o = 0;
-							end
+									if(op1_i < op2_i)begin
+										reg_wdata_o = 1;
+									end
+									else begin
+										reg_wdata_o = 0;
+									end
+								end
+								`INST_XOR: begin
+									reg_waddr_o = reg_waddr_i;
+									reg_wdata_o = op1_i ^ op2_i;
+								end
+								`INST_SR: begin
+									reg_waddr_o = reg_waddr_i;
+									reg_wdata_o = shift_result_type_r;
+								end
+								`INST_OR: begin
+									reg_waddr_o = reg_waddr_i;
+									reg_wdata_o = op1_i | op2_i;
+								end
+								`INST_AND: begin
+									reg_waddr_o = reg_waddr_i;
+									reg_wdata_o = op1_i & op2_i;
+								end
+								default: begin
+									reg_waddr_o = `ZERO_REG;
+									reg_wdata_o = `ZERO;
+									reg_we_o = `WRITE_DISABLE;
+								end
+							endcase
 						end
-						`INST_XOR: begin
-							reg_waddr_o = reg_waddr_i;
-							reg_wdata_o = op1_i ^ op2_i;
-						end
-						`INST_SR: begin
-							reg_waddr_o = reg_waddr_i;
-							reg_wdata_o = shift_result_type_r;
-						end
-						`INST_OR: begin
-							reg_waddr_o = reg_waddr_i;
-							reg_wdata_o = op1_i | op2_i;
-						end
-						`INST_AND: begin
-							reg_waddr_o = reg_waddr_i;
-							reg_wdata_o = op1_i & op2_i;
-						end
-						default: begin
-							reg_waddr_o = `ZERO_REG;
-							reg_wdata_o = `ZERO;
-							reg_we_o = `WRITE_DISABLE;
+						`M_TYPE: begin
 						end
 					endcase
 				end
