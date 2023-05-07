@@ -2,6 +2,7 @@
 
 module exe(
 		input	wire	rst_i,
+		input	wire	clk_i,
 
 		input 	wire[`DATA_WIDTH-1:0]	op1_i,
 		input 	wire[`DATA_WIDTH-1:0]	op2_i,
@@ -19,7 +20,7 @@ module exe(
 		output	reg			mem_we_o,
 		output	reg[3:0]		mem_op_o,
 		
-		//output	reg			stallreq_o,
+		output	reg			stallreq_o,
 		output	reg			jump_enable_o,
 		output	reg[`ADDR_WIDTH-1:0]	jump_addr_o
 	  );
@@ -68,6 +69,30 @@ module exe(
 			.arithmetic_i(r_type_arithmetic),
 			.value_o(shift_result_type_r)
 		    );
+
+	wire[1:0]	m_d_op;
+	wire		rs1_signed_i;
+	wire		rs2_signed_i;
+	wire[31:0]	m_d_high_result;
+	wire[31:0]	m_d_low_result;
+	wire		m_d_ready;
+	wire[5:0]	m_d_count;
+
+	mul_div m_d(
+			.clk_i(clk_i),
+			.mul_div_req_i(inst_i[25]),
+			.m_d_op(inst_i[14:12]),
+			.op(inst_i[6:0]),
+			.rs1(op1_i),
+			.rs1_signed(rs1_signed_i),
+			.rs2(op2_i),
+			.rs2_signed(rs2_signed_i),
+
+			.high(m_d_high_result),
+			.low(m_d_low_result),
+			.ready(m_d_ready),
+			.count(m_d_count)
+		   );
 
 	always@(*) begin
 		if(rst_i == 1) begin
@@ -199,6 +224,43 @@ module exe(
 							endcase
 						end
 						`M_TYPE: begin
+							if(m_d_ready == 1)begin
+								stallreq_o = 0;
+								reg_waddr_o = reg_waddr_i;
+								reg_we_o = `WRITE_ENABLE;
+								case(funct3)
+									`INST_MUL: begin
+										reg_wdata_o = m_d_low_result;
+									end
+									`INST_MULH: begin
+										reg_wdata_o = m_d_high_result;
+									end
+									`INST_MULSU: begin
+										reg_wdata_o = m_d_high_result;
+									end
+									`INST_MULHU: begin
+										reg_wdata_o = m_d_high_result;
+									end
+									`INST_DIV: begin
+										reg_wdata_o = m_d_low_result;
+									end
+									`INST_DIVU: begin
+										reg_wdata_o = m_d_low_result;
+									end
+									`INST_REM: begin
+										reg_wdata_o = m_d_high_result;
+									end
+									`INST_REMU: begin
+										reg_wdata_o = m_d_high_result;
+									end
+								endcase
+							end
+							else begin
+								stallreq_o = 1;
+								reg_waddr_o = `ZERO_REG;
+								reg_wdata_o = `ZERO;
+								reg_we_o = `WRITE_DISABLE;
+							end
 						end
 					endcase
 				end

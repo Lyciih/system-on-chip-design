@@ -65,7 +65,7 @@ module	test_top(
 	wire			exe_mem_we_o;
 	wire[3:0]		exe_mem_op_o;
 
-	//wire			exe_pipe_ctrl_stallreq_o;
+	wire			exe_pipe_ctrl_stallreq_o;
 	wire			exe_pipe_ctrl_jump_enable_o;
 	wire[`ADDR_WIDTH-1:0]	exe_pipe_ctrl_jump_addr_o;
 
@@ -101,7 +101,7 @@ module	test_top(
 	pipe_ctrl ctrl0(
 			.rst_i(rst_i),
 			.stallreq_from_id_i(id_pipe_ctrl_stallreq_o),
-			//.stallreq_from_exe_i(exe_pipe_ctrl_stallreq_o),
+			.stallreq_from_exe_i(exe_pipe_ctrl_stallreq_o),
 			.jump_enable_i(exe_pipe_ctrl_jump_enable_o),
 			.jump_addr_i(exe_pipe_ctrl_jump_addr_o),
 
@@ -223,6 +223,7 @@ module	test_top(
 
 	exe	exe0(
 			.rst_i(rst_i),
+			.clk_i(clk_i),
 
 			.op1_i(id_exe_op1_o),
 			.op2_i(id_exe_op2_o),
@@ -239,7 +240,7 @@ module	test_top(
 			.mem_we_o(exe_mem_we_o),
 			.mem_op_o(exe_mem_op_o),
 			
-			//.stallreq_o(exe_pipe_ctrl_stallreq_o),
+			.stallreq_o(exe_pipe_ctrl_stallreq_o),
 			.jump_enable_o(exe_pipe_ctrl_jump_enable_o),
 			.jump_addr_o(exe_pipe_ctrl_jump_addr_o)
 		);

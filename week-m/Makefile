@@ -28,11 +28,11 @@ test_src/$(PROG).bin:
 	$(MAKE) -C test_src/
 
 
-.PHONY: clean vhdl run wave
+.PHONY: clean vhdl run wave test
 
 run: test_src/$(PROG).bin obj_dir/V$(TOP)
 #obj_dir/V$(TOP) test_src/$(PROG).bin
-	obj_dir/V$(TOP) isa/generated/rv32ui-p-and.bin
+	obj_dir/V$(TOP) isa/generated/rv32um-p-div.bin
 wave: run
 	$(GTKWAVE) wave.vcd
 
@@ -42,3 +42,6 @@ vhdl: obj_dir/V$(TOP).mk
 clean:
 	rm -rf obj_dir wave.vcd
 	rm -rf test_src/*.elf test_src/*.bin
+
+test:
+	python3 test_all_isa.py
