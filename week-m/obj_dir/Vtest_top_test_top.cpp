@@ -303,6 +303,8 @@ VL_INLINE_OPT void Vtest_top_test_top::_sequent__TOP__test_top__1(Vtest_top__Sym
         vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d_low_result = 0U;
         vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d_ready = 0U;
         vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d_count = 0U;
+        vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d__DOT__rs1_is_neg = 0U;
+        vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d__DOT__rs2_is_neg = 0U;
         vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d__DOT__long_temp[0U] = 0U;
         vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d__DOT__long_temp[1U] = 0U;
         vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d__DOT__long_temp[2U] = 0U;

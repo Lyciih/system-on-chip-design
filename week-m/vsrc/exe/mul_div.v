@@ -193,6 +193,8 @@ module mul_div(
 			low = 0;
 			ready = 0;
 			count = 0;
+			rs1_is_neg = 0;
+			rs2_is_neg = 0;
 			long_temp = 0;
 			rs1_temp = 0;
 			rs2_temp = 0;
