@@ -31,7 +31,8 @@ VL_INLINE_OPT void Vtest_top_test_top::_sequent__TOP__test_top__1(Vtest_top__Sym
         if ((0x4000U & vlSymsp->TOP__test_top.__PVT__id_exe_inst_o)) {
             if (((0U == vlSymsp->TOP__test_top.__PVT__id_exe_op1_o) 
                  | (0U == vlSymsp->TOP__test_top.__PVT__id_exe_op2_o))) {
-                vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d_high_result = 0U;
+                vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d_high_result 
+                    = vlSymsp->TOP__test_top.__PVT__id_exe_op1_o;
                 vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d_low_result 
                     = ((0U == vlSymsp->TOP__test_top.__PVT__id_exe_op2_o)
                         ? 0xffffffffU : 0U);
@@ -121,13 +122,18 @@ VL_INLINE_OPT void Vtest_top_test_top::_sequent__TOP__test_top__1(Vtest_top__Sym
                         vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d_low_result 
                             = vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d__DOT__long_temp[0U];
                         if ((0x20U == (IData)(vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d_count))) {
+                            vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d_high_result 
+                                = ((IData)(vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d__DOT__rs1_is_neg)
+                                    ? ((IData)(1U) 
+                                       + (~ vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d__DOT__long_temp[1U]))
+                                    : vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d__DOT__long_temp[1U]);
+                            vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d_ready = 1U;
                             if (((IData)(vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d__DOT__rs1_is_neg) 
                                  ^ (IData)(vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d__DOT__rs2_is_neg))) {
                                 vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d_low_result 
                                     = ((IData)(1U) 
                                        + (~ vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d__DOT__long_temp[0U]));
                             }
-                            vlSymsp->TOP__test_top.__PVT__exe0__DOT__m_d_ready = 1U;
                         }
                     }
                 }

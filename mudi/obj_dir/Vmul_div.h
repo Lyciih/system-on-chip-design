@@ -27,6 +27,7 @@ VL_MODULE(Vmul_div) {
     VL_IN8(rs1_signed,0,0);
     VL_IN8(rs2_signed,0,0);
     VL_OUT8(ready,0,0);
+    VL_OUT8(count,5,0);
     VL_OUT8(stall,0,0);
     VL_IN(rs1,31,0);
     VL_IN(rs2,31,0);
@@ -35,7 +36,6 @@ VL_MODULE(Vmul_div) {
     
     // LOCAL SIGNALS
     // Internals; generally not touched by application code
-    CData/*5:0*/ mul_div__DOT__count;
     CData/*0:0*/ mul_div__DOT__rs1_is_neg;
     CData/*0:0*/ mul_div__DOT__rs2_is_neg;
     WData/*64:0*/ mul_div__DOT__long_temp[3];

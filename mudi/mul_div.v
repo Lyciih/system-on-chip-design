@@ -9,10 +9,11 @@ module mul_div(
 		output	reg[31:0]	high,
 		output	reg[31:0]	low,
 		output	reg		ready,
+		output	reg[5:0]	count,
 		output	reg		stall
 	      );
 
-	reg[5:0]	count;
+	//reg[5:0]	count;
 	reg[64:0]	long_temp;
 	reg[31:0]	rs1_temp;	
 	reg[31:0]	rs2_temp;	
@@ -22,6 +23,7 @@ module mul_div(
 
 
 	always@(posedge clk)begin
+		//乘法
 		if(op == 1)begin
 			if(count == 0)begin
 				if (rs1_signed == 1)begin
@@ -87,6 +89,7 @@ module mul_div(
 				end
 			end
 		end
+		//除法
 		else if(op == 2)begin
 			if(count == 0)begin
 				if (rs1_signed == 1)begin
@@ -155,6 +158,8 @@ module mul_div(
 			high = 0;
 			low = 0;
 			ready = 0;
+			stall = 0;
+			count = 0;
 		end
 	end
 endmodule

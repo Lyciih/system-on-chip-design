@@ -111,7 +111,7 @@ module mul_div(
 			//除法
 			else begin
 				if(rs1 == 0 || rs2 == 0)begin
-					high = 0;
+					high = rs1;
 					if(rs2 == 0)begin
 						low = -1;
 					end
@@ -173,6 +173,12 @@ module mul_div(
 						high = long_temp[63:32];
 						low = long_temp[31:0];
 						if(count == 32)begin
+							if(rs1_is_neg == 1)begin
+								high = ~long_temp[63:32] + 1;
+							end
+							else begin
+								high = long_temp[63:32];
+							end
 							if(rs1_is_neg ^ rs2_is_neg == 1)begin
 								low = ~long_temp[31:0] + 1;
 							end

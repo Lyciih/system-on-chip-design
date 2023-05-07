@@ -76,7 +76,7 @@ VL_INLINE_OPT void Vmul_div::_sequent__TOP__1(Vmul_div__Syms* __restrict vlSymsp
     QData/*63:0*/ __Vtemp7;
     // Body
     if ((1U == (IData)(vlTOPp->op))) {
-        if ((0U == (IData)(vlTOPp->mul_div__DOT__count))) {
+        if ((0U == (IData)(vlTOPp->count))) {
             if (vlTOPp->rs1_signed) {
                 if (VL_GTS_III(1,32,32, 0U, vlTOPp->rs1)) {
                     vlTOPp->mul_div__DOT__rs1_temp 
@@ -91,9 +91,7 @@ VL_INLINE_OPT void Vmul_div::_sequent__TOP__1(Vmul_div__Syms* __restrict vlSymsp
                 vlTOPp->mul_div__DOT__rs1_temp = vlTOPp->rs1;
                 vlTOPp->mul_div__DOT__rs1_is_neg = 0U;
             }
-            vlTOPp->mul_div__DOT__count = (0x3fU & 
-                                           ((IData)(1U) 
-                                            + (IData)(vlTOPp->mul_div__DOT__count)));
+            vlTOPp->count = (0x3fU & ((IData)(1U) + (IData)(vlTOPp->count)));
             vlTOPp->stall = 1U;
             if (vlTOPp->rs2_signed) {
                 if (VL_GTS_III(1,32,32, 0U, vlTOPp->rs2)) {
@@ -133,7 +131,7 @@ VL_INLINE_OPT void Vmul_div::_sequent__TOP__1(Vmul_div__Syms* __restrict vlSymsp
             vlTOPp->high = vlTOPp->mul_div__DOT__long_temp[1U];
             vlTOPp->low = vlTOPp->mul_div__DOT__long_temp[0U];
         } else {
-            if ((0x20U > (IData)(vlTOPp->mul_div__DOT__count))) {
+            if ((0x20U > (IData)(vlTOPp->count))) {
                 VL_SHIFTR_WWI(65,65,32, __Vtemp6, vlTOPp->mul_div__DOT__long_temp, 1U);
                 vlTOPp->mul_div__DOT__long_temp[0U] 
                     = __Vtemp6[0U];
@@ -159,12 +157,11 @@ VL_INLINE_OPT void Vmul_div::_sequent__TOP__1(Vmul_div__Syms* __restrict vlSymsp
                     vlTOPp->mul_div__DOT__long_temp[2U] 
                         = (IData)((__Vtemp7 >> 0x20U));
                 }
-                vlTOPp->mul_div__DOT__count = (0x3fU 
-                                               & ((IData)(1U) 
-                                                  + (IData)(vlTOPp->mul_div__DOT__count)));
+                vlTOPp->count = (0x3fU & ((IData)(1U) 
+                                          + (IData)(vlTOPp->count)));
                 vlTOPp->high = vlTOPp->mul_div__DOT__long_temp[1U];
                 vlTOPp->low = vlTOPp->mul_div__DOT__long_temp[0U];
-                if ((0x20U == (IData)(vlTOPp->mul_div__DOT__count))) {
+                if ((0x20U == (IData)(vlTOPp->count))) {
                     VL_SHIFTR_WWI(65,65,32, __Vtemp11, vlTOPp->mul_div__DOT__long_temp, 1U);
                     vlTOPp->mul_div__DOT__long_temp[0U] 
                         = __Vtemp11[0U];
@@ -186,10 +183,9 @@ VL_INLINE_OPT void Vmul_div::_sequent__TOP__1(Vmul_div__Syms* __restrict vlSymsp
         }
     } else {
         if ((2U == (IData)(vlTOPp->op))) {
-            if ((0U == (IData)(vlTOPp->mul_div__DOT__count))) {
-                vlTOPp->mul_div__DOT__count = (0x3fU 
-                                               & ((IData)(1U) 
-                                                  + (IData)(vlTOPp->mul_div__DOT__count)));
+            if ((0U == (IData)(vlTOPp->count))) {
+                vlTOPp->count = (0x3fU & ((IData)(1U) 
+                                          + (IData)(vlTOPp->count)));
                 if (vlTOPp->rs1_signed) {
                     if (VL_GTS_III(1,32,32, 0U, vlTOPp->rs1)) {
                         vlTOPp->mul_div__DOT__rs1_temp 
@@ -245,7 +241,7 @@ VL_INLINE_OPT void Vmul_div::_sequent__TOP__1(Vmul_div__Syms* __restrict vlSymsp
                 vlTOPp->high = vlTOPp->mul_div__DOT__long_temp[1U];
                 vlTOPp->low = vlTOPp->mul_div__DOT__long_temp[0U];
             } else {
-                if ((0x20U > (IData)(vlTOPp->mul_div__DOT__count))) {
+                if ((0x20U > (IData)(vlTOPp->count))) {
                     VL_SHIFTL_WWI(65,65,32, __Vtemp17, vlTOPp->mul_div__DOT__long_temp, 1U);
                     vlTOPp->mul_div__DOT__long_temp[0U] 
                         = __Vtemp17[0U];
@@ -261,12 +257,11 @@ VL_INLINE_OPT void Vmul_div::_sequent__TOP__1(Vmul_div__Syms* __restrict vlSymsp
                         vlTOPp->mul_div__DOT__long_temp[0U] 
                             = (1U | vlTOPp->mul_div__DOT__long_temp[0U]);
                     }
-                    vlTOPp->mul_div__DOT__count = (0x3fU 
-                                                   & ((IData)(1U) 
-                                                      + (IData)(vlTOPp->mul_div__DOT__count)));
+                    vlTOPp->count = (0x3fU & ((IData)(1U) 
+                                              + (IData)(vlTOPp->count)));
                     vlTOPp->high = vlTOPp->mul_div__DOT__long_temp[1U];
                     vlTOPp->low = vlTOPp->mul_div__DOT__long_temp[0U];
-                    if ((0x20U == (IData)(vlTOPp->mul_div__DOT__count))) {
+                    if ((0x20U == (IData)(vlTOPp->count))) {
                         if (((IData)(vlTOPp->mul_div__DOT__rs1_is_neg) 
                              ^ (IData)(vlTOPp->mul_div__DOT__rs2_is_neg))) {
                             vlTOPp->low = ((IData)(1U) 
@@ -281,6 +276,8 @@ VL_INLINE_OPT void Vmul_div::_sequent__TOP__1(Vmul_div__Syms* __restrict vlSymsp
             vlTOPp->high = 0U;
             vlTOPp->low = 0U;
             vlTOPp->ready = 0U;
+            vlTOPp->stall = 0U;
+            vlTOPp->count = 0U;
         }
     }
 }

@@ -59,8 +59,8 @@ void Vmul_div::_ctor_var_reset() {
     high = VL_RAND_RESET_I(32);
     low = VL_RAND_RESET_I(32);
     ready = VL_RAND_RESET_I(1);
+    count = VL_RAND_RESET_I(6);
     stall = VL_RAND_RESET_I(1);
-    mul_div__DOT__count = VL_RAND_RESET_I(6);
     VL_RAND_RESET_W(65, mul_div__DOT__long_temp);
     mul_div__DOT__rs1_temp = VL_RAND_RESET_I(32);
     mul_div__DOT__rs2_temp = VL_RAND_RESET_I(32);
