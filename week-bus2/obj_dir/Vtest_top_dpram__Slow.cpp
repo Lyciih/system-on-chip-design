@@ -30,13 +30,19 @@ void Vtest_top_dpram::_ctor_var_reset() {
     __PVT__clk_i = VL_RAND_RESET_I(1);
     __PVT__rst_i = VL_RAND_RESET_I(1);
     __PVT__we_i = VL_RAND_RESET_I(1);
+    __PVT__request_i = VL_RAND_RESET_I(1);
     __PVT__addr_i = VL_RAND_RESET_I(32);
     __PVT__data_i = VL_RAND_RESET_I(32);
     __PVT__data_o = VL_RAND_RESET_I(32);
     __PVT__inst_ce_i = VL_RAND_RESET_I(1);
     __PVT__pc_i = VL_RAND_RESET_I(32);
     __PVT__inst_o = VL_RAND_RESET_I(32);
-    { int __Vi0=0; for (; __Vi0<65536; ++__Vi0) {
+    { int __Vi0=0; for (; __Vi0<3145728; ++__Vi0) {
             __PVT__mem[__Vi0] = VL_RAND_RESET_I(8);
     }}
+    __Vlvbound1 = VL_RAND_RESET_I(8);
+    __Vlvbound2 = VL_RAND_RESET_I(8);
+    __Vlvbound3 = VL_RAND_RESET_I(8);
+    __Vlvbound4 = VL_RAND_RESET_I(8);
+    __Vlvbound5 = VL_RAND_RESET_I(8);
 }

@@ -5,6 +5,7 @@ module dpram(
 		input	wire			rst_i,
 
 		input	wire			we_i,
+		input	wire			request_i,
 		input	wire[`ADDR_WIDTH-1:0]	addr_i,
 		input	wire[`DATA_WIDTH-1:0]	data_i,
 
@@ -16,7 +17,7 @@ module dpram(
 		output	reg[`DATA_WIDTH-1:0]	inst_o
 		);
 
-	reg[7:0]			mem[0:`RAM_SIZE];
+	reg[7:0]			mem[3145727:0];
 	
 	wire[`RAM_WIDTH-1:0]	addr4;
 	assign addr4 = {addr_i[`RAM_WIDTH-1:2], 2'b0};
@@ -27,7 +28,7 @@ module dpram(
 
 	//data port
 	always@(posedge clk_i)begin
-		if(we_i == `WRITE_ENABLE && rst_i == 1'b0)begin
+		if(we_i == `WRITE_ENABLE && rst_i == 1'b0 && request_i == 1)begin
 			mem[addr4] <= data_i[31:24];
             		mem[addr4+1] <= data_i[23:16];
             		mem[addr4+2] <= data_i[15:8];
@@ -39,8 +40,11 @@ module dpram(
 		if(rst_i == 1'b1)begin
 			data_o = `ZERO;
 		end
-		else begin
+		else if(request_i == 1)begin
 			data_o =  {mem[addr4],mem[addr4+1],mem[addr4+2],mem[addr4+3]};
+		end
+		else begin
+			data_o = `ZERO;
 		end
 	end
 

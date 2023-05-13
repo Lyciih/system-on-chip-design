@@ -8,7 +8,7 @@
 #ifndef _VTEST_TOP_H_
 #define _VTEST_TOP_H_  // guard
 
-#include "verilated.h"
+#include "verilated_heavy.h"
 #include "Vtest_top__Dpi.h"
 
 //==========

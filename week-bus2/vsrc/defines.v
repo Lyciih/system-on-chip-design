@@ -8,7 +8,7 @@
 `define	PART_ADDR_WIDTH	21
 
 `define	RAM_SIZE	65535
-`define	RAM_WIDTH	16
+`define	RAM_WIDTH	22
 `define	STOP		1
 `define	NOSTOP		0
 `define HALT_ADDR	32'h200008

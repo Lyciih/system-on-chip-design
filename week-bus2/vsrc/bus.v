@@ -29,8 +29,8 @@ module bus #(
 		    input	wire[AddressWidth-1:0]	cfg_device_addr_mask	[NrDevices]
 		    );
 
-	localparam	NumBitsHostSel = $clog2(NrHosts) + 1;
-	localparam	NumBitsDeviceSel = $clog2(NrDevices) + 1;
+	localparam	NumBitsHostSel = $clog2(NrHosts - 1) + 1;
+	localparam	NumBitsDeviceSel = $clog2(NrDevices - 1) + 1;
 
 	reg	[NumBitsHostSel-1:0]	host_sel_req;
 	reg	[NumBitsDeviceSel-1:0]	device_sel_req;

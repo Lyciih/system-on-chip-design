@@ -7,13 +7,14 @@ module	test_top(
 		);
 
 
-	localparam	int	NrDevices	= 1;
+	localparam	int	NrDevices	= 2;
 	localparam	int	NrHosts		= 1;
 	localparam	int	MemSize 	= 32'h100000;
 	localparam	int	MemAddrWidth 	= 20;
 
 	`define	HOST_CORE_PORT	0
 	`define	DEV_RAM		0
+	`define	DEV_CONSOLE	1
 
 	wire				host_req		[NrHosts];
 	wire				host_gnt		[NrHosts];
@@ -35,7 +36,10 @@ module	test_top(
 	assign	cfg_device_addr_base[`DEV_RAM] = 32'h0;
 	assign	cfg_device_addr_mask[`DEV_RAM] = ~32'hFFFFF;
 
-
+	assign	cfg_device_addr_base[`DEV_CONSOLE] = 32'h200000;
+	assign	cfg_device_addr_mask[`DEV_CONSOLE] = ~32'hFFFFF;
+	
+	wire	halt_from_console;
 
 	bus #(
 			.NrDevices	(NrDevices),
@@ -72,12 +76,14 @@ module	test_top(
 	wire[`ADDR_WIDTH-1:0]	core_ram_pc;
 	wire			core_ram_ce;
 	wire[`DATA_WIDTH-1:0]	ram_core_inst;
+	//wire			halt_from_core;
 
 	core_top core_top0(
 			.rst_i(rst_i),
 			.clk_i(clk_i),
-			.halt_o(halt_o),
+			//.halt_o(halt_from_core),
 
+			.ram_request_o(host_req[`HOST_CORE_PORT]),
 			.ram_we_o(host_we[`HOST_CORE_PORT]),
 			.ram_addr_o(host_addr[`HOST_CORE_PORT]),
 			.ram_wdata_o(host_wdata[`HOST_CORE_PORT]),
@@ -93,6 +99,7 @@ module	test_top(
 			.rst_i(rst_i),
 			.clk_i(clk_i),
 
+			.request_i(device_req[`DEV_RAM]),
 			.we_i(device_we[`DEV_RAM]),
 			.addr_i(device_addr[`DEV_RAM]),
 			.data_i(device_wdata[`DEV_RAM]),
@@ -102,6 +109,20 @@ module	test_top(
 			.inst_ce_i(core_ram_ce),
 			.inst_o(ram_core_inst)
 			);
+
+	assign halt_o = halt_from_console;
+	console #(
+			.LogName("./log/console.log")
+		 )console0(
+			 .clk_i(clk_i),
+			 .rst_i(rst_i),
+
+			 .req_i(device_req[`DEV_CONSOLE]),
+			 .we_i(device_we[`DEV_CONSOLE]),
+			 .addr_i(device_addr[`DEV_CONSOLE]),
+			 .wdata_i(device_wdata[`DEV_CONSOLE]),
+			 .halt_o(halt_from_console)
+			 );
 
 
 endmodule

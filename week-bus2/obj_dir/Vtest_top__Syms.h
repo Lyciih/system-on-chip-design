@@ -7,7 +7,7 @@
 #ifndef _VTEST_TOP__SYMS_H_
 #define _VTEST_TOP__SYMS_H_  // guard
 
-#include "verilated.h"
+#include "verilated_heavy.h"
 
 // INCLUDE MODULE CLASSES
 #include "Vtest_top.h"

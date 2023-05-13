@@ -5,7 +5,7 @@
 #ifndef _VTEST_TOP_CORE_TOP_H_
 #define _VTEST_TOP_CORE_TOP_H_  // guard
 
-#include "verilated.h"
+#include "verilated_heavy.h"
 #include "Vtest_top__Dpi.h"
 
 //==========
@@ -28,8 +28,8 @@ VL_MODULE(Vtest_top_core_top) {
     // PORTS
     VL_IN8(__PVT__clk_i,0,0);
     VL_IN8(__PVT__rst_i,0,0);
-    VL_OUT8(__PVT__halt_o,0,0);
     VL_OUT8(__PVT__ram_we_o,0,0);
+    VL_OUT8(__PVT__ram_request_o,0,0);
     VL_OUT8(__PVT__ce_wire_o,0,0);
     VL_OUT(__PVT__ram_addr_o,31,0);
     VL_OUT(__PVT__ram_wdata_o,31,0);
@@ -116,14 +116,15 @@ VL_MODULE(Vtest_top_core_top) {
     
     // INTERNAL METHODS
     void __Vconfigure(Vtest_top__Syms* symsp, bool first);
-    static void _combo__TOP__test_top__core_top0__5(Vtest_top__Syms* __restrict vlSymsp);
+    static void _combo__TOP__test_top__core_top0__6(Vtest_top__Syms* __restrict vlSymsp);
   private:
     void _ctor_var_reset() VL_ATTR_COLD;
   public:
-    static void _sequent__TOP__test_top__core_top0__3(Vtest_top__Syms* __restrict vlSymsp);
     static void _sequent__TOP__test_top__core_top0__4(Vtest_top__Syms* __restrict vlSymsp);
+    static void _sequent__TOP__test_top__core_top0__5(Vtest_top__Syms* __restrict vlSymsp);
     static void _settle__TOP__test_top__core_top0__1(Vtest_top__Syms* __restrict vlSymsp) VL_ATTR_COLD;
     static void _settle__TOP__test_top__core_top0__2(Vtest_top__Syms* __restrict vlSymsp);
+    static void _settle__TOP__test_top__core_top0__3(Vtest_top__Syms* __restrict vlSymsp);
   private:
     static void traceInit(void* userp, VerilatedVcd* tracep, uint32_t code) VL_ATTR_COLD;
 } VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);

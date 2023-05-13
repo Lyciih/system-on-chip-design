@@ -20,20 +20,22 @@ module mem(
 		output	reg[`ADDR_WIDTH-1:0]	ram_addr_o,
 		output	reg[`DATA_WIDTH-1:0]	ram_data_o,
 		output	reg			ram_w_request_o,
+		output	reg			ram_request_o,
 
 		output	reg[`RADDR_WIDTH-1:0]	reg_waddr_o,
 		output	reg			reg_we_o,
-		output	reg[`RDATA_WIDTH-1:0]	reg_wdata_o,
-		output	reg			halt_o
+		output	reg[`RDATA_WIDTH-1:0]	reg_wdata_o
+		//output	reg			halt_o
 	  );
 
+/*
 	always@(posedge clk_i)begin
 		if(mem_op_i == `SW && mem_addr_i == `HALT_ADDR)
 			halt_o <= 1'b1;
 		else
 			halt_o <= halt_o;
 	end
-
+*/
 
 	wire[1:0] ram_addr_offset = mem_addr_i[1:0];
 
@@ -46,6 +48,7 @@ module mem(
 			ram_addr_o = `ZERO;
 			ram_data_o = `ZERO;
 			ram_w_request_o = `WRITE_DISABLE;
+			ram_request_o = 0;
 		end
 		else begin
 			reg_waddr_o = reg_waddr_i;
@@ -54,6 +57,7 @@ module mem(
 			ram_addr_o = mem_addr_i;
 			case(mem_op_i)
 				`SB: begin
+					ram_request_o = 1;
 					case (ram_addr_offset)
 						2'b00: begin
 							ram_data_o = {ram_data_i[31:8],mem_data_i[7:0]};
@@ -70,6 +74,7 @@ module mem(
 					endcase
 				end
 				`SH: begin
+					ram_request_o = 1;
 					case (ram_addr_offset)
 						2'b00: begin
 							ram_data_o = {ram_data_i[31:16],mem_data_i[15:0]};
@@ -84,9 +89,11 @@ module mem(
 					//ram_data_o = {ram_data_i[31:16],mem_data_i[15:0]};
 				end
 				`SW: begin
+					ram_request_o = 1;
 					ram_data_o = mem_data_i;
 				end
 				`LB: begin
+					ram_request_o = 1;
 					case(ram_addr_offset)
 						2'b00:begin
 							reg_wdata_o = {{24{ram_data_i[7]}}, ram_data_i[7:0]};
@@ -103,6 +110,7 @@ module mem(
 					endcase      
 				end
 				`LBU: begin
+					ram_request_o = 1;
 					case(ram_addr_offset)
 						2'b00:begin
 							reg_wdata_o = {{24{1'b0}}, ram_data_i[7:0]};
@@ -119,6 +127,7 @@ module mem(
 					endcase      
 				end
 				`LH: begin
+					ram_request_o = 1;
 					case(ram_addr_offset)
 						2'b00:begin
 							reg_wdata_o = {{16{ram_data_i[15]}}, ram_data_i[15:0]};
@@ -132,6 +141,7 @@ module mem(
 					endcase      
 				end
 				`LHU: begin
+					ram_request_o = 1;
 					case(ram_addr_offset)
 						2'b00:begin
 							reg_wdata_o = {{16{1'b0}}, ram_data_i[15:0]};
@@ -146,6 +156,7 @@ module mem(
 					//reg_wdata_o = {{16{1'b0}}, ram_data_i[15:0]};
 				end
 				`LW: begin
+					ram_request_o = 1;
 					reg_wdata_o = ram_data_i;
 				end
 				default:begin
@@ -153,6 +164,7 @@ module mem(
 					ram_addr_o = `ZERO;
 					ram_data_o = `ZERO;
 					ram_w_request_o = `WRITE_DISABLE;
+					ram_request_o = 0;
 				end
 			endcase
 		end

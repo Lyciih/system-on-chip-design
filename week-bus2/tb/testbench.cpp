@@ -65,6 +65,7 @@ int main(int argc,char **argv)
 	    }
     }
 
+
     int a0 = sim_regs_read(top->test_top->core_top0->regfile0, 10);
     if(a0)
     {
@@ -75,32 +76,7 @@ int main(int argc,char **argv)
 	    printf("PASS\n");
     }
 
-/*
-    for( int i=0; i<MAX_SIM_CYCLE;i++) {
-	    one_cycle(top, tfp);
-	    int x = top->halt_o;
-	    if(x == 1)
-	    {
-		    printf("yes\n");
-		    break;
-	    }
-	    else
-	    {
-		    printf("no\n");
-	    }
-		    
-    }
 
-    while(!Verilated::gotFinish())
-    {
-	    one_cycle(top, tfp);
-	    int x = top->halt_o;
-	    if(x == 1)
-	    {
-		    break;
-	    }	    
-    }
-*/
     for(int i = 0; i < 32; i++)
     {
 	    int x = sim_regs_read(top->test_top->core_top0->regfile0, i);

@@ -6,7 +6,7 @@ OBJDUMP = ${CROSS_COMPILE}objdump
 
 .DEFAULT_GOAL := all
 all:
-	@${CC} ${CFLAGS} j3_test.s -Ttext=0x00000000 -o test.elf
+	@${CC} ${CFLAGS} bus_test.s -Ttext=0x00000000 -o test.elf
 	@${OBJCOPY} -O	binary test.elf test.bin
 
 .PHONY: code

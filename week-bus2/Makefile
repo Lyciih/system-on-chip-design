@@ -28,7 +28,7 @@ test_src/$(PROG).bin:
 	$(MAKE) -C test_src/
 
 
-.PHONY: clean vhdl run wave test
+.PHONY: clean vhdl run wave test boot
 
 run: test_src/$(PROG).bin obj_dir/V$(TOP)
 #obj_dir/V$(TOP) test_src/$(PROG).bin
@@ -45,3 +45,8 @@ clean:
 
 test:
 	python3 test_all_isa.py
+
+
+
+boot: main/$(PROG).bin obj_dir/V$(TOP)
+	obj_dir/V$(TOP) main/test.bin

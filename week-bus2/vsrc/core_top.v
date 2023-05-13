@@ -3,11 +3,12 @@
 module	core_top(
 		input	wire	rst_i,
 		input	wire	clk_i,
-		output	reg	halt_o,	//for isa test
+		//output	reg	halt_o,	//for isa test
 
 
 		// ram
 		output	reg			ram_we_o,
+		output	reg			ram_request_o,
 		output	reg[`ADDR_WIDTH-1:0]	ram_addr_o,
 		output	reg[`DATA_WIDTH-1:0]	ram_wdata_o,
 		input	wire[`DATA_WIDTH-1:0]	ram_rdata_i,
@@ -269,7 +270,7 @@ module	core_top(
 			.mem_op_o(exe_mem_mem_op_o)
 			);
 
-	assign	halt_o = mem_halt_o;
+	//assign	halt_o = mem_halt_o;
 
 	mem mem0(
 			.rst_i(rst_i),
@@ -290,11 +291,12 @@ module	core_top(
 			.ram_addr_o(ram_addr_o),
 			.ram_data_o(ram_wdata_o),
 			.ram_w_request_o(ram_we_o),
+			.ram_request_o(ram_request_o),
 
 			.reg_waddr_o(mem_reg_waddr_o),
 			.reg_we_o(mem_reg_we_o),
-			.reg_wdata_o(mem_reg_wdata_o),
-			.halt_o(mem_halt_o)	//for isa test
+			.reg_wdata_o(mem_reg_wdata_o)
+			//.halt_o(mem_halt_o)	//for isa test
 		);
 
 
