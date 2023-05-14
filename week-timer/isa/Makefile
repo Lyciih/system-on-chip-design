@@ -62,4 +62,4 @@ all: $(tests_dump)
 # Clean up
 
 clean:
-	rm -rf generated/*
+	rm -f generated/*

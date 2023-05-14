@@ -33,7 +33,7 @@ test_src/$(PROG).bin:
 run: test_src/$(PROG).bin obj_dir/V$(TOP)
 	obj_dir/V$(TOP) test_src/$(PROG).bin 1 100 1
 #obj_dir/V$(TOP) isa/generated/rv32ui-p-and.bin
-wave: run
+wave:
 	$(GTKWAVE) wave.vcd
 
 vhdl: obj_dir/V$(TOP).mk
