@@ -52,6 +52,10 @@ int main(int argc,char **argv)
 			top->trace(tfp, 0);
 		}
 	}
+	else
+	{
+		top->trace(tfp, 0);
+	}
 	
 	tfp->open("wave.vcd"); 
 
