@@ -31,8 +31,8 @@ test_src/$(PROG).bin:
 .PHONY: clean vhdl run wave test boot
 
 run: test_src/$(PROG).bin obj_dir/V$(TOP)
-#obj_dir/V$(TOP) test_src/$(PROG).bin
-	obj_dir/V$(TOP) isa/generated/rv32ui-p-and.bin
+	obj_dir/V$(TOP) test_src/$(PROG).bin 1 100 1
+#obj_dir/V$(TOP) isa/generated/rv32ui-p-and.bin
 wave: run
 	$(GTKWAVE) wave.vcd
 
@@ -49,4 +49,4 @@ test:
 
 
 boot: main/$(PROG).bin obj_dir/V$(TOP)
-	obj_dir/V$(TOP) main/test.bin
+	obj_dir/V$(TOP) main/test.bin 0 0 1
