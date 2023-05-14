@@ -6,7 +6,7 @@ module	test_top(
 		output	reg	halt_o	//for isa test
 		);
 
-/*
+
 	localparam	int	NrDevices	= 1;
 	localparam	int	NrHosts		= 1;
 	localparam	int	MemSize 	= 32'h100000;
@@ -15,11 +15,27 @@ module	test_top(
 	`define	HOST_CORE_PORT	0
 	`define	DEV_RAM		0
 
+	wire				host_req		[NrHosts];
+	wire				host_gnt		[NrHosts];
+	wire	[`ADDR_WIDTH-1:0]	host_addr		[NrHosts];
+	wire				host_we			[NrHosts];
+	wire	[`DATA_WIDTH-1:0]	host_wdata		[NrHosts];
+	wire	[`DATA_WIDTH-1:0]	host_rdata		[NrHosts];
+
+	wire				device_req		[NrDevices];
+	wire	[`ADDR_WIDTH-1:0]	device_addr		[NrDevices];
+	wire				device_we		[NrDevices];
+	wire	[`DATA_WIDTH-1:0]	device_wdata		[NrDevices];
+	wire	[`DATA_WIDTH-1:0]	device_rdata		[NrDevices];
+
+
 	wire	[`ADDR_WIDTH-1:0]	cfg_device_addr_base	[NrDevices];
 	wire	[`ADDR_WIDTH-1:0]	cfg_device_addr_mask	[NrDevices];
 
 	assign	cfg_device_addr_base[`DEV_RAM] = 32'h0;
 	assign	cfg_device_addr_mask[`DEV_RAM] = ~32'hFFFFF;
+
+
 
 	bus #(
 			.NrDevices	(NrDevices),
@@ -27,7 +43,31 @@ module	test_top(
 			.DataWidth	(`DATA_WIDTH),
 			.AddressWidth	(`ADDR_WIDTH)
 	     ) u_bus (
-*/
+		     .clk_i	(clk_i),
+		     .rst_i	(rst_i),
+
+		     .host_req_i	(),
+		     .host_gnt_o	(),
+		     .host_addr_i	(),
+		     .host_we_i		(),
+		     .host_wdata_i	(),
+		     .host_wdata_o	(),
+
+
+		     .device_req_o	(),
+		     .device_addr_o	(),
+		     .device_we_o	(),
+		     .device_wdata_o	(),
+		     .device_rdata_i	(),
+
+		     .cfg_device_addr_base,
+		     .cfg_device_addr_mask
+		     );
+
+
+
+
+
 	wire	core_ram_we;
 	wire[`ADDR_WIDTH-1:0]	core_ram_addr;
 	wire[`DATA_WIDTH-1:0]	core_ram_data;

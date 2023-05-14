@@ -32,7 +32,7 @@ test_src/$(PROG).bin:
 
 run: test_src/$(PROG).bin obj_dir/V$(TOP)
 #obj_dir/V$(TOP) test_src/$(PROG).bin
-	obj_dir/V$(TOP) isa/generated/rv32um-p-rem.bin
+	obj_dir/V$(TOP) isa/generated/rv32ui-p-addi.bin
 wave: run
 	$(GTKWAVE) wave.vcd
 
