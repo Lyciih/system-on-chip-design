@@ -79,6 +79,7 @@ VL_MODULE(Vtest_top_core_top) {
         CData/*5:0*/ __PVT__exe0__DOT__m_d_count;
         CData/*0:0*/ __PVT__exe0__DOT__m_d__DOT__rs1_is_neg;
         CData/*0:0*/ __PVT__exe0__DOT__m_d__DOT__rs2_is_neg;
+        CData/*0:0*/ __PVT__csr0__DOT__w_sepc;
         SData/*11:0*/ __PVT__exe_csr_raddr;
         SData/*11:0*/ __PVT__exe_exe_mem_waddr;
         SData/*11:0*/ __PVT__exe_mem_mem_waddr;
@@ -103,9 +104,9 @@ VL_MODULE(Vtest_top_core_top) {
         IData/*31:0*/ __PVT__mem_reg_wdata_o;
         IData/*31:0*/ __PVT__mem_wb_reg_wdata_o;
         IData/*31:0*/ __PVT__exe_exe_mem_wdata;
-        IData/*31:0*/ __PVT__exe_mem_mem_wdata;
     };
     struct {
+        IData/*31:0*/ __PVT__exe_mem_mem_wdata;
         IData/*31:0*/ __PVT__mem_wb_wdata;
         IData/*31:0*/ __PVT__wb_csr_wdata;
         IData/*31:0*/ __PVT__csr_exe_rdata;
@@ -117,6 +118,7 @@ VL_MODULE(Vtest_top_core_top) {
         IData/*31:0*/ __PVT__exe0__DOT__compare_sub_type_r;
         IData/*31:0*/ __PVT__exe0__DOT__m_d_high_result;
         IData/*31:0*/ __PVT__exe0__DOT__m_d_low_result;
+        IData/*31:0*/ __PVT__exe0__DOT__csr_rdata;
         WData/*64:0*/ __PVT__exe0__DOT__m_d__DOT__long_temp[3];
         IData/*31:0*/ __PVT__exe0__DOT__m_d__DOT__rs1_temp;
         IData/*31:0*/ __PVT__exe0__DOT__m_d__DOT__rs2_temp;
@@ -126,6 +128,15 @@ VL_MODULE(Vtest_top_core_top) {
         IData/*31:0*/ __PVT__csr0__DOT__mscratch;
         IData/*31:0*/ __PVT__csr0__DOT__mepc;
         IData/*31:0*/ __PVT__csr0__DOT__mtval;
+        IData/*31:0*/ __PVT__csr0__DOT__medeleg;
+        IData/*31:0*/ __PVT__csr0__DOT__mideleg;
+        IData/*31:0*/ __PVT__csr0__DOT__pmpcfg0;
+        IData/*31:0*/ __PVT__csr0__DOT__pmpaddr0;
+        IData/*31:0*/ __PVT__csr0__DOT__stvec;
+        IData/*31:0*/ __PVT__csr0__DOT__sscratch;
+        IData/*31:0*/ __PVT__csr0__DOT__sepc;
+        IData/*31:0*/ __PVT__csr0__DOT__scause;
+        IData/*31:0*/ __PVT__csr0__DOT__satp;
         QData/*63:0*/ __PVT__csr0__DOT__mcycle;
         QData/*63:0*/ __PVT__csr0__DOT__minstret;
     };

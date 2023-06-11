@@ -262,6 +262,66 @@ module	id(
 							op1_o_final = reg1_rdata_i;
 							op2_o_final = `ZERO;
 						end
+						`INST_CSRRWI: begin
+							inst_o = inst_i;
+							inst_addr_o = inst_addr_i;
+							reg1_raddr_o = `ZERO_REG;
+							reg2_raddr_o = `ZERO_REG;
+							reg1_re_o = `READ_DISABLE;
+							reg2_re_o = `READ_DISABLE;
+							reg_we_o = `WRITE_ENABLE;
+							reg_waddr_o = rd;
+							op1_o_final ={{27{1'b0}}, inst_i[19:15]};
+							op2_o_final = `ZERO;
+						end
+						`INST_CSRRS: begin
+							inst_o = inst_i;
+							inst_addr_o = inst_addr_i;
+							reg1_raddr_o = rs1;
+							reg2_raddr_o = `ZERO_REG;
+							reg1_re_o = `READ_ENABLE;
+							reg2_re_o = `READ_DISABLE;
+							reg_we_o = `WRITE_ENABLE;
+							reg_waddr_o = rd;
+							op1_o_final = reg1_rdata_i;
+							op2_o_final = `ZERO;
+						end
+						`INST_CSRRSI: begin
+							inst_o = inst_i;
+							inst_addr_o = inst_addr_i;
+							reg1_raddr_o = `ZERO_REG;
+							reg2_raddr_o = `ZERO_REG;
+							reg1_re_o = `READ_DISABLE;
+							reg2_re_o = `READ_DISABLE;
+							reg_we_o = `WRITE_ENABLE;
+							reg_waddr_o = rd;
+							op1_o_final ={{27{1'b0}}, inst_i[19:15]};
+							op2_o_final = `ZERO;
+						end
+						`INST_CSRRC: begin
+							inst_o = inst_i;
+							inst_addr_o = inst_addr_i;
+							reg1_raddr_o = rs1;
+							reg2_raddr_o = `ZERO_REG;
+							reg1_re_o = `READ_ENABLE;
+							reg2_re_o = `READ_DISABLE;
+							reg_we_o = `WRITE_ENABLE;
+							reg_waddr_o = rd;
+							op1_o_final = reg1_rdata_i;
+							op2_o_final = `ZERO;
+						end
+						`INST_CSRRCI: begin
+							inst_o = inst_i;
+							inst_addr_o = inst_addr_i;
+							reg1_raddr_o = `ZERO_REG;
+							reg2_raddr_o = `ZERO_REG;
+							reg1_re_o = `READ_DISABLE;
+							reg2_re_o = `READ_DISABLE;
+							reg_we_o = `WRITE_ENABLE;
+							reg_waddr_o = rd;
+							op1_o_final ={{27{1'b0}}, inst_i[19:15]};
+							op2_o_final = `ZERO;
+						end
 						default: begin
 							inst_o = `NOP;
 							inst_addr_o = `ZERO;

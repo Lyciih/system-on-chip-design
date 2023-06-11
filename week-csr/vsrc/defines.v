@@ -117,6 +117,8 @@
 /*------ Machine trap setup ---------*/
 `define	CSR_MSTATUS_ADDR	12'h300
 `define	CSR_MISA_ADDR		12'h301
+`define	CSR_MEDELEG_ADDR	12'h302
+`define	CSR_MIDELEG_ADDR	12'h303
 `define	CSR_MIE_ADDR		12'h304
 `define	CSR_MTVEC_ADDR		12'h305
 `define	CSR_MCOUNTEREN_ADDR	12'h306
@@ -135,3 +137,20 @@
 `define	CSR_MCYCLEH_ADDR	12'hB80
 `define	CSR_MINSTRET_ADDR	12'hB02
 `define	CSR_MINSTRETH_ADDR	12'hB82
+
+/*------ Machine memory protection --*/
+`define	CSR_PMPCFG0_ADDR	12'h3A0
+`define	CSR_PMPADDR0_ADDR	12'h3B0
+
+
+/*------ Supervisor trap setup ------*/
+`define	CSR_STVEC_ADDR		12'h105
+
+
+/*------ Supervisor trap handling ---*/
+`define	CSR_SSCRATCH_ADDR	12'h140
+`define	CSR_SEPC_ADDR		12'h141
+`define	CSR_SCAUSE_ADDR		12'h142
+
+/* Supervisor Protection and Translation */
+`define	CSR_SATP_ADDR		12'h180

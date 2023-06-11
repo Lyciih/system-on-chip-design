@@ -444,6 +444,76 @@ module exe(
 							csr_raddr_o = inst_i[31:20];
 							csr_waddr_o = inst_i[31:20];
 						end
+						`INST_CSRRWI: begin
+							reg_waddr_o = reg_waddr_i;
+							reg_wdata_o = csr_rdata;
+							reg_we_o = reg_we_i;
+
+							mem_addr_o = `ZERO;
+							mem_data_o = `ZERO;
+							mem_we_o = `WRITE_DISABLE;
+							mem_op_o = `MEM_NOP;
+							csr_we_o = `WRITE_ENABLE;
+							csr_wdata_o = op1_i;
+							csr_raddr_o = inst_i[31:20];
+							csr_waddr_o = inst_i[31:20];
+						end
+						`INST_CSRRS: begin
+							reg_waddr_o = reg_waddr_i;
+							reg_wdata_o = csr_rdata;
+							reg_we_o = reg_we_i;
+
+							mem_addr_o = `ZERO;
+							mem_data_o = `ZERO;
+							mem_we_o = `WRITE_DISABLE;
+							mem_op_o = `MEM_NOP;
+							csr_we_o = `WRITE_ENABLE;
+							csr_wdata_o = op1_i | csr_rdata;
+							csr_raddr_o = inst_i[31:20];
+							csr_waddr_o = inst_i[31:20];
+						end
+						`INST_CSRRSI: begin
+							reg_waddr_o = reg_waddr_i;
+							reg_wdata_o = csr_rdata;
+							reg_we_o = reg_we_i;
+
+							mem_addr_o = `ZERO;
+							mem_data_o = `ZERO;
+							mem_we_o = `WRITE_DISABLE;
+							mem_op_o = `MEM_NOP;
+							csr_we_o = `WRITE_ENABLE;
+							csr_wdata_o = op1_i | csr_rdata;
+							csr_raddr_o = inst_i[31:20];
+							csr_waddr_o = inst_i[31:20];
+						end
+						`INST_CSRRC: begin
+							reg_waddr_o = reg_waddr_i;
+							reg_wdata_o = csr_rdata;
+							reg_we_o = reg_we_i;
+
+							mem_addr_o = `ZERO;
+							mem_data_o = `ZERO;
+							mem_we_o = `WRITE_DISABLE;
+							mem_op_o = `MEM_NOP;
+							csr_we_o = `WRITE_ENABLE;
+							csr_wdata_o = ~op1_i & csr_rdata;
+							csr_raddr_o = inst_i[31:20];
+							csr_waddr_o = inst_i[31:20];
+						end
+						`INST_CSRRCI: begin
+							reg_waddr_o = reg_waddr_i;
+							reg_wdata_o = csr_rdata;
+							reg_we_o = reg_we_i;
+
+							mem_addr_o = `ZERO;
+							mem_data_o = `ZERO;
+							mem_we_o = `WRITE_DISABLE;
+							mem_op_o = `MEM_NOP;
+							csr_we_o = `WRITE_ENABLE;
+							csr_wdata_o = ~op1_i & csr_rdata;
+							csr_raddr_o = inst_i[31:20];
+							csr_waddr_o = inst_i[31:20];
+						end
 						default: begin
 							reg_waddr_o = `ZERO_REG;
 							reg_wdata_o = `ZERO;

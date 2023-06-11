@@ -165,6 +165,139 @@ module	csr(
 		end
 	end
 
+
+	//medeleg
+	reg[`RDATA_WIDTH-1:0]	medeleg;
+
+	wire w_medeleg;
+	assign w_medeleg = ((waddr_i == `CSR_MEDELEG_ADDR) && we_i == `WRITE_ENABLE);
+	always@(posedge clk_i) begin
+		if(rst_i == 1'b1) begin
+			medeleg <= `ZERO;
+		end
+		else if(w_medeleg) begin
+			medeleg <= wdata_i;
+		end
+	end
+
+
+	//mideleg
+	reg[`RDATA_WIDTH-1:0]	mideleg;
+
+	wire w_mideleg;
+	assign w_mideleg = ((waddr_i == `CSR_MIDELEG_ADDR) && we_i == `WRITE_ENABLE);
+	always@(posedge clk_i) begin
+		if(rst_i == 1'b1) begin
+			mideleg <= `ZERO;
+		end
+		else if(w_mideleg) begin
+			mideleg <= wdata_i;
+		end
+	end
+
+
+	//pmpcfg0
+	reg[`RDATA_WIDTH-1:0]	pmpcfg0;
+
+	wire w_pmpcfg0;
+	assign w_pmpcfg0 = ((waddr_i == `CSR_PMPCFG0_ADDR) && we_i == `WRITE_ENABLE);
+	always@(posedge clk_i) begin
+		if(rst_i == 1'b1) begin
+			pmpcfg0 <= `ZERO;
+		end
+		else if(w_pmpcfg0) begin
+			pmpcfg0 <= wdata_i;
+		end
+	end
+
+
+	//pmpaddr0
+	reg[`RDATA_WIDTH-1:0]	pmpaddr0;
+
+	wire w_pmpaddr0;
+	assign w_pmpaddr0 = ((waddr_i == `CSR_PMPADDR0_ADDR) && we_i == `WRITE_ENABLE);
+	always@(posedge clk_i) begin
+		if(rst_i == 1'b1) begin
+			pmpaddr0 <= `ZERO;
+		end
+		else if(w_pmpaddr0) begin
+			pmpaddr0 <= wdata_i;
+		end
+	end
+
+
+	//stvec
+	reg[`RDATA_WIDTH-1:0]	stvec;
+
+	wire w_stvec;
+	assign w_stvec = ((waddr_i == `CSR_STVEC_ADDR) && we_i == `WRITE_ENABLE);
+	always@(posedge clk_i) begin
+		if(rst_i == 1'b1) begin
+			stvec <= `ZERO;
+		end
+		else if(w_stvec) begin
+			stvec <= wdata_i;
+		end
+	end
+
+	//sscratch
+	reg[`RDATA_WIDTH-1:0]	sscratch;
+
+	wire w_sscratch;
+	assign w_sscratch = ((waddr_i == `CSR_SSCRATCH_ADDR) && we_i == `WRITE_ENABLE);
+	always@(posedge clk_i) begin
+		if(rst_i == 1'b1) begin
+			sscratch <= `ZERO;
+		end
+		else if(w_sscratch) begin
+			sscratch <= wdata_i;
+		end
+	end
+
+	//sepc
+	reg[`RDATA_WIDTH-1:0]	sepc;
+
+	wire w_sepc;
+	assign w_sepc = ((waddr_i == `CSR_SEPC_ADDR) && we_i == `WRITE_ENABLE);
+	always@(posedge clk_i) begin
+		if(rst_i == 1'b1) begin
+			sepc <= `ZERO;
+		end
+		else if(w_sepc) begin
+			sepc <= wdata_i;
+		end
+	end
+
+
+	//scause
+	reg[`RDATA_WIDTH-1:0]	scause;
+
+	wire w_scause;
+	assign w_scause = ((waddr_i == `CSR_SCAUSE_ADDR) && we_i == `WRITE_ENABLE);
+	always@(posedge clk_i) begin
+		if(rst_i == 1'b1) begin
+			scause <= `ZERO;
+		end
+		else if(w_sepc) begin
+			scause <= wdata_i;
+		end
+	end
+	
+	//satp
+	reg[`RDATA_WIDTH-1:0]	satp;
+
+	wire w_satp;
+	assign w_satp = ((waddr_i == `CSR_SATP_ADDR) && we_i == `WRITE_ENABLE);
+	always@(posedge clk_i) begin
+		if(rst_i == 1'b1) begin
+			satp <= `ZERO;
+		end
+		else if(w_satp) begin
+			satp <= wdata_i;
+		end
+	end
+
+
 /*--------------------- read csr -----------------------------*/
 	always@(*)begin
 		if((waddr_i == raddr_i) && (we_i == `WRITE_ENABLE))begin
@@ -216,6 +349,33 @@ module	csr(
 				end
 				`CSR_MIP_ADDR: begin
 					rdata_o = mip;
+				end
+				`CSR_MEDELEG_ADDR: begin
+					rdata_o = medeleg;
+				end
+				`CSR_MIDELEG_ADDR: begin
+					rdata_o = mideleg;
+				end
+				`CSR_PMPCFG0_ADDR: begin
+					rdata_o = pmpcfg0;
+				end
+				`CSR_PMPADDR0_ADDR: begin
+					rdata_o = pmpaddr0;
+				end
+				`CSR_STVEC_ADDR: begin
+					rdata_o = stvec;
+				end
+				`CSR_SSCRATCH_ADDR: begin
+					rdata_o = sscratch;
+				end
+				`CSR_SEPC_ADDR: begin
+					rdata_o = sepc;
+				end
+				`CSR_SCAUSE_ADDR: begin
+					rdata_o = scause;
+				end
+				`CSR_SATP_ADDR: begin
+					rdata_o = satp;
 				end
 				default: begin
 					rdata_o = `ZERO;
