@@ -5,12 +5,12 @@ module	timer(
 		input	wire	req_i,
 		input	wire	we_i,
 		input	wire[`ADDR_WIDTH-1:0]	addr_i,
-		input	wire[`DATA_WIDTH*2-1:0]	time_set_i,
+		input	wire[`DATA_WIDTH-1:0]	time_set_i,
 
-		output	reg[63:0]		second_count
+		output	reg[31:0]		second_count
 	     );
 
-	reg[63:0]	clk_count;
+	reg[31:0]	clk_count;
 
 	initial	begin
 		clk_count = 0;

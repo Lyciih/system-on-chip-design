@@ -32,10 +32,10 @@ VL_MODULE(Vtest_top_core_top) {
     VL_OUT8(__PVT__ram_request_o,0,0);
     VL_OUT8(__PVT__ce_wire_o,0,0);
     VL_OUT(__PVT__ram_addr_o,31,0);
-    VL_OUT(__PVT__ram_wdata_o,31,0);
-    VL_IN(__PVT__ram_rdata_i,31,0);
     VL_OUT(__PVT__pc_wire_o,31,0);
     VL_IN(__PVT__if_inst_i,31,0);
+    VL_OUT64(__PVT__ram_wdata_o,63,0);
+    VL_IN64(__PVT__ram_rdata_i,63,0);
     
     // LOCAL SIGNALS
     // Anonymous structures to workaround compiler member-count bugs
@@ -114,6 +114,7 @@ VL_MODULE(Vtest_top_core_top) {
         IData/*31:0*/ __PVT__id0__DOT__op2_o_final;
         IData/*31:0*/ __PVT__id0__DOT__i_op2_o;
         IData/*31:0*/ __PVT__exe0__DOT__b_type_offset;
+        IData/*31:0*/ __PVT__exe0__DOT__load_addr_offset;
         IData/*31:0*/ __PVT__exe0__DOT__compare_sub_type_i;
         IData/*31:0*/ __PVT__exe0__DOT__compare_sub_type_r;
         IData/*31:0*/ __PVT__exe0__DOT__m_d_high_result;

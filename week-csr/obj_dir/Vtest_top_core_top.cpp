@@ -492,131 +492,174 @@ VL_INLINE_OPT void Vtest_top_core_top::_settle__TOP__test_top__core_top0__3(Vtes
                         ? vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_wdata_o
                         : ((1U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
                             ? ((0U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                ? (0xffffU & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                   [0U]) : ((1U == 
-                                             (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                             ? (0xffffU 
-                                                & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                   [0U] 
-                                                   >> 8U))
-                                             : (0xffffU 
-                                                & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                   [0U] 
-                                                   >> 0x10U))))
+                                ? (0xffffU & (IData)(
+                                                     vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                     [0U]))
+                                : ((1U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                    ? (0xffffU & (IData)(
+                                                         (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                          [0U] 
+                                                          >> 8U)))
+                                    : ((2U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                        ? (0xffffU 
+                                           & (IData)(
+                                                     (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                      [0U] 
+                                                      >> 0x10U)))
+                                        : (0xffffU 
+                                           & (IData)(
+                                                     (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                      [0U] 
+                                                      >> 0x18U))))))
                             : ((0U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                ? (0xffU & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                   [0U]) : ((1U == 
-                                             (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                             ? (0xffU 
-                                                & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                   [0U] 
-                                                   >> 8U))
-                                             : ((2U 
-                                                 == 
-                                                 (3U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                                 ? 
-                                                (0xffU 
-                                                 & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                    [0U] 
-                                                    >> 0x10U))
-                                                 : 
-                                                (0xffU 
-                                                 & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                    [0U] 
-                                                    >> 0x18U)))))))
+                                ? (0xffU & (IData)(
+                                                   vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                   [0U]))
+                                : ((1U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                    ? (0xffU & (IData)(
+                                                       (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                        [0U] 
+                                                        >> 8U)))
+                                    : ((2U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                        ? (0xffU & (IData)(
+                                                           (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                            [0U] 
+                                                            >> 0x10U)))
+                                        : (0xffU & (IData)(
+                                                           (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                            [0U] 
+                                                            >> 0x18U))))))))
                     : ((2U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
                         ? ((1U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
-                            ? vlSymsp->TOP__test_top.__PVT__host_rdata
-                           [0U] : ((0U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                            ? ((0U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                ? (IData)(vlSymsp->TOP__test_top.__PVT__host_rdata
+                                          [0U]) : (
+                                                   (1U 
+                                                    == 
+                                                    (3U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                                    ? (IData)(
+                                                              (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                               [0U] 
+                                                               >> 8U))
+                                                    : 
+                                                   ((2U 
+                                                     == 
+                                                     (3U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                                     ? (IData)(
+                                                               (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                [0U] 
+                                                                >> 0x10U))
+                                                     : (IData)(
+                                                               (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                [0U] 
+                                                                >> 0x18U)))))
+                            : ((0U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                ? ((0xffff0000U & (
+                                                   (- (IData)(
+                                                              (1U 
+                                                               & (IData)(
+                                                                         (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                          [0U] 
+                                                                          >> 0xfU))))) 
+                                                   << 0x10U)) 
+                                   | (0xffffU & (IData)(
+                                                        vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                        [0U])))
+                                : ((1U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
                                     ? ((0xffff0000U 
                                         & ((- (IData)(
                                                       (1U 
-                                                       & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                          [0U] 
-                                                          >> 0xfU)))) 
+                                                       & (IData)(
+                                                                 (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                  [0U] 
+                                                                  >> 0x17U))))) 
                                            << 0x10U)) 
-                                       | (0xffffU & 
-                                          vlSymsp->TOP__test_top.__PVT__host_rdata
-                                          [0U])) : 
-                                   ((1U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                     ? ((0xffff0000U 
-                                         & ((- (IData)(
-                                                       (1U 
-                                                        & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                           [0U] 
-                                                           >> 0x17U)))) 
-                                            << 0x10U)) 
-                                        | (0xffffU 
-                                           & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                              [0U] 
-                                              >> 8U)))
-                                     : ((0xffff0000U 
-                                         & ((- (IData)(
-                                                       (1U 
-                                                        & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                           [0U] 
-                                                           >> 0x1fU)))) 
-                                            << 0x10U)) 
-                                        | (0xffffU 
-                                           & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                              [0U] 
-                                              >> 0x10U))))))
+                                       | (0xffffU & (IData)(
+                                                            (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                             [0U] 
+                                                             >> 8U))))
+                                    : ((2U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                        ? ((0xffff0000U 
+                                            & ((- (IData)(
+                                                          (1U 
+                                                           & (IData)(
+                                                                     (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                      [0U] 
+                                                                      >> 0x1fU))))) 
+                                               << 0x10U)) 
+                                           | (0xffffU 
+                                              & (IData)(
+                                                        (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                         [0U] 
+                                                         >> 0x10U))))
+                                        : ((0xffff0000U 
+                                            & ((- (IData)(
+                                                          (1U 
+                                                           & (IData)(
+                                                                     (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                      [0U] 
+                                                                      >> 0x27U))))) 
+                                               << 0x10U)) 
+                                           | (0xffffU 
+                                              & (IData)(
+                                                        (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                         [0U] 
+                                                         >> 0x18U))))))))
                         : ((1U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
                             ? ((0U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
                                 ? ((0xffffff00U & (
                                                    (- (IData)(
                                                               (1U 
-                                                               & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                                  [0U] 
-                                                                  >> 7U)))) 
+                                                               & (IData)(
+                                                                         (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                          [0U] 
+                                                                          >> 7U))))) 
                                                    << 8U)) 
-                                   | (0xffU & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                      [0U])) : ((1U 
-                                                 == 
-                                                 (3U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                                 ? 
-                                                ((0xffffff00U 
-                                                  & ((- (IData)(
-                                                                (1U 
-                                                                 & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                                    [0U] 
-                                                                    >> 0xfU)))) 
-                                                     << 8U)) 
-                                                 | (0xffU 
-                                                    & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                       [0U] 
-                                                       >> 8U)))
-                                                 : 
-                                                ((2U 
-                                                  == 
-                                                  (3U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                                  ? 
-                                                 ((0xffffff00U 
-                                                   & ((- (IData)(
-                                                                 (1U 
-                                                                  & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                                     [0U] 
-                                                                     >> 0x17U)))) 
-                                                      << 8U)) 
-                                                  | (0xffU 
-                                                     & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                        [0U] 
-                                                        >> 0x10U)))
-                                                  : 
-                                                 ((0xffffff00U 
-                                                   & ((- (IData)(
-                                                                 (1U 
-                                                                  & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                                     [0U] 
-                                                                     >> 0x1fU)))) 
-                                                      << 8U)) 
-                                                  | (0xffU 
-                                                     & (vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                        [0U] 
-                                                        >> 0x18U))))))
+                                   | (0xffU & (IData)(
+                                                      vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                      [0U])))
+                                : ((1U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                    ? ((0xffffff00U 
+                                        & ((- (IData)(
+                                                      (1U 
+                                                       & (IData)(
+                                                                 (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                  [0U] 
+                                                                  >> 0xfU))))) 
+                                           << 8U)) 
+                                       | (0xffU & (IData)(
+                                                          (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                           [0U] 
+                                                           >> 8U))))
+                                    : ((2U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                        ? ((0xffffff00U 
+                                            & ((- (IData)(
+                                                          (1U 
+                                                           & (IData)(
+                                                                     (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                      [0U] 
+                                                                      >> 0x17U))))) 
+                                               << 8U)) 
+                                           | (0xffU 
+                                              & (IData)(
+                                                        (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                         [0U] 
+                                                         >> 0x10U))))
+                                        : ((0xffffff00U 
+                                            & ((- (IData)(
+                                                          (1U 
+                                                           & (IData)(
+                                                                     (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                      [0U] 
+                                                                      >> 0x1fU))))) 
+                                               << 8U)) 
+                                           | (0xffU 
+                                              & (IData)(
+                                                        (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                         [0U] 
+                                                         >> 0x18U)))))))
                             : vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_wdata_o)));
         } else {
             if ((4U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))) {
@@ -634,84 +677,179 @@ VL_INLINE_OPT void Vtest_top_core_top::_settle__TOP__test_top__core_top0__3(Vtes
         }
     }
     if (vlTOPp->rst_i) {
-        vlSymsp->TOP__test_top__core_top0.__PVT__ram_wdata_o = 0U;
+        vlSymsp->TOP__test_top__core_top0.__PVT__ram_wdata_o = 0ULL;
     } else {
         if ((8U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))) {
             if ((4U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))) {
                 if ((2U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))) {
-                    vlSymsp->TOP__test_top__core_top0.__PVT__ram_wdata_o = 0U;
+                    vlSymsp->TOP__test_top__core_top0.__PVT__ram_wdata_o = 0ULL;
                 }
             } else {
                 if ((1U & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o) 
                               >> 1U)))) {
                     if ((1U & (~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o)))) {
-                        vlSymsp->TOP__test_top__core_top0.__PVT__ram_wdata_o = 0U;
+                        vlSymsp->TOP__test_top__core_top0.__PVT__ram_wdata_o = 0ULL;
                     }
                 }
             }
         } else {
             vlSymsp->TOP__test_top__core_top0.__PVT__ram_wdata_o 
                 = ((4U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
-                    ? 0U : ((2U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
-                             ? ((1U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
-                                 ? vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o
-                                 : ((0U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                     ? ((0xffff0000U 
-                                         & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                         [0U]) | (0xffffU 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o))
-                                     : ((1U == (3U 
+                    ? 0ULL : ((2U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
+                               ? ((1U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
+                                   ? ((0U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                       ? (((QData)((IData)(
+                                                           (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                            [0U] 
+                                                            >> 0x20U))) 
+                                           << 0x20U) 
+                                          | (QData)((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o)))
+                                       : ((1U == (3U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                           ? (((QData)((IData)(
+                                                               (0xffffffU 
+                                                                & (IData)(
+                                                                          (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                           [0U] 
+                                                                           >> 0x28U))))) 
+                                               << 0x28U) 
+                                              | (((QData)((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o)) 
+                                                  << 8U) 
+                                                 | (QData)((IData)(
+                                                                   (0xffU 
+                                                                    & (IData)(
+                                                                              vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                              [0U]))))))
+                                           : ((2U == 
+                                               (3U 
                                                 & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                         ? ((0xff000000U 
-                                             & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                             [0U]) 
-                                            | ((0xffff00U 
-                                                & (vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
-                                                   << 8U)) 
-                                               | (0xffU 
-                                                  & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                  [0U])))
-                                         : ((0xffff0000U 
-                                             & (vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
-                                                << 0x10U)) 
-                                            | (0xffffU 
+                                               ? (((QData)((IData)(
+                                                                   (0xffffU 
+                                                                    & (IData)(
+                                                                              (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                               [0U] 
+                                                                               >> 0x30U))))) 
+                                                   << 0x30U) 
+                                                  | (((QData)((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o)) 
+                                                      << 0x10U) 
+                                                     | (QData)((IData)(
+                                                                       (0xffffU 
+                                                                        & (IData)(
+                                                                                vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                                [0U]))))))
+                                               : (((QData)((IData)(
+                                                                   (0xffU 
+                                                                    & (IData)(
+                                                                              (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                               [0U] 
+                                                                               >> 0x38U))))) 
+                                                   << 0x38U) 
+                                                  | (((QData)((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o)) 
+                                                      << 0x18U) 
+                                                     | (QData)((IData)(
+                                                                       (0xffffffU 
+                                                                        & (IData)(
+                                                                                vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                                [0U])))))))))
+                                   : ((0U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                       ? ((0xffffffffffff0000ULL 
+                                           & vlSymsp->TOP__test_top.__PVT__host_rdata
+                                           [0U]) | (QData)((IData)(
+                                                                   (0xffffU 
+                                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o))))
+                                       : ((1U == (3U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                           ? ((0xffffffffff000000ULL 
                                                & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                               [0U])))))
-                             : ((1U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
-                                 ? ((0U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                     ? ((0xffffff00U 
-                                         & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                         [0U]) | (0xffU 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o))
-                                     : ((1U == (3U 
+                                               [0U]) 
+                                              | (QData)((IData)(
+                                                                ((0xffff00U 
+                                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
+                                                                     << 8U)) 
+                                                                 | (0xffU 
+                                                                    & (IData)(
+                                                                              vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                              [0U]))))))
+                                           : ((2U == 
+                                               (3U 
                                                 & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                         ? ((0xffff0000U 
-                                             & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                             [0U]) 
-                                            | ((0xff00U 
-                                                & (vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
-                                                   << 8U)) 
-                                               | (0xffU 
-                                                  & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                  [0U])))
-                                         : ((2U == 
-                                             (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
-                                             ? ((0xff000000U 
-                                                 & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                 [0U]) 
-                                                | ((0xff0000U 
-                                                    & (vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
-                                                       << 0x10U)) 
-                                                   | (0xffffU 
-                                                      & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                      [0U])))
-                                             : ((0xff000000U 
-                                                 & (vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
-                                                    << 0x18U)) 
-                                                | (0xffffffU 
+                                               ? (((QData)((IData)(
+                                                                   (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                    [0U] 
+                                                                    >> 0x20U))) 
+                                                   << 0x20U) 
+                                                  | (QData)((IData)(
+                                                                    ((0xffff0000U 
+                                                                      & (vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
+                                                                         << 0x10U)) 
+                                                                     | (0xffffU 
+                                                                        & (IData)(
+                                                                                vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                                [0U]))))))
+                                               : (((QData)((IData)(
+                                                                   (0xffffffU 
+                                                                    & (IData)(
+                                                                              (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                               [0U] 
+                                                                               >> 0x28U))))) 
+                                                   << 0x28U) 
+                                                  | (((QData)((IData)(
+                                                                      (0xffffU 
+                                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o))) 
+                                                      << 0x18U) 
+                                                     | (QData)((IData)(
+                                                                       (0xffffffU 
+                                                                        & (IData)(
+                                                                                vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                                [0U]))))))))))
+                               : ((1U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
+                                   ? ((0U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                       ? ((0xffffffffffffff00ULL 
+                                           & vlSymsp->TOP__test_top.__PVT__host_rdata
+                                           [0U]) | (QData)((IData)(
+                                                                   (0xffU 
+                                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o))))
+                                       : ((1U == (3U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                           ? ((0xffffffffffff0000ULL 
+                                               & vlSymsp->TOP__test_top.__PVT__host_rdata
+                                               [0U]) 
+                                              | (QData)((IData)(
+                                                                ((0xff00U 
+                                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
+                                                                     << 8U)) 
+                                                                 | (0xffU 
+                                                                    & (IData)(
+                                                                              vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                              [0U]))))))
+                                           : ((2U == 
+                                               (3U 
+                                                & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o))
+                                               ? ((0xffffffffff000000ULL 
                                                    & vlSymsp->TOP__test_top.__PVT__host_rdata
-                                                   [0U])))))
-                                 : 0U)));
+                                                   [0U]) 
+                                                  | (QData)((IData)(
+                                                                    ((0xff0000U 
+                                                                      & (vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
+                                                                         << 0x10U)) 
+                                                                     | (0xffffU 
+                                                                        & (IData)(
+                                                                                vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                                [0U]))))))
+                                               : (((QData)((IData)(
+                                                                   (vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                    [0U] 
+                                                                    >> 0x20U))) 
+                                                   << 0x20U) 
+                                                  | (QData)((IData)(
+                                                                    ((0xff000000U 
+                                                                      & (vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
+                                                                         << 0x18U)) 
+                                                                     | (0xffffffU 
+                                                                        & (IData)(
+                                                                                vlSymsp->TOP__test_top.__PVT__host_rdata
+                                                                                [0U])))))))))
+                                   : 0ULL)));
         }
     }
 }
@@ -1442,6 +1580,11 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
     }
     vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_we 
         = ((~ (IData)(vlTOPp->rst_i)) & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_we));
+    vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__load_addr_offset 
+        = ((0xfffff000U & ((- (IData)((1U & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                             >> 0x1fU)))) 
+                           << 0xcU)) | (0xfffU & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                                  >> 0x14U)));
     vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__b_type_offset 
         = (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_addr_o 
            + ((0xfffff000U & ((- (IData)((1U & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
@@ -3252,144 +3395,6 @@ VL_INLINE_OPT void Vtest_top_core_top::_combo__TOP__test_top__core_top0__6(Vtest
                                                               >> 1U) 
                                                              & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o))))))));
     if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
-        if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-            if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                } else {
-                    if ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
-                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                                }
-                            } else {
-                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                            }
-                        } else {
-                            vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                        }
-                    } else {
-                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
-                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                                }
-                            } else {
-                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                            }
-                        } else {
-                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
-                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                                }
-                            } else {
-                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                            }
-                        }
-                    }
-                }
-            } else {
-                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-            }
-        } else {
-            if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                    if ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                    } else {
-                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
-                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                                }
-                            } else {
-                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                            }
-                        } else {
-                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
-                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                                }
-                            } else {
-                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                            }
-                        }
-                    }
-                } else {
-                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o 
-                        = ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                     ? 0U : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                              ? ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                  ? 
-                                                 (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
-                                                  + 
-                                                  ((0xfffff000U 
-                                                    & ((- (IData)(
-                                                                  (1U 
-                                                                   & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
-                                                                      >> 0x1fU)))) 
-                                                       << 0xcU)) 
-                                                   | ((0xfe0U 
-                                                       & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
-                                                          >> 0x14U)) 
-                                                      | (0x1fU 
-                                                         & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
-                                                            >> 7U)))))
-                                                  : 0U)
-                                              : 0U)));
-                }
-            } else {
-                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                    if ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                    } else {
-                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
-                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                                }
-                            } else {
-                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                            }
-                        } else {
-                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
-                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                                }
-                            } else {
-                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
-                            }
-                        }
-                    }
-                } else {
-                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o 
-                        = ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                     ? 0U : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                              ? ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                  ? 
-                                                 (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
-                                                  + 
-                                                  ((0xfffff000U 
-                                                    & ((- (IData)(
-                                                                  (1U 
-                                                                   & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
-                                                                      >> 0x1fU)))) 
-                                                       << 0xcU)) 
-                                                   | (0xfffU 
-                                                      & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
-                                                         >> 0x14U))))
-                                                  : 0U)
-                                              : 0U)));
-                }
-            }
-        }
-    }
-    if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o = 0U;
         if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
             if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
@@ -3581,6 +3586,158 @@ VL_INLINE_OPT void Vtest_top_core_top::_combo__TOP__test_top__core_top0__6(Vtest
     }
     vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_we 
         = ((~ (IData)(vlTOPp->rst_i)) & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_we));
+    if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
+        if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+            if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                } else {
+                    if ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
+                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                                }
+                            } else {
+                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                            }
+                        } else {
+                            vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                        }
+                    } else {
+                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
+                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                                }
+                            } else {
+                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                            }
+                        } else {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
+                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                                }
+                            } else {
+                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                            }
+                        }
+                    }
+                }
+            } else {
+                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+            }
+        } else {
+            if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                    if ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                    } else {
+                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
+                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                                }
+                            } else {
+                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                            }
+                        } else {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
+                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                                }
+                            } else {
+                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                            }
+                        }
+                    }
+                } else {
+                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o 
+                        = ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                     ? 0U : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                              ? ((1U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                  ? 
+                                                 (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
+                                                  + 
+                                                  ((0xfffff000U 
+                                                    & ((- (IData)(
+                                                                  (1U 
+                                                                   & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                                                      >> 0x1fU)))) 
+                                                       << 0xcU)) 
+                                                   | ((0xfe0U 
+                                                       & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                                          >> 0x14U)) 
+                                                      | (0x1fU 
+                                                         & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                                            >> 7U)))))
+                                                  : 0U)
+                                              : 0U)));
+                }
+            } else {
+                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                    if ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                    } else {
+                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
+                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                                }
+                            } else {
+                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                            }
+                        } else {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                if ((1U & (~ vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))) {
+                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                                }
+                            } else {
+                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                            }
+                        }
+                    }
+                } else {
+                    if ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                    } else {
+                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                            vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                        } else {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                if ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o 
+                                        = (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
+                                           + vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__load_addr_offset);
+                                    if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                                  >> 0xeU)))) {
+                                        if ((0x2000U 
+                                             & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                            if ((1U 
+                                                 & (~ 
+                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                                     >> 0xcU)))) {
+                                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o 
+                                                    = 
+                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
+                                                     + vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__load_addr_offset);
+                                            }
+                                        }
+                                    }
+                                } else {
+                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                                }
+                            } else {
+                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o = 0U;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_addr_o = 0U;
         if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {

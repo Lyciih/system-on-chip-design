@@ -32,8 +32,8 @@ void Vtest_top_dpram::_ctor_var_reset() {
     __PVT__we_i = VL_RAND_RESET_I(1);
     __PVT__request_i = VL_RAND_RESET_I(1);
     __PVT__addr_i = VL_RAND_RESET_I(32);
-    __PVT__data_i = VL_RAND_RESET_I(32);
-    __PVT__data_o = VL_RAND_RESET_I(32);
+    __PVT__data_i = VL_RAND_RESET_Q(64);
+    __PVT__data_o = VL_RAND_RESET_Q(64);
     __PVT__inst_ce_i = VL_RAND_RESET_I(1);
     __PVT__pc_i = VL_RAND_RESET_I(32);
     __PVT__inst_o = VL_RAND_RESET_I(32);
@@ -45,4 +45,8 @@ void Vtest_top_dpram::_ctor_var_reset() {
     __Vlvbound3 = VL_RAND_RESET_I(8);
     __Vlvbound4 = VL_RAND_RESET_I(8);
     __Vlvbound5 = VL_RAND_RESET_I(8);
+    __Vlvbound6 = VL_RAND_RESET_I(8);
+    __Vlvbound7 = VL_RAND_RESET_I(8);
+    __Vlvbound8 = VL_RAND_RESET_I(8);
+    __Vlvbound9 = VL_RAND_RESET_I(8);
 }

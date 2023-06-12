@@ -21,14 +21,14 @@ module	test_top(
 	wire				host_gnt		[NrHosts];
 	wire	[`ADDR_WIDTH-1:0]	host_addr		[NrHosts];
 	wire				host_we			[NrHosts];
-	wire	[`DATA_WIDTH*2-1:0]	host_wdata		[NrHosts];
-	wire	[`DATA_WIDTH*2-1:0]	host_rdata		[NrHosts];
+	wire	[`DATA_WIDTH-1:0]	host_wdata		[NrHosts];
+	wire	[`DATA_WIDTH-1:0]	host_rdata		[NrHosts];
 
 	wire				device_req		[NrDevices];
 	wire	[`ADDR_WIDTH-1:0]	device_addr		[NrDevices];
 	wire				device_we		[NrDevices];
-	wire	[`DATA_WIDTH*2-1:0]	device_wdata		[NrDevices];
-	wire	[`DATA_WIDTH*2-1:0]	device_rdata		[NrDevices];
+	wire	[`DATA_WIDTH-1:0]	device_wdata		[NrDevices];
+	wire	[`DATA_WIDTH-1:0]	device_rdata		[NrDevices];
 
 
 	wire	[`ADDR_WIDTH-1:0]	cfg_device_addr_base	[NrDevices];

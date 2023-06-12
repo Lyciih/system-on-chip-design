@@ -26,10 +26,10 @@ VL_MODULE(Vtest_top_dpram) {
     VL_IN8(__PVT__request_i,0,0);
     VL_IN8(__PVT__inst_ce_i,0,0);
     VL_IN(__PVT__addr_i,31,0);
-    VL_IN(__PVT__data_i,31,0);
-    VL_OUT(__PVT__data_o,31,0);
     VL_IN(__PVT__pc_i,31,0);
     VL_OUT(__PVT__inst_o,31,0);
+    VL_IN64(__PVT__data_i,63,0);
+    VL_OUT64(__PVT__data_o,63,0);
     
     // LOCAL SIGNALS
     CData/*7:0*/ __PVT__mem[3145728];
@@ -40,6 +40,10 @@ VL_MODULE(Vtest_top_dpram) {
     CData/*7:0*/ __Vlvbound3;
     CData/*7:0*/ __Vlvbound4;
     CData/*7:0*/ __Vlvbound5;
+    CData/*7:0*/ __Vlvbound6;
+    CData/*7:0*/ __Vlvbound7;
+    CData/*7:0*/ __Vlvbound8;
+    CData/*7:0*/ __Vlvbound9;
     
     // INTERNAL VARIABLES
   private:

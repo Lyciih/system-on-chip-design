@@ -352,6 +352,7 @@ module exe(
 							mem_op_o = `LH;
 						end
 						`INST_LW:begin
+							mem_addr_o = $signed(op1_i)+$signed(load_addr_offset);
 							mem_op_o = `LW;
 						end
 						`INST_LBU:begin

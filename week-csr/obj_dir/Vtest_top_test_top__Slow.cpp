@@ -38,8 +38,8 @@ void Vtest_top_test_top::_initial__TOP__test_top__1(Vtest_top__Syms* __restrict 
     VL_DEBUG_IF(VL_DBG_MSGF("+      Vtest_top_test_top::_initial__TOP__test_top__1\n"); );
     Vtest_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    vlSymsp->TOP__test_top.__PVT__timer0__DOT__clk_count = 0U;
-    vlSymsp->TOP__test_top.__Vcellout__timer0__second_count = 0U;
+    vlSymsp->TOP__test_top.__PVT__timer0__DOT__clk_count = 0ULL;
+    vlSymsp->TOP__test_top.__Vcellout__timer0__second_count = 0ULL;
     vlSymsp->TOP__test_top.__PVT__console0__DOT__sim_finish = 0U;
     vlSymsp->TOP__test_top.__PVT__console0__DOT__log_fd = VL_FOPEN_NN(
                                                                       std::string("./log/console.log")
@@ -312,10 +312,10 @@ void Vtest_top_test_top::_ctor_var_reset() {
             __PVT__host_we[__Vi0] = VL_RAND_RESET_I(1);
     }}
     { int __Vi0=0; for (; __Vi0<1; ++__Vi0) {
-            __PVT__host_wdata[__Vi0] = VL_RAND_RESET_I(32);
+            __PVT__host_wdata[__Vi0] = VL_RAND_RESET_Q(64);
     }}
     { int __Vi0=0; for (; __Vi0<1; ++__Vi0) {
-            __PVT__host_rdata[__Vi0] = VL_RAND_RESET_I(32);
+            __PVT__host_rdata[__Vi0] = VL_RAND_RESET_Q(64);
     }}
     { int __Vi0=0; for (; __Vi0<3; ++__Vi0) {
             __PVT__device_req[__Vi0] = VL_RAND_RESET_I(1);
@@ -327,10 +327,10 @@ void Vtest_top_test_top::_ctor_var_reset() {
             __PVT__device_we[__Vi0] = VL_RAND_RESET_I(1);
     }}
     { int __Vi0=0; for (; __Vi0<3; ++__Vi0) {
-            __PVT__device_wdata[__Vi0] = VL_RAND_RESET_I(32);
+            __PVT__device_wdata[__Vi0] = VL_RAND_RESET_Q(64);
     }}
     { int __Vi0=0; for (; __Vi0<3; ++__Vi0) {
-            __PVT__device_rdata[__Vi0] = VL_RAND_RESET_I(32);
+            __PVT__device_rdata[__Vi0] = VL_RAND_RESET_Q(64);
     }}
     { int __Vi0=0; for (; __Vi0<3; ++__Vi0) {
             __PVT__cfg_device_addr_base[__Vi0] = VL_RAND_RESET_I(32);
@@ -346,10 +346,10 @@ void Vtest_top_test_top::_ctor_var_reset() {
             __Vcellinp__u_bus__cfg_device_addr_base[__Vi0] = VL_RAND_RESET_I(32);
     }}
     { int __Vi0=0; for (; __Vi0<3; ++__Vi0) {
-            __Vcellinp__u_bus__device_rdata_i[__Vi0] = VL_RAND_RESET_I(32);
+            __Vcellinp__u_bus__device_rdata_i[__Vi0] = VL_RAND_RESET_Q(64);
     }}
     { int __Vi0=0; for (; __Vi0<3; ++__Vi0) {
-            __Vcellout__u_bus__device_wdata_o[__Vi0] = VL_RAND_RESET_I(32);
+            __Vcellout__u_bus__device_wdata_o[__Vi0] = VL_RAND_RESET_Q(64);
     }}
     { int __Vi0=0; for (; __Vi0<3; ++__Vi0) {
             __Vcellout__u_bus__device_we_o[__Vi0] = VL_RAND_RESET_I(1);
@@ -361,10 +361,10 @@ void Vtest_top_test_top::_ctor_var_reset() {
             __Vcellout__u_bus__device_req_o[__Vi0] = VL_RAND_RESET_I(1);
     }}
     { int __Vi0=0; for (; __Vi0<1; ++__Vi0) {
-            __Vcellout__u_bus__host_rdata_o[__Vi0] = VL_RAND_RESET_I(32);
+            __Vcellout__u_bus__host_rdata_o[__Vi0] = VL_RAND_RESET_Q(64);
     }}
     { int __Vi0=0; for (; __Vi0<1; ++__Vi0) {
-            __Vcellinp__u_bus__host_wdata_i[__Vi0] = VL_RAND_RESET_I(32);
+            __Vcellinp__u_bus__host_wdata_i[__Vi0] = VL_RAND_RESET_Q(64);
     }}
     { int __Vi0=0; for (; __Vi0<1; ++__Vi0) {
             __Vcellinp__u_bus__host_we_i[__Vi0] = VL_RAND_RESET_I(1);
@@ -378,17 +378,17 @@ void Vtest_top_test_top::_ctor_var_reset() {
     { int __Vi0=0; for (; __Vi0<1; ++__Vi0) {
             __Vcellinp__u_bus__host_req_i[__Vi0] = VL_RAND_RESET_I(1);
     }}
-    __Vcellout__timer0__second_count = VL_RAND_RESET_I(32);
+    __Vcellout__timer0__second_count = VL_RAND_RESET_Q(64);
     __PVT__u_bus__DOT__host_sel_req = VL_RAND_RESET_I(1);
     __PVT__u_bus__DOT__device_sel_req = VL_RAND_RESET_I(2);
     __PVT__u_bus__DOT__device_sel_resp = VL_RAND_RESET_I(2);
     u_bus__DOT____Vlvbound1 = VL_RAND_RESET_I(1);
     u_bus__DOT____Vlvbound2 = VL_RAND_RESET_I(1);
     u_bus__DOT____Vlvbound3 = VL_RAND_RESET_I(32);
-    u_bus__DOT____Vlvbound4 = VL_RAND_RESET_I(32);
-    u_bus__DOT____Vlvbound10 = VL_RAND_RESET_I(32);
+    u_bus__DOT____Vlvbound4 = VL_RAND_RESET_Q(64);
+    u_bus__DOT____Vlvbound10 = VL_RAND_RESET_Q(64);
     u_bus__DOT____Vlvbound12 = VL_RAND_RESET_I(1);
     __PVT__console0__DOT__sim_finish = VL_RAND_RESET_I(3);
     __PVT__console0__DOT__log_fd = 0;
-    __PVT__timer0__DOT__clk_count = VL_RAND_RESET_I(32);
+    __PVT__timer0__DOT__clk_count = VL_RAND_RESET_Q(64);
 }

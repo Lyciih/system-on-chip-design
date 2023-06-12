@@ -25,13 +25,13 @@ VL_INLINE_OPT void Vtest_top_test_top::_settle__TOP__test_top__4(Vtest_top__Syms
         = vlSymsp->TOP__test_top.__PVT__device_rdata
         [2U];
     if (((~ (IData)(vlTOPp->rst_i)) & (IData)(vlSymsp->TOP__test_top.__PVT__u_bus__DOT__host_sel_req))) {
-        vlSymsp->TOP__test_top.__Vcellout__u_bus__host_rdata_o[0U] = 0U;
+        vlSymsp->TOP__test_top.__Vcellout__u_bus__host_rdata_o[0U] = 0ULL;
     } else {
         vlSymsp->TOP__test_top.u_bus__DOT____Vlvbound10 
             = ((2U >= (IData)(vlSymsp->TOP__test_top.__PVT__u_bus__DOT__device_sel_resp))
                 ? vlSymsp->TOP__test_top.__Vcellinp__u_bus__device_rdata_i
                [vlSymsp->TOP__test_top.__PVT__u_bus__DOT__device_sel_resp]
-                : 0U);
+                : 0ULL);
         vlSymsp->TOP__test_top.__Vcellout__u_bus__host_rdata_o[0U] 
             = vlSymsp->TOP__test_top.u_bus__DOT____Vlvbound10;
     }
@@ -52,33 +52,33 @@ VL_INLINE_OPT void Vtest_top_test_top::_settle__TOP__test_top__5(Vtest_top__Syms
             = ((0U >= (IData)(vlSymsp->TOP__test_top.__PVT__u_bus__DOT__host_sel_req))
                 ? vlSymsp->TOP__test_top.__Vcellinp__u_bus__host_wdata_i
                [vlSymsp->TOP__test_top.__PVT__u_bus__DOT__host_sel_req]
-                : 0U);
+                : 0ULL);
         vlSymsp->TOP__test_top.__Vcellout__u_bus__device_wdata_o[0U] 
             = vlSymsp->TOP__test_top.u_bus__DOT____Vlvbound4;
     } else {
-        vlSymsp->TOP__test_top.__Vcellout__u_bus__device_wdata_o[0U] = 0U;
+        vlSymsp->TOP__test_top.__Vcellout__u_bus__device_wdata_o[0U] = 0ULL;
     }
     if ((1U == (IData)(vlSymsp->TOP__test_top.__PVT__u_bus__DOT__device_sel_req))) {
         vlSymsp->TOP__test_top.u_bus__DOT____Vlvbound4 
             = ((0U >= (IData)(vlSymsp->TOP__test_top.__PVT__u_bus__DOT__host_sel_req))
                 ? vlSymsp->TOP__test_top.__Vcellinp__u_bus__host_wdata_i
                [vlSymsp->TOP__test_top.__PVT__u_bus__DOT__host_sel_req]
-                : 0U);
+                : 0ULL);
         vlSymsp->TOP__test_top.__Vcellout__u_bus__device_wdata_o[1U] 
             = vlSymsp->TOP__test_top.u_bus__DOT____Vlvbound4;
     } else {
-        vlSymsp->TOP__test_top.__Vcellout__u_bus__device_wdata_o[1U] = 0U;
+        vlSymsp->TOP__test_top.__Vcellout__u_bus__device_wdata_o[1U] = 0ULL;
     }
     if ((2U == (IData)(vlSymsp->TOP__test_top.__PVT__u_bus__DOT__device_sel_req))) {
         vlSymsp->TOP__test_top.u_bus__DOT____Vlvbound4 
             = ((0U >= (IData)(vlSymsp->TOP__test_top.__PVT__u_bus__DOT__host_sel_req))
                 ? vlSymsp->TOP__test_top.__Vcellinp__u_bus__host_wdata_i
                [vlSymsp->TOP__test_top.__PVT__u_bus__DOT__host_sel_req]
-                : 0U);
+                : 0ULL);
         vlSymsp->TOP__test_top.__Vcellout__u_bus__device_wdata_o[2U] 
             = vlSymsp->TOP__test_top.u_bus__DOT____Vlvbound4;
     } else {
-        vlSymsp->TOP__test_top.__Vcellout__u_bus__device_wdata_o[2U] = 0U;
+        vlSymsp->TOP__test_top.__Vcellout__u_bus__device_wdata_o[2U] = 0ULL;
     }
     vlSymsp->TOP__test_top.__PVT__device_wdata[0U] 
         = vlSymsp->TOP__test_top.__Vcellout__u_bus__device_wdata_o
@@ -99,11 +99,11 @@ VL_INLINE_OPT void Vtest_top_test_top::_sequent__TOP__test_top__6(Vtest_top__Sym
     // Body
     __Vdly__console0__DOT__sim_finish = vlSymsp->TOP__test_top.__PVT__console0__DOT__sim_finish;
     vlSymsp->TOP__test_top.__PVT__timer0__DOT__clk_count 
-        = ((IData)(1U) + vlSymsp->TOP__test_top.__PVT__timer0__DOT__clk_count);
-    if ((0x2710U == vlSymsp->TOP__test_top.__PVT__timer0__DOT__clk_count)) {
+        = (1ULL + vlSymsp->TOP__test_top.__PVT__timer0__DOT__clk_count);
+    if ((0x2710ULL == vlSymsp->TOP__test_top.__PVT__timer0__DOT__clk_count)) {
         vlSymsp->TOP__test_top.__Vcellout__timer0__second_count 
-            = ((IData)(1U) + vlSymsp->TOP__test_top.__Vcellout__timer0__second_count);
-        vlSymsp->TOP__test_top.__PVT__timer0__DOT__clk_count = 0U;
+            = (1ULL + vlSymsp->TOP__test_top.__Vcellout__timer0__second_count);
+        vlSymsp->TOP__test_top.__PVT__timer0__DOT__clk_count = 0ULL;
     }
     if (vlTOPp->rst_i) {
         __Vdly__console0__DOT__sim_finish = 0U;
@@ -114,16 +114,16 @@ VL_INLINE_OPT void Vtest_top_test_top::_sequent__TOP__test_top__6(Vtest_top__Sym
             if (VL_UNLIKELY((4U == (0xffU & vlSymsp->TOP__test_top.__PVT__device_addr
                                     [1U])))) {
                 VL_FWRITEF(vlSymsp->TOP__test_top.__PVT__console0__DOT__log_fd,"%c",
-                           8,(0xffU & vlSymsp->TOP__test_top.__PVT__device_wdata
-                              [1U]));
-                VL_WRITEF("%c",8,(0xffU & vlSymsp->TOP__test_top.__PVT__device_wdata
-                                  [1U]));
+                           8,(0xffU & (IData)(vlSymsp->TOP__test_top.__PVT__device_wdata
+                                              [1U])));
+                VL_WRITEF("%c",8,(0xffU & (IData)(vlSymsp->TOP__test_top.__PVT__device_wdata
+                                                  [1U])));
                 if (vlSymsp->TOP__test_top.__PVT__console0__DOT__log_fd) { VL_FFLUSH_I(vlSymsp->TOP__test_top.__PVT__console0__DOT__log_fd); }
             } else {
                 if ((8U == (0xffU & vlSymsp->TOP__test_top.__PVT__device_addr
                             [1U]))) {
-                    if ((vlSymsp->TOP__test_top.__PVT__device_wdata
-                         [1U] & (0U == (IData)(vlSymsp->TOP__test_top.__PVT__console0__DOT__sim_finish)))) {
+                    if (((IData)(vlSymsp->TOP__test_top.__PVT__device_wdata
+                                 [1U]) & (0U == (IData)(vlSymsp->TOP__test_top.__PVT__console0__DOT__sim_finish)))) {
                         __Vdly__console0__DOT__sim_finish = 1U;
                     }
                 }
