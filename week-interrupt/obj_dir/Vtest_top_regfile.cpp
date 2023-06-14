@@ -23,17 +23,6 @@ VL_INLINE_OPT void Vtest_top_regfile::_settle__TOP__test_top__core_top0__regfile
     VL_DEBUG_IF(VL_DBG_MSGF("+          Vtest_top_regfile::_settle__TOP__test_top__core_top0__regfile0__2\n"); );
     Vtest_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__rdata1_o 
-        = ((0U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o))
-            ? 0U : (((((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o) 
-                       == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_waddr_o)) 
-                      & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_we_o)) 
-                     & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_re_o))
-                     ? vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_wdata_o
-                     : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_re_o)
-                         ? vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__regs
-                        [vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o]
-                         : 0U)));
     vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__rdata2_o 
         = ((0U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_addr_o))
             ? 0U : (((((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_addr_o) 
@@ -44,6 +33,17 @@ VL_INLINE_OPT void Vtest_top_regfile::_settle__TOP__test_top__core_top0__regfile
                      : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_re_o)
                          ? vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__regs
                         [vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_addr_o]
+                         : 0U)));
+    vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__rdata1_o 
+        = ((0U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o))
+            ? 0U : (((((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o) 
+                       == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_waddr_o)) 
+                      & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_we_o)) 
+                     & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_re_o))
+                     ? vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_wdata_o
+                     : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_re_o)
+                         ? vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__regs
+                        [vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o]
                          : 0U)));
 }
 

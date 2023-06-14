@@ -294,9 +294,69 @@ VL_INLINE_OPT void Vtest_top_core_top::_settle__TOP__test_top__core_top0__2(Vtes
         }
     }
     if (vlTOPp->rst_i) {
-        vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__op1_o_final = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__op2_o_final = 0U;
+        vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__op1_o_final = 0U;
     } else {
+        vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__op2_o_final 
+            = ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                ? ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                    ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                        ? 0U : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                 ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                          ? 0U : ((2U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 
+                                                  ((1U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__rdata2_o
+                                                    : 0U)
+                                                   : 0U))))
+                    : 0U) : ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                              ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                  ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                      ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                               ? 0U
+                                               : ((2U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 
+                                                  ((1U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__rdata2_o
+                                                    : 0U)
+                                                   : 0U)))
+                                  : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                      ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                               ? 0U
+                                               : ((2U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 
+                                                  ((1U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__rdata2_o
+                                                    : 0U)
+                                                   : 0U))))
+                              : ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                  ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                      ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                               ? ((2U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 
+                                                  ((1U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 
+                                                   (0xfffff000U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    : 0U)
+                                                   : 0U)
+                                               : ((2U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 
+                                                  ((1U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__i_op2_o
+                                                    : 0U)
+                                                   : 0U)))
+                                  : 0U)));
         vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__op1_o_final 
             = ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
                 ? ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
@@ -415,66 +475,6 @@ VL_INLINE_OPT void Vtest_top_core_top::_settle__TOP__test_top__core_top0__2(Vtes
                                                     ? vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__rdata1_o
                                                     : 0U)
                                                    : 0U))))));
-        vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__op2_o_final 
-            = ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                ? ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                    ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                        ? 0U : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                 ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                          ? 0U : ((2U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((1U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__rdata2_o
-                                                    : 0U)
-                                                   : 0U))))
-                    : 0U) : ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                              ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                  ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                      ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? 0U
-                                               : ((2U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((1U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__rdata2_o
-                                                    : 0U)
-                                                   : 0U)))
-                                  : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                      ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? 0U
-                                               : ((2U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((1U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? vlSymsp->TOP__test_top__core_top0__regfile0.__PVT__rdata2_o
-                                                    : 0U)
-                                                   : 0U))))
-                              : ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                  ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                      ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? ((2U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((1U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   (0xfffff000U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    : 0U)
-                                                   : 0U)
-                                               : ((2U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((1U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__i_op2_o
-                                                    : 0U)
-                                                   : 0U)))
-                                  : 0U)));
     }
 }
 
@@ -531,7 +531,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
     WData/*95:0*/ __Vtemp22[3];
     WData/*95:0*/ __Vtemp23[3];
     WData/*95:0*/ __Vtemp24[3];
-    IData/*31:0*/ __Vtemp33;
+    IData/*31:0*/ __Vtemp34;
     QData/*63:0*/ __Vdly__csr0__DOT__minstret;
     QData/*63:0*/ __Vtemp11;
     QData/*63:0*/ __Vtemp15;
@@ -823,23 +823,53 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
         vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__rs1_temp = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__rs2_temp = 0U;
     }
-    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_we_o 
-        = ((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o));
+    vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__exception 
+        = (0U != vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_ctrl_exception);
     if (vlTOPp->rst_i) {
+        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_exception = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_waddr_o = 0U;
-        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_wdata_o = 0U;
     } else {
+        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_exception 
+            = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                ? 0U : ((IData)(vlTOPp->rst_i) ? 0U
+                         : vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_exe_exception));
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_waddr_o 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o;
+            = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                ? 0U : (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o));
+    }
+    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_we_o 
+        = ((IData)(vlTOPp->rst_i) | ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable) 
+                                     | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o)));
+    if (vlTOPp->rst_i) {
+        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_wdata_o = 0U;
+        vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_exe_exception = 0U;
+    } else {
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_wdata_o 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_wdata_o;
+            = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_wdata_o);
+        vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_exe_exception 
+            = ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
+                       >> 2U) & ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
+                                 >> 3U))) ? vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_exe_exception
+                : ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
+                           >> 2U) & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
+                                        >> 3U)))) ? 0U
+                    : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
+                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable))
+                        ? 0U : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__except_ecall) 
+                                 << 1U) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__except_mret)))));
     }
     __Vdly__pc_wire = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ce_wire)
                         ? ((1U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o))
                             ? vlSymsp->TOP__test_top__core_top0.__PVT__pc_wire
-                            : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
-                                ? vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_addr_o
-                                : ((IData)(4U) + vlSymsp->TOP__test_top__core_top0.__PVT__pc_wire)))
+                            : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
+                                | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable))
+                                ? ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__isr_addr
+                                    : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
+                                        ? vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_addr_o
+                                        : 0U)) : ((IData)(4U) 
+                                                  + vlSymsp->TOP__test_top__core_top0.__PVT__pc_wire)))
                         : 0U);
     vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o 
         = ((IData)(vlTOPp->rst_i) ? 0U : ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
@@ -854,7 +884,8 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                                    ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                                     >> 3U))))
                                                ? 0U
-                                               : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
+                                               : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
+                                                   | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable))
                                                    ? 0U
                                                    : (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg_waddr_o)))));
     vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_we_o 
@@ -868,7 +899,9 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                                  & (~ 
                                                     ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                                      >> 3U)))) 
-                                             & ((~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)) 
+                                             & ((~ 
+                                                 ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
+                                                  | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable))) 
                                                 & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg_we_o)))));
     vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_id_rd_o 
         = ((IData)(vlTOPp->rst_i) ? 0U : (0x1fU & (
@@ -887,7 +920,8 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                                             >> 3U))))
                                                      ? 0U
                                                      : 
-                                                    ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
+                                                    (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
+                                                      | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable))
                                                       ? 0U
                                                       : 
                                                      (vlSymsp->TOP__test_top__core_top0.__PVT__id_inst_o 
@@ -903,13 +937,16 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                                  & (~ 
                                                     ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                                      >> 3U)))) 
-                                             & ((~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)) 
+                                             & ((~ 
+                                                 ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
+                                                  | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable))) 
                                                 & (3U 
                                                    == 
                                                    (0x7fU 
                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__id_inst_o))))));
     if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o = 0U;
+        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_inst_addr = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_addr_o = 0U;
     } else {
         vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o 
@@ -919,8 +956,13 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                 : ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                            >> 1U) & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                         >> 2U)))) ? 0U
-                    : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
+                    : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
+                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable))
                         ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__pc_wire)));
+        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_inst_addr 
+            = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                ? 0U : ((IData)(vlTOPp->rst_i) ? 0U
+                         : vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_addr_o));
         vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_addr_o 
             = ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                        >> 2U) & ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
@@ -928,21 +970,72 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                 : ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                            >> 2U) & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                         >> 3U)))) ? 0U
-                    : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
+                    : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
+                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable))
                         ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__id_inst_addr_o)));
     }
-    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_we 
-        = ((~ (IData)(vlTOPp->rst_i)) & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_we));
     if (vlTOPp->rst_i) {
-        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_waddr = 0U;
+        vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_type = 0U;
+    } else {
+        if ((2U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))) {
+            if (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mstatus_ie) 
+                 & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__eip))) {
+                vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_type = 1U;
+            } else {
+                if (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mstatus_ie) 
+                     & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__sip))) {
+                    vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_type = 1U;
+                } else {
+                    if (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mstatus_ie) 
+                         & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__tip))) {
+                        vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_type = 1U;
+                    } else {
+                        if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_ctrl_exception)) {
+                            vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_type = 0U;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    if (vlTOPp->rst_i) {
+        vlSymsp->TOP__test_top__core_top0.__PVT__cause = 0U;
+    } else {
+        if ((2U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))) {
+            if (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mstatus_ie) 
+                 & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__eip))) {
+                vlSymsp->TOP__test_top__core_top0.__PVT__cause = 0xbU;
+            } else {
+                if (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mstatus_ie) 
+                     & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__sip))) {
+                    vlSymsp->TOP__test_top__core_top0.__PVT__cause = 3U;
+                } else {
+                    if (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mstatus_ie) 
+                         & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__tip))) {
+                        vlSymsp->TOP__test_top__core_top0.__PVT__cause = 7U;
+                    } else {
+                        if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_ctrl_exception)) {
+                            vlSymsp->TOP__test_top__core_top0.__PVT__cause = 0xbU;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_waddr 
+        = ((IData)(vlTOPp->rst_i) ? 0U : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                                           ? 0U : (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_waddr)));
+    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_we 
+        = ((~ (IData)(vlTOPp->rst_i)) & ((~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)) 
+                                         & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_we)));
+    if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_wdata = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op2_o = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mcycle = 0ULL;
     } else {
-        vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_waddr 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_waddr;
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_wdata 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_wdata;
+            = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_wdata);
         vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op2_o 
             = ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                        >> 2U) & ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
@@ -950,7 +1043,8 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                 : ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                            >> 2U) & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                         >> 3U)))) ? 0U
-                    : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
+                    : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
+                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable))
                         ? 0U : ((IData)(vlTOPp->rst_i)
                                  ? 0U : ((((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_re_o) 
                                            & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o)) 
@@ -989,10 +1083,6 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                 = vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_wdata;
         }
     }
-    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_we_o 
-        = ((~ (IData)(vlTOPp->rst_i)) & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_we_o));
-    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
-        = ((IData)(vlTOPp->rst_i) ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_data_o);
     if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtval = 0U;
     } else {
@@ -1002,6 +1092,12 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                 = vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_wdata;
         }
     }
+    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_we_o 
+        = ((~ (IData)(vlTOPp->rst_i)) & ((~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)) 
+                                         & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_we_o)));
+    vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
+        = ((IData)(vlTOPp->rst_i) ? 0U : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                                           ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_data_o));
     if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__satp = 0U;
     } else {
@@ -1110,7 +1206,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                 = vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_wdata;
         }
     }
-    __Vtemp33 = ((IData)(vlTOPp->rst_i) ? 0x13U : (
+    __Vtemp34 = ((IData)(vlTOPp->rst_i) ? 0x13U : (
                                                    (1U 
                                                     & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                                         >> 1U) 
@@ -1126,7 +1222,8 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                                             >> 2U))))
                                                      ? 0x13U
                                                      : 
-                                                    ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
+                                                    (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
+                                                      | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable))
                                                       ? 0x13U
                                                       : 
                                                      ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ce_wire)
@@ -1194,7 +1291,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                                                  : 0U))))
                                                        : 0U)))));
     vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-        = __Vtemp33;
+        = __Vtemp34;
     if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o = 0x13U;
         vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o = 0U;
@@ -1207,7 +1304,8 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                 : ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                            >> 2U) & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                         >> 3U)))) ? 0x13U
-                    : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
+                    : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
+                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable))
                         ? 0x13U : vlSymsp->TOP__test_top__core_top0.__PVT__id_inst_o)));
         vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
             = ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
@@ -1216,7 +1314,8 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                 : ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                            >> 2U) & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                         >> 3U)))) ? 0U
-                    : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
+                    : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
+                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable))
                         ? 0U : ((IData)(vlTOPp->rst_i)
                                  ? 0U : (((((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_re_o) 
                                             & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o)) 
@@ -1233,12 +1332,15 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                               ? vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_wdata_o
                                               : vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__op1_o_final))))));
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o;
+            = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o);
     }
     vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__minstret 
         = __Vdly__csr0__DOT__minstret;
     vlSymsp->TOP__test_top__core_top0.__PVT__pc_wire 
         = __Vdly__pc_wire;
+    vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S 
+        = ((IData)(vlTOPp->rst_i) ? 1U : (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S_nxt));
     vlSymsp->TOP__test_top__core_top0.__PVT__ram_wdata_o 
         = vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o;
     if (vlTOPp->rst_i) {
@@ -1246,12 +1348,15 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
         vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_waddr = 0U;
     } else {
         vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_wdata 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_wdata;
+            = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_wdata);
         vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_waddr 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_waddr;
+            = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                ? 0U : (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_waddr));
     }
     vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_we 
-        = ((~ (IData)(vlTOPp->rst_i)) & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_we));
+        = ((~ (IData)(vlTOPp->rst_i)) & ((~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)) 
+                                         & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_we)));
     vlSymsp->TOP__test_top__core_top0.__PVT__ce_wire 
         = (1U & (~ (IData)(vlTOPp->rst_i)));
     vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__i_op2_o 
@@ -1336,6 +1441,66 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                               | (0x1eU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                                     >> 7U))))));
+    vlSymsp->TOP__test_top__core_top0.__PVT__epc_we 
+        = (1U & ((~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                     >> 3U)) & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                                 >> 2U) & ((~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                                               >> 1U)) 
+                                           & (~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))))));
+    vlSymsp->TOP__test_top__core_top0.__PVT__mstatus_ie_clear 
+        = (1U & ((~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                     >> 3U)) & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                                 >> 2U) & ((~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                                               >> 1U)) 
+                                           & (~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))))));
+    vlSymsp->TOP__test_top__core_top0.__PVT__cause_we 
+        = (1U & ((~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                     >> 3U)) & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                                 >> 2U) & ((~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                                               >> 1U)) 
+                                           & (~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))))));
+    vlSymsp->TOP__test_top__core_top0.__PVT__mstatus_ie_set 
+        = (1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                  >> 3U) & ((~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                                >> 2U)) & ((~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                                               >> 1U)) 
+                                           & (~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))))));
+    vlSymsp->TOP__test_top__core_top0.__PVT__isr_addr 
+        = ((8U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))
+            ? ((4U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))
+                ? 0U : ((2U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))
+                         ? 0U : ((1U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))
+                                  ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__csr_interrupt_ctrl_mepc)))
+            : ((4U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))
+                ? ((2U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))
+                    ? 0U : ((1U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))
+                             ? 0U : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_type)
+                                      ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__mtvec)
+                                          ? ((0xfffffffcU 
+                                              & vlSymsp->TOP__test_top__core_top0.__PVT__mtvec) 
+                                             + ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__cause) 
+                                                << 2U))
+                                          : (0xfffffffcU 
+                                             & vlSymsp->TOP__test_top__core_top0.__PVT__mtvec))
+                                      : (0xfffffffcU 
+                                         & vlSymsp->TOP__test_top__core_top0.__PVT__mtvec))))
+                : 0U));
+    vlSymsp->TOP__test_top__core_top0.__Vtableidx1 
+        = ((0x20U & (vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_ctrl_exception 
+                     << 5U)) | ((0x10U & (((((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mstatus_ie) 
+                                             & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__eip) 
+                                                 | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__tip)) 
+                                                | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__sip))) 
+                                            << 4U) 
+                                           | (0xfffffff0U 
+                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_ctrl_exception 
+                                                 << 3U))) 
+                                          | (vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_ctrl_exception 
+                                             << 4U))) 
+                                | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S)));
+    vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S_nxt 
+        = vlSymsp->TOP__test_top__core_top0.__Vtable1___PVT__interrupt_ctrl0__DOT__S_nxt
+        [vlSymsp->TOP__test_top__core_top0.__Vtableidx1];
     vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__w_sepc 
         = ((0x141U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_waddr)) 
            & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_we));
@@ -1346,25 +1511,434 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__5(Vte
     Vtest_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_we_o 
-        = ((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_we_o));
+        = ((IData)(vlTOPp->rst_i) | ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable) 
+                                     | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_we_o)));
     if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_waddr_o = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_wdata_o = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o = 0U;
     } else {
         vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_waddr_o 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_waddr_o;
+            = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                ? 0U : (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_waddr_o));
         vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_wdata_o 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_wdata_o;
+            = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_wdata_o);
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_op_o;
+            = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable)
+                ? 0U : (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_op_o));
     }
+    vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_pipe_ctrl_int_enable 
+        = (1U & ((8U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))
+                  ? ((~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                         >> 2U)) & ((~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                                        >> 1U)) & (~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))))
+                  : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                      >> 2U) & ((~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                                    >> 1U)) & (~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))))));
 }
 
 VL_INLINE_OPT void Vtest_top_core_top::_combo__TOP__test_top__core_top0__6(Vtest_top__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+        Vtest_top_core_top::_combo__TOP__test_top__core_top0__6\n"); );
     Vtest_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
+    vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_ctrl_inst_addr 
+        = ((IData)(vlTOPp->rst_i) ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_inst_addr);
+    if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
+        vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__except_ecall = 0U;
+        if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)) {
+            if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)) {
+                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)) {
+                    if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                  >> 3U)))) {
+                        if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                      >> 2U)))) {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)) {
+                                if ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)) {
+                                    if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                  >> 0xeU)))) {
+                                        if ((1U & (~ 
+                                                   (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                    >> 0xdU)))) {
+                                            if ((1U 
+                                                 & (~ 
+                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                     >> 0xcU)))) {
+                                                if (
+                                                    ((0U 
+                                                      == 
+                                                      (0x7fU 
+                                                       & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                          >> 0x19U))) 
+                                                     & (0U 
+                                                        == 
+                                                        (0x1fU 
+                                                         & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                            >> 0x14U))))) {
+                                                    vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__except_ecall = 1U;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    vlSymsp->TOP__test_top__core_top0.__PVT__id_reg_waddr_o 
+        = ((IData)(vlTOPp->rst_i) ? 0U : (0x1fU & (
+                                                   (0x40U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 
+                                                   ((0x20U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    ((0x10U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     ((8U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? 0U
+                                                       : 
+                                                      ((4U 
+                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                        ? 0U
+                                                        : 
+                                                       ((2U 
+                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                         ? 
+                                                        ((1U 
+                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                          ? 
+                                                         ((0x4000U 
+                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                           ? 
+                                                          ((0x2000U 
+                                                            & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                            ? 
+                                                           (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                            >> 7U)
+                                                            : 
+                                                           ((0x1000U 
+                                                             & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                             ? 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U)
+                                                             : 0U))
+                                                           : 
+                                                          ((0x2000U 
+                                                            & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                            ? 
+                                                           (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                            >> 7U)
+                                                            : 
+                                                           ((0x1000U 
+                                                             & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                             ? 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U)
+                                                             : 0U)))
+                                                          : 0U)
+                                                         : 0U)))
+                                                      : 
+                                                     ((8U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? 
+                                                      ((4U 
+                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                        ? 
+                                                       ((2U 
+                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                         ? 
+                                                        ((1U 
+                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                          ? 
+                                                         (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                          >> 7U)
+                                                          : 0U)
+                                                         : 0U)
+                                                        : 0U)
+                                                       : 
+                                                      ((4U 
+                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                        ? 
+                                                       ((2U 
+                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                         ? 
+                                                        ((1U 
+                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                          ? 
+                                                         (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                          >> 7U)
+                                                          : 0U)
+                                                         : 0U)
+                                                        : 0U)))
+                                                     : 0U)
+                                                    : 
+                                                   ((0x20U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    ((0x10U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     ((8U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? 0U
+                                                       : 
+                                                      ((4U 
+                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                        ? 
+                                                       ((2U 
+                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                         ? 
+                                                        ((1U 
+                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                          ? 
+                                                         (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                          >> 7U)
+                                                          : 0U)
+                                                         : 0U)
+                                                        : 
+                                                       ((2U 
+                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                         ? 
+                                                        ((1U 
+                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                          ? 
+                                                         ((0x4000U 
+                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                           ? 
+                                                          ((0x2000U 
+                                                            & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                            ? 
+                                                           ((0x1000U 
+                                                             & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                             ? 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U)
+                                                             : 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U))
+                                                            : 
+                                                           ((0x1000U 
+                                                             & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                             ? 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U)
+                                                             : 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U)))
+                                                           : 
+                                                          ((0x2000U 
+                                                            & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                            ? 
+                                                           ((0x1000U 
+                                                             & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                             ? 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U)
+                                                             : 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U))
+                                                            : 
+                                                           ((0x1000U 
+                                                             & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                             ? 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U)
+                                                             : 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U))))
+                                                          : 0U)
+                                                         : 0U)))
+                                                      : 0U)
+                                                     : 
+                                                    ((0x10U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     ((8U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? 0U
+                                                       : 
+                                                      ((4U 
+                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                        ? 
+                                                       ((2U 
+                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                         ? 
+                                                        ((1U 
+                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                          ? 
+                                                         (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                          >> 7U)
+                                                          : 0U)
+                                                         : 0U)
+                                                        : 
+                                                       ((2U 
+                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                         ? 
+                                                        ((1U 
+                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                          ? 
+                                                         ((0x4000U 
+                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                           ? 
+                                                          ((0x2000U 
+                                                            & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                            ? 
+                                                           ((0x1000U 
+                                                             & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                             ? 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U)
+                                                             : 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U))
+                                                            : 
+                                                           ((0x1000U 
+                                                             & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                             ? 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U)
+                                                             : 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U)))
+                                                           : 
+                                                          ((0x2000U 
+                                                            & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                            ? 
+                                                           ((0x1000U 
+                                                             & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                             ? 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U)
+                                                             : 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U))
+                                                            : 
+                                                           ((0x1000U 
+                                                             & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                             ? 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U)
+                                                             : 
+                                                            (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                             >> 7U))))
+                                                          : 0U)
+                                                         : 0U)))
+                                                      : 
+                                                     ((8U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? 0U
+                                                       : 
+                                                      ((4U 
+                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                        ? 0U
+                                                        : 
+                                                       ((2U 
+                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                         ? 
+                                                        ((1U 
+                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                          ? 
+                                                         (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                          >> 7U)
+                                                          : 0U)
+                                                         : 0U))))))));
+    vlSymsp->TOP__test_top__core_top0.__PVT__id_reg_we_o 
+        = (1U & ((~ (IData)(vlTOPp->rst_i)) & ((0x40U 
+                                                & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                ? (
+                                                   (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                    >> 5U) 
+                                                   & ((0x10U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? 
+                                                      ((~ 
+                                                        (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                         >> 3U)) 
+                                                       & ((~ 
+                                                           (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                            >> 2U)) 
+                                                          & ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                              >> 1U) 
+                                                             & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                                & ((0x4000U 
+                                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                                    ? 
+                                                                   ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                                     >> 0xdU) 
+                                                                    | (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                                       >> 0xcU))
+                                                                    : 
+                                                                   ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                                     >> 0xdU) 
+                                                                    | (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                                       >> 0xcU)))))))
+                                                       : 
+                                                      ((8U 
+                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                        ? 
+                                                       ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                         >> 2U) 
+                                                        & ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                            >> 1U) 
+                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o))
+                                                        : 
+                                                       ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                         >> 2U) 
+                                                        & ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                            >> 1U) 
+                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)))))
+                                                : (
+                                                   (0x20U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 
+                                                   ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                     >> 4U) 
+                                                    & ((~ 
+                                                        (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                         >> 3U)) 
+                                                       & ((4U 
+                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                           ? 
+                                                          ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                            >> 1U) 
+                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                           : 
+                                                          ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                            >> 1U) 
+                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o))))
+                                                    : 
+                                                   ((0x10U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    ((~ 
+                                                      (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                       >> 3U)) 
+                                                     & ((4U 
+                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                         ? 
+                                                        ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                          >> 1U) 
+                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                         : 
+                                                        ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                          >> 1U) 
+                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)))
+                                                     : 
+                                                    ((~ 
+                                                      (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                       >> 3U)) 
+                                                     & ((~ 
+                                                         (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                          >> 2U)) 
+                                                        & ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                            >> 1U) 
+                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o))))))));
     vlSymsp->TOP__test_top__core_top0.__PVT__id_inst_o 
         = ((IData)(vlTOPp->rst_i) ? 0x13U : ((0x40U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
@@ -1399,15 +1973,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_combo__TOP__test_top__core_top0__6(Vtest
                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
                                                           ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o
                                                           : 0x13U))
-                                                        : 
-                                                       ((0x2000U 
-                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                         ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o
-                                                         : 
-                                                        ((0x1000U 
-                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                          ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o
-                                                          : 0x13U)))
+                                                        : vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
                                                        : 0x13U)
                                                       : 0x13U)))
                                                    : 
@@ -1540,597 +2106,213 @@ VL_INLINE_OPT void Vtest_top_core_top::_combo__TOP__test_top__core_top0__6(Vtest
                                                        ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o
                                                        : 0x13U)
                                                       : 0x13U)))))));
-    vlSymsp->TOP__test_top__core_top0.__PVT__id_reg_we_o 
-        = (1U & ((~ (IData)(vlTOPp->rst_i)) & ((0x40U 
-                                                & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                ? (
+    if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
+        vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__except_mret = 0U;
+        if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)) {
+            if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)) {
+                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)) {
+                    if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                  >> 3U)))) {
+                        if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                      >> 2U)))) {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)) {
+                                if ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)) {
+                                    if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                  >> 0xeU)))) {
+                                        if ((1U & (~ 
                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                    >> 5U) 
-                                                   & ((0x10U 
-                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                       ? 
-                                                      ((~ 
-                                                        (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                         >> 3U)) 
-                                                       & ((~ 
-                                                           (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                            >> 2U)) 
-                                                          & ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                              >> 1U) 
-                                                             & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                                & ((0x4000U 
-                                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                                    ? 
-                                                                   ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                                     >> 0xdU) 
-                                                                    | (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                                       >> 0xcU))
-                                                                    : 
-                                                                   ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                                     >> 0xdU) 
-                                                                    | (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                                       >> 0xcU)))))))
-                                                       : 
-                                                      ((8U 
-                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                        ? 
-                                                       ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                         >> 2U) 
-                                                        & ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                            >> 1U) 
-                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o))
-                                                        : 
-                                                       ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                         >> 2U) 
-                                                        & ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                            >> 1U) 
-                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)))))
-                                                : (
-                                                   (0x20U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 4U) 
-                                                    & ((~ 
-                                                        (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                         >> 3U)) 
-                                                       & ((4U 
-                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                           ? 
-                                                          ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                            >> 1U) 
-                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                           : 
-                                                          ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                            >> 1U) 
-                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o))))
-                                                    : 
-                                                   ((0x10U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    ((~ 
-                                                      (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                       >> 3U)) 
-                                                     & ((4U 
-                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                         ? 
-                                                        ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                          >> 1U) 
-                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                         : 
-                                                        ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                          >> 1U) 
-                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)))
-                                                     : 
-                                                    ((~ 
-                                                      (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                       >> 3U)) 
-                                                     & ((~ 
-                                                         (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                          >> 2U)) 
-                                                        & ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                            >> 1U) 
-                                                           & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o))))))));
-    if (vlTOPp->rst_i) {
-        vlSymsp->TOP__test_top__core_top0.__PVT__id_reg_waddr_o = 0U;
-        vlSymsp->TOP__test_top__core_top0.__PVT__id_inst_addr_o = 0U;
-        vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o = 0U;
-        vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_addr_o = 0U;
-    } else {
-        vlSymsp->TOP__test_top__core_top0.__PVT__id_reg_waddr_o 
-            = (0x1fU & ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                         ? ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                             ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                 ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                     ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                              ? 0U : 
-                                             ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? ((1U 
+                                                    >> 0xdU)))) {
+                                            if ((1U 
+                                                 & (~ 
+                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                     >> 0xcU)))) {
+                                                if (
+                                                    ((0x18U 
+                                                      == 
+                                                      (0x7fU 
+                                                       & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                          >> 0x19U))) 
+                                                     & (2U 
+                                                        == 
+                                                        (0x1fU 
+                                                         & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                            >> 0x14U))))) {
+                                                    vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__except_mret = 1U;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    vlSymsp->TOP__test_top__core_top0.__PVT__id_inst_addr_o 
+        = ((IData)(vlTOPp->rst_i) ? 0U : ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                           ? ((0x20U 
+                                               & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                               ? ((0x10U 
                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
                                                    ? 
-                                                  ((0x4000U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((0x2000U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 7U)
-                                                     : 
-                                                    ((0x1000U 
-                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                      ? 
-                                                     (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                      >> 7U)
-                                                      : 0U))
-                                                    : 
-                                                   ((0x2000U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 7U)
-                                                     : 
-                                                    ((0x1000U 
-                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                      ? 
-                                                     (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                      >> 7U)
-                                                      : 0U)))
-                                                   : 0U)
-                                               : 0U)))
-                                 : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                     ? ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                         ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                             ? ((1U 
-                                                 & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                 ? 
-                                                (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                 >> 7U)
-                                                 : 0U)
-                                             : 0U) : 0U)
-                                     : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                         ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                             ? ((1U 
-                                                 & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                 ? 
-                                                (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                 >> 7U)
-                                                 : 0U)
-                                             : 0U) : 0U)))
-                             : 0U) : ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                       ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                           ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? 0U
-                                               : ((4U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((2U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((1U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 7U)
-                                                     : 0U)
-                                                    : 0U)
-                                                   : 
-                                                  ((2U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((1U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    ((0x4000U 
-                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                      ? 
-                                                     ((0x2000U 
-                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                       ? 
-                                                      ((0x1000U 
-                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                        ? 
-                                                       (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                        >> 7U)
-                                                        : 
-                                                       (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                        >> 7U))
-                                                       : 
-                                                      ((0x1000U 
-                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                        ? 
-                                                       (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                        >> 7U)
-                                                        : 
-                                                       (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                        >> 7U)))
-                                                      : 
-                                                     ((0x2000U 
-                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                       ? 
-                                                      ((0x1000U 
-                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                        ? 
-                                                       (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                        >> 7U)
-                                                        : 
-                                                       (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                        >> 7U))
-                                                       : 
-                                                      ((0x1000U 
-                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                        ? 
-                                                       (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                        >> 7U)
-                                                        : 
-                                                       (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                        >> 7U))))
-                                                     : 0U)
-                                                    : 0U)))
-                                           : 0U) : 
-                                      ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                        ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                            ? 0U : 
-                                           ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                             ? ((2U 
-                                                 & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                 ? 
-                                                ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                  ? 
-                                                 (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                  >> 7U)
-                                                  : 0U)
-                                                 : 0U)
-                                             : ((2U 
-                                                 & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                 ? 
-                                                ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                  ? 
-                                                 ((0x4000U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((0x2000U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((0x1000U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 7U)
-                                                     : 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 7U))
-                                                    : 
-                                                   ((0x1000U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 7U)
-                                                     : 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 7U)))
-                                                   : 
-                                                  ((0x2000U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((0x1000U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 7U)
-                                                     : 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 7U))
-                                                    : 
-                                                   ((0x1000U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 7U)
-                                                     : 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 7U))))
-                                                  : 0U)
-                                                 : 0U)))
-                                        : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                            ? 0U : 
-                                           ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                             ? 0U : 
-                                            ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                              ? ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                  ? 
-                                                 (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                  >> 7U)
-                                                  : 0U)
-                                              : 0U)))))));
-        vlSymsp->TOP__test_top__core_top0.__PVT__id_inst_addr_o 
-            = ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                ? ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                    ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                        ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                     ? 0U : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                              ? ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                  ? 
-                                                 ((0x4000U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((0x2000U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                    : 
-                                                   ((0x1000U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                     : 0U))
-                                                   : 
-                                                  ((0x2000U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                    : 
-                                                   ((0x1000U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                     : 0U)))
-                                                  : 0U)
-                                              : 0U)))
-                        : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                            ? ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                    ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                        ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                        : 0U) : 0U)
-                                : 0U) : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                          ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                              ? ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                  ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                  : 0U)
-                                              : 0U)
-                                          : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                              ? ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                  ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                  : 0U)
-                                              : 0U))))
-                    : 0U) : ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                              ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                  ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                      ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? ((2U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((1U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                    : 0U)
-                                                   : 0U)
-                                               : ((2U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((1U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                    : 0U)
-                                                   : 0U)))
-                                  : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                      ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? 0U
-                                               : ((2U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((1U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                    : 0U)
-                                                   : 0U))))
-                              : ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                  ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                      ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? ((2U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((1U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                    : 0U)
-                                                   : 0U)
-                                               : ((2U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((1U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                    : 0U)
-                                                   : 0U)))
-                                  : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                      ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? 0U
-                                               : ((2U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((1U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                    : 0U)
-                                                   : 0U))))));
-        vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o 
-            = (0x1fU & ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                         ? ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                             ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                 ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                     ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                              ? 0U : 
-                                             ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? ((1U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 
-                                                  ((0x4000U 
+                                                  ((8U 
                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
                                                     ? 0U
                                                     : 
-                                                   ((0x2000U 
+                                                   ((4U 
                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 0xfU)
+                                                     ? 0U
                                                      : 
-                                                    ((0x1000U 
+                                                    ((2U 
                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
                                                       ? 
-                                                     (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                      >> 0xfU)
+                                                     ((1U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? 
+                                                      ((0x4000U 
+                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                        ? 
+                                                       ((0x2000U 
+                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                         ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
+                                                         : 
+                                                        ((0x1000U 
+                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                          ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
+                                                          : 0U))
+                                                        : vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o)
+                                                       : 0U)
                                                       : 0U)))
-                                                   : 0U)
-                                               : 0U)))
-                                 : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                     ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                              ? ((2U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                  ? 
-                                                 ((1U 
+                                                   : 
+                                                  ((8U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 
+                                                   ((4U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    ((2U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     ((1U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
+                                                       : 0U)
+                                                      : 0U)
+                                                     : 0U)
+                                                    : 
+                                                   ((4U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    ((2U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     ((1U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
+                                                       : 0U)
+                                                      : 0U)
+                                                     : 
+                                                    ((2U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     ((1U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
+                                                       : 0U)
+                                                      : 0U))))
+                                               : 0U)
+                                           : ((0x20U 
+                                               & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                               ? ((0x10U 
                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
                                                    ? 
-                                                  (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                   >> 0xfU)
-                                                   : 0U)
-                                                  : 0U)
-                                              : ((2U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                  ? 
-                                                 ((1U 
+                                                  ((8U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 0U
+                                                    : 
+                                                   ((4U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    ((2U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     ((1U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
+                                                       : 0U)
+                                                      : 0U)
+                                                     : 
+                                                    ((2U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     ((1U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
+                                                       : 0U)
+                                                      : 0U)))
+                                                   : 
+                                                  ((8U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 0U
+                                                    : 
+                                                   ((4U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 0U
+                                                     : 
+                                                    ((2U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     ((1U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
+                                                       : 0U)
+                                                      : 0U))))
+                                               : ((0x10U 
                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
                                                    ? 
-                                                  (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                   >> 0xfU)
-                                                   : 0U)
-                                                  : 0U))))
-                             : 0U) : ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                       ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                           ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? 0U
-                                               : ((4U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 0U
-                                                   : 
-                                                  ((2U 
+                                                  ((8U 
                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((1U 
+                                                    ? 0U
+                                                    : 
+                                                   ((4U 
                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
                                                      ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 0xfU)
-                                                     : 0U)
-                                                    : 0U)))
-                                           : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? 0U
-                                               : ((4U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 0U
+                                                    ((2U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     ((1U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
+                                                       : 0U)
+                                                      : 0U)
+                                                     : 
+                                                    ((2U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     ((1U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
+                                                       : 0U)
+                                                      : 0U)))
                                                    : 
-                                                  ((2U 
+                                                  ((8U 
                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((1U 
+                                                    ? 0U
+                                                    : 
+                                                   ((4U 
                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 0xfU)
-                                                     : 0U)
-                                                    : 0U))))
-                                       : ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                           ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? 0U
-                                               : ((4U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 0U
-                                                   : 
-                                                  ((2U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((1U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 0xfU)
-                                                     : 0U)
-                                                    : 0U)))
-                                           : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? 0U
-                                               : ((4U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 0U
-                                                   : 
-                                                  ((2U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((1U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 0xfU)
-                                                     : 0U)
-                                                    : 0U)))))));
-        vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_addr_o 
-            = (0x1fU & ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                         ? ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                             ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                 ? 0U : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                          ? 0U : ((4U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 0U
-                                                   : 
-                                                  ((2U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((1U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 0x14U)
-                                                     : 0U)
-                                                    : 0U))))
-                             : 0U) : ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                       ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                           ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? 0U
-                                               : ((4U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 0U
-                                                   : 
-                                                  ((2U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((1U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 0x14U)
-                                                     : 0U)
-                                                    : 0U)))
-                                           : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                               ? 0U
-                                               : ((4U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                   ? 0U
-                                                   : 
-                                                  ((2U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                    ? 
-                                                   ((1U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                     ? 
-                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                     >> 0x14U)
-                                                     : 0U)
-                                                    : 0U))))
-                                       : 0U)));
-    }
+                                                     ? 0U
+                                                     : 
+                                                    ((2U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     ((1U 
+                                                       & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                       ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
+                                                       : 0U)
+                                                      : 0U)))))));
     vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_re_o 
         = (1U & ((~ (IData)(vlTOPp->rst_i)) & ((0x40U 
                                                 & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
@@ -2262,6 +2444,215 @@ VL_INLINE_OPT void Vtest_top_core_top::_combo__TOP__test_top__core_top0__6(Vtest
                                                           & ((vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
                                                               >> 1U) 
                                                              & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o))))))));
+    if (vlTOPp->rst_i) {
+        vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_addr_o = 0U;
+        vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o = 0U;
+    } else {
+        vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_addr_o 
+            = (0x1fU & ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                         ? ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                             ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                 ? 0U : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                          ? 0U : ((4U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 0U
+                                                   : 
+                                                  ((2U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                     >> 0x14U)
+                                                     : 0U)
+                                                    : 0U))))
+                             : 0U) : ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                       ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                           ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                               ? 0U
+                                               : ((4U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 0U
+                                                   : 
+                                                  ((2U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                     >> 0x14U)
+                                                     : 0U)
+                                                    : 0U)))
+                                           : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                               ? 0U
+                                               : ((4U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 0U
+                                                   : 
+                                                  ((2U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                     >> 0x14U)
+                                                     : 0U)
+                                                    : 0U))))
+                                       : 0U)));
+        vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o 
+            = (0x1fU & ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                         ? ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                             ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                 ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                     ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                              ? 0U : 
+                                             ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                               ? ((1U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 
+                                                  ((0x4000U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 0U
+                                                    : 
+                                                   ((0x2000U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                     >> 0xfU)
+                                                     : 
+                                                    ((0x1000U 
+                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                      ? 
+                                                     (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                      >> 0xfU)
+                                                      : 0U)))
+                                                   : 0U)
+                                               : 0U)))
+                                 : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                     ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                              ? ((2U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                  ? 
+                                                 ((1U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 
+                                                  (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                   >> 0xfU)
+                                                   : 0U)
+                                                  : 0U)
+                                              : ((2U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                  ? 
+                                                 ((1U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 
+                                                  (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                   >> 0xfU)
+                                                   : 0U)
+                                                  : 0U))))
+                             : 0U) : ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                       ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                           ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                               ? 0U
+                                               : ((4U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 0U
+                                                   : 
+                                                  ((2U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                     >> 0xfU)
+                                                     : 0U)
+                                                    : 0U)))
+                                           : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                               ? 0U
+                                               : ((4U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 0U
+                                                   : 
+                                                  ((2U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                     >> 0xfU)
+                                                     : 0U)
+                                                    : 0U))))
+                                       : ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                           ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                               ? 0U
+                                               : ((4U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 0U
+                                                   : 
+                                                  ((2U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                     >> 0xfU)
+                                                     : 0U)
+                                                    : 0U)))
+                                           : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                               ? 0U
+                                               : ((4U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                   ? 0U
+                                                   : 
+                                                  ((2U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
+                                                     ? 
+                                                    (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                     >> 0xfU)
+                                                     : 0U)
+                                                    : 0U)))))));
+    }
+    if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
+        vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_we = 0U;
+        if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+            if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                    if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                  >> 3U)))) {
+                        if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                      >> 2U)))) {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                if ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_we 
+                                        = (1U & ((0x4000U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                  ? 
+                                                 ((vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                                   >> 0xdU) 
+                                                  | (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                                     >> 0xcU))
+                                                  : 
+                                                 ((vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                                   >> 0xdU) 
+                                                  | (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                                     >> 0xcU))));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_waddr = 0U;
         if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
@@ -2320,38 +2711,6 @@ VL_INLINE_OPT void Vtest_top_core_top::_combo__TOP__test_top__core_top0__6(Vtest
                                             }
                                         }
                                     }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
-        vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_we = 0U;
-        if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-            if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                    if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
-                                  >> 3U)))) {
-                        if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
-                                      >> 2U)))) {
-                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                if ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_we 
-                                        = (1U & ((0x4000U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                  ? 
-                                                 ((vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
-                                                   >> 0xdU) 
-                                                  | (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
-                                                     >> 0xcU))
-                                                  : 
-                                                 ((vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
-                                                   >> 0xdU) 
-                                                  | (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
-                                                     >> 0xcU))));
                                 }
                             }
                         }
@@ -2570,118 +2929,6 @@ VL_INLINE_OPT void Vtest_top_core_top::_combo__TOP__test_top__core_top0__6(Vtest
         }
     }
     if (vlTOPp->rst_i) {
-        vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
-    } else {
-        if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-            vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
-                = ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                    ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                        ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                     ? 0U : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                              ? ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                  ? 
-                                                 ((0x4000U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                   ? 
-                                                  ((0x2000U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                    ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                    : 
-                                                   ((0x1000U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                     ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                     : 0U))
-                                                   : 
-                                                  ((0x2000U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                    ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                    : 
-                                                   ((0x1000U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                     ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                     : 0U)))
-                                                  : 0U)
-                                              : 0U)))
-                        : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                            ? ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                    ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                        ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                        : 0U) : 0U)
-                                : 0U) : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                          ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                              ? ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                  ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                  : 0U)
-                                              : 0U)
-                                          : 0U))) : 0U);
-        } else {
-            if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                    if ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
-                    } else {
-                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                            vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
-                                = ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                    ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                        ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                        : 0U) : 0U);
-                        } else {
-                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                if ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                    if ((0x2000000U 
-                                         & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                        if ((0x2000000U 
-                                             & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                            vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
-                                                = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d_ready)
-                                                    ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                    : 0U);
-                                        }
-                                    } else {
-                                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
-                                            = vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o;
-                                    }
-                                } else {
-                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
-                                }
-                            } else {
-                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
-                            }
-                        }
-                    }
-                } else {
-                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
-                }
-            } else {
-                vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
-                    = ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                        ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                     ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                         ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                             ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                             : 0U) : 0U)
-                                     : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                         ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                             ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                             : 0U) : 0U)))
-                        : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                     ? 0U : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                              ? ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                  ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                  : 0U)
-                                              : 0U))));
-            }
-        }
-    }
-    if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o = 0U;
     } else {
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o 
@@ -2813,6 +3060,118 @@ VL_INLINE_OPT void Vtest_top_core_top::_combo__TOP__test_top__core_top0__6(Vtest
                                                     >> 1U) 
                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o))));
                 }
+            }
+        }
+    }
+    if (vlTOPp->rst_i) {
+        vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
+    } else {
+        if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+            vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
+                = ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                    ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                        ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                     ? 0U : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                              ? ((1U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                  ? 
+                                                 ((0x4000U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                   ? 
+                                                  ((0x2000U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                    ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                    : 
+                                                   ((0x1000U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                     ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                     : 0U))
+                                                   : 
+                                                  ((0x2000U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                    ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                    : 
+                                                   ((0x1000U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                     ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                     : 0U)))
+                                                  : 0U)
+                                              : 0U)))
+                        : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                            ? ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                    ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                        ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                        : 0U) : 0U)
+                                : 0U) : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                          ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                              ? ((1U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                  ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                  : 0U)
+                                              : 0U)
+                                          : 0U))) : 0U);
+        } else {
+            if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                    if ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
+                    } else {
+                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                            vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
+                                = ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                    ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                        ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                        : 0U) : 0U);
+                        } else {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                if ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                    if ((0x2000000U 
+                                         & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                        if ((0x2000000U 
+                                             & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                            vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
+                                                = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d_ready)
+                                                    ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                    : 0U);
+                                        }
+                                    } else {
+                                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
+                                            = vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o;
+                                    }
+                                } else {
+                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
+                                }
+                            } else {
+                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
+                            }
+                        }
+                    }
+                } else {
+                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
+                }
+            } else {
+                vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
+                    = ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                        ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                     ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                         ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                             ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                             : 0U) : 0U)
+                                     : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                         ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                             ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                             : 0U) : 0U)))
+                        : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                     ? 0U : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                              ? ((1U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                  ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                  : 0U)
+                                              : 0U))));
             }
         }
     }
@@ -3557,6 +3916,22 @@ VL_INLINE_OPT void Vtest_top_core_top::_combo__TOP__test_top__core_top0__6(Vtest
                     if ((1U & (~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o)))) {
                         vlSymsp->TOP__test_top__core_top0.__PVT__ram_addr_o = 0U;
                     }
+                }
+            }
+        }
+    }
+    vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_csr_mepc 
+        = vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_ctrl_inst_addr;
+    if ((1U & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                  >> 3U)))) {
+        if ((4U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S))) {
+            if ((1U & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S) 
+                          >> 1U)))) {
+                if ((1U & (~ (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__S)))) {
+                    vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl_csr_mepc 
+                        = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_ctrl0__DOT__exception)
+                            ? ((IData)(4U) + vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_ctrl_inst_addr)
+                            : vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_ctrl_inst_addr);
                 }
             }
         }

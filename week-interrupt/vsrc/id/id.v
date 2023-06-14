@@ -37,17 +37,24 @@ module	id(
 		output	reg[`RDATA_WIDTH-1:0]	op2_o,
 		output	reg			reg_we_o,
 		output	reg[`RADDR_WIDTH-1:0]	reg_waddr_o,
-		output	reg			stallreq_o
+		output	reg			stallreq_o,
+		
+		output	reg[31:0]		exception_o
 		);
 
 
 	reg[`RDATA_WIDTH-1:0]	op1_o_final;
 	reg[`RDATA_WIDTH-1:0]	op2_o_final;
+	
+	reg			except_mret;
+	reg			except_ecall;
 
+	assign exception_o = {30'b0, except_ecall, except_mret};
 
 	wire[6:0]		opcode = inst_i[6:0];
 	wire[4:0]		rd = inst_i[11:7];
 	wire[2:0]		funct3 = inst_i[14:12];
+	wire[6:0]		funct7 = inst_i[31:25];
 	wire[4:0]		rs1 = inst_i[19:15];
 	wire[4:0]		rs2 = inst_i[24:20];
 
@@ -130,6 +137,8 @@ module	id(
 			end
 		else
 			begin
+			except_mret = 1'b0;
+			except_ecall = 1'b0;
 			case(opcode)
 				`INST_TYPE_I:
 					begin
@@ -250,6 +259,24 @@ module	id(
 					end
 				`INST_TYPE_SYSTEM: begin
 					case(funct3)
+						`INST_CSR_PRIV: begin
+							inst_o = inst_i;
+							inst_addr_o = inst_addr_i;
+							reg1_raddr_o = `ZERO_REG;
+							reg2_raddr_o = `ZERO_REG;
+							reg1_re_o = `READ_DISABLE;
+							reg2_re_o = `READ_DISABLE;
+							reg_we_o = `WRITE_DISABLE;
+							reg_waddr_o = `ZERO_REG;
+							op1_o_final = `ZERO;
+							op2_o_final = `ZERO;
+							if((funct7 == 7'b0011000) && (rs2 == 5'b00010)) begin
+								except_mret = 1'b1;
+							end
+							if((funct7 == 7'b0000000) && (rs2 == 5'b00000)) begin
+								except_ecall = 1'b1;
+							end
+						end
 						`INST_CSRRW: begin
 							inst_o = inst_i;
 							inst_addr_o = inst_addr_i;

@@ -63,8 +63,8 @@ void Vtest_top::_eval_settle(Vtest_top__Syms* __restrict vlSymsp) {
     vlTOPp->__Vm_traceActivity[2U] = 1U;
     vlTOPp->__Vm_traceActivity[1U] = 1U;
     vlTOPp->__Vm_traceActivity[0U] = 1U;
-    vlTOPp->_settle__TOP__1(vlSymsp);
     vlSymsp->TOP__test_top__core_top0._settle__TOP__test_top__core_top0__1(vlSymsp);
+    vlTOPp->_settle__TOP__1(vlSymsp);
     vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type._settle__TOP__test_top__core_top0__exe0__DOT__shift_i_type__1(vlSymsp);
     vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type._settle__TOP__test_top__core_top0__exe0__DOT__shift_i_type__1(vlSymsp);
     vlSymsp->TOP__test_top__core_top0__regfile0._settle__TOP__test_top__core_top0__regfile0__2(vlSymsp);

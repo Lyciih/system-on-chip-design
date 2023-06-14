@@ -1,5 +1,5 @@
 module bus #(
-		parameter	NrDevices	= 1,
+		parameter	NrDevices	= 4,
 		parameter	NrHosts		= 1,
 		parameter	DataWidth	= 32,
 		parameter	AddressWidth	= 32
@@ -30,7 +30,7 @@ module bus #(
 		    );
 
 	localparam	NumBitsHostSel = $clog2(NrHosts - 1) + 1;
-	localparam	NumBitsDeviceSel = $clog2(NrDevices - 1) + 1;
+	localparam	NumBitsDeviceSel = $clog2(NrDevices);
 
 	reg	[NumBitsHostSel-1:0]	host_sel_req;
 	reg	[NumBitsDeviceSel-1:0]	device_sel_req;

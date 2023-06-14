@@ -101,6 +101,7 @@
 
 //CSR
 `define INST_TYPE_SYSTEM	7'b1110011	//opcode
+`define	INST_CSR_PRIV	3'b000
 `define	INST_CSRRW	3'b001
 `define	INST_CSRRS	3'b010
 `define	INST_CSRRC	3'b011

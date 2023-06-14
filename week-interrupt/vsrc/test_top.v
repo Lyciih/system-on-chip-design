@@ -7,7 +7,7 @@ module	test_top(
 		);
 
 
-	localparam	int	NrDevices	= 3;
+	localparam	int	NrDevices	= 4;
 	localparam	int	NrHosts		= 1;
 	localparam	int	MemSize 	= 32'h100000;
 	localparam	int	MemAddrWidth 	= 24;
@@ -15,7 +15,8 @@ module	test_top(
 	`define	HOST_CORE_PORT	0
 	`define	DEV_RAM		0
 	`define	DEV_CONSOLE	1
-	`define	DEV_TIMER	2
+	`define	DEV_CLINT	2
+	`define	DEV_TIMER	3
 
 	wire				host_req		[NrHosts];
 	wire				host_gnt		[NrHosts];
@@ -42,6 +43,9 @@ module	test_top(
 	
 	wire	halt_from_console;
 
+	assign	cfg_device_addr_base[`DEV_CLINT] = 32'h2000000;
+	assign	cfg_device_addr_mask[`DEV_CLINT] = ~32'hFFFFFF;
+	
 	assign	cfg_device_addr_base[`DEV_TIMER] = 32'h400000;
 	assign	cfg_device_addr_mask[`DEV_TIMER] = ~32'hFFFFF;
 	
@@ -97,7 +101,9 @@ module	test_top(
 
 			.pc_wire_o(core_ram_pc),
 			.ce_wire_o(core_ram_ce),
-			.if_inst_i(ram_core_inst)
+			.if_inst_i(ram_core_inst),
+			.timer_irq_i(timer_irq),
+			.software_irq_i(software_irq)
 			);
 
 
@@ -142,5 +148,20 @@ module	test_top(
 			.second_count(device_rdata[`DEV_TIMER])
 		      );
 
+	wire	timer_irq;
+	wire	software_irq;
+	clint	clint0(
+			.rst_i(rst_i),
+			.clk_i(clk_i),
+
+			.req_i(device_req[`DEV_CLINT]),
+			.we_i(device_we[`DEV_CLINT]),
+			.addr_i(device_addr[`DEV_CLINT]),
+			.data_i(device_wdata[`DEV_CLINT]),
+			.data_o(device_rdata[`DEV_CLINT]),
+
+			.timer_irq_o(timer_irq),
+			.software_irq_o(software_irq)
+		      );
 
 endmodule

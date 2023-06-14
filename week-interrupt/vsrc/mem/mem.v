@@ -9,14 +9,20 @@ module mem(
 		input	wire			reg_we_i,
 		input	wire[`RDATA_WIDTH-1:0]	reg_wdata_i,
 
+		input	wire[`ADDR_WIDTH-1:0]	inst_addr_i,
+		
 		input	wire[`ADDR_WIDTH-1:0]	mem_addr_i,
 		input	wire[`DATA_WIDTH-1:0]	mem_data_i,
 		input	wire			mem_we_i,
 		input	wire[3:0]		mem_op_i,
+		
+		input	wire[`DATA_WIDTH-1:0]	exception_i,
 
 		input	wire[`DATA_WIDTH-1:0]	ram_data_i,
 
 
+		output	reg[`ADDR_WIDTH-1:0]	inst_addr_o,
+		
 		output	reg[`ADDR_WIDTH-1:0]	ram_addr_o,
 		output	reg[`DATA_WIDTH-1:0]	ram_data_o,
 		output	reg			ram_w_request_o,
@@ -26,6 +32,8 @@ module mem(
 		output	reg[`RADDR_WIDTH-1:0]	reg_waddr_o,
 		output	reg			reg_we_o,
 		output	reg[`RDATA_WIDTH-1:0]	reg_wdata_o,
+		
+		output	reg[`DATA_WIDTH-1:0]	exception_o,
 		//output	reg			halt_o
 		
 		input wire			csr_we_i,
@@ -64,6 +72,7 @@ module mem(
 			csr_we_o = `WRITE_DISABLE;
 			csr_waddr_o = 0;
 			csr_wdata_o = `ZERO;
+			inst_addr_o = `ZERO;
 		end
 		else begin
 			reg_waddr_o = reg_waddr_i;
@@ -73,6 +82,7 @@ module mem(
 			csr_we_o = csr_we_i;
 			csr_waddr_o = csr_waddr_i;
 			csr_wdata_o = csr_wdata_i;
+			inst_addr_o = inst_addr_i;
 			case(mem_op_i)
 				`SB: begin
 					ram_request_o = 1;

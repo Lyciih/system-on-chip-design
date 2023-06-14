@@ -31,6 +31,8 @@ VL_MODULE(Vtest_top_core_top) {
     VL_OUT8(__PVT__ram_we_o,0,0);
     VL_OUT8(__PVT__ram_request_o,0,0);
     VL_OUT8(__PVT__ram_op_o,3,0);
+    VL_IN8(__PVT__timer_irq_i,0,0);
+    VL_IN8(__PVT__software_irq_i,0,0);
     VL_OUT8(__PVT__ce_wire_o,0,0);
     VL_OUT(__PVT__ram_addr_o,31,0);
     VL_OUT(__PVT__ram_wdata_o,31,0);
@@ -73,6 +75,23 @@ VL_MODULE(Vtest_top_core_top) {
         CData/*0:0*/ __PVT__mem_wb_we;
         CData/*0:0*/ __PVT__wb_csr_we;
         CData/*0:0*/ __PVT__wb_csr_instret_incr;
+        CData/*0:0*/ __PVT__mstatus_ie;
+        CData/*0:0*/ __PVT__mie_external;
+        CData/*0:0*/ __PVT__mie_timer;
+        CData/*0:0*/ __PVT__mie_software;
+        CData/*0:0*/ __PVT__mip_external;
+        CData/*0:0*/ __PVT__mip_timer;
+        CData/*0:0*/ __PVT__mip_software;
+        CData/*0:0*/ __PVT__interrupt_type;
+        CData/*0:0*/ __PVT__cause_we;
+        CData/*3:0*/ __PVT__cause;
+        CData/*0:0*/ __PVT__epc_we;
+        CData/*0:0*/ __PVT__mepc;
+        CData/*0:0*/ __PVT__mstatus_ie_clear;
+        CData/*0:0*/ __PVT__mstatus_ie_set;
+        CData/*0:0*/ __PVT__interrupt_ctrl_pipe_ctrl_int_enable;
+        CData/*0:0*/ __PVT__id0__DOT__except_mret;
+        CData/*0:0*/ __PVT__id0__DOT__except_ecall;
         CData/*1:0*/ __PVT__exe0__DOT__m_d_op;
         CData/*0:0*/ __PVT__exe0__DOT__rs1_signed_i;
         CData/*0:0*/ __PVT__exe0__DOT__rs2_signed_i;
@@ -80,7 +99,16 @@ VL_MODULE(Vtest_top_core_top) {
         CData/*5:0*/ __PVT__exe0__DOT__m_d_count;
         CData/*0:0*/ __PVT__exe0__DOT__m_d__DOT__rs1_is_neg;
         CData/*0:0*/ __PVT__exe0__DOT__m_d__DOT__rs2_is_neg;
+        CData/*0:0*/ __PVT__csr0__DOT__irq_external_i;
         CData/*0:0*/ __PVT__csr0__DOT__w_sepc;
+        CData/*3:0*/ __PVT__interrupt_ctrl0__DOT__S;
+        CData/*3:0*/ __PVT__interrupt_ctrl0__DOT__S_nxt;
+        CData/*0:0*/ __PVT__interrupt_ctrl0__DOT__eip;
+        CData/*0:0*/ __PVT__interrupt_ctrl0__DOT__tip;
+        CData/*0:0*/ __PVT__interrupt_ctrl0__DOT__sip;
+        CData/*0:0*/ __PVT__interrupt_ctrl0__DOT__exception;
+    };
+    struct {
         SData/*11:0*/ __PVT__exe_csr_raddr;
         SData/*11:0*/ __PVT__exe_exe_mem_waddr;
         SData/*11:0*/ __PVT__exe_mem_mem_waddr;
@@ -105,12 +133,19 @@ VL_MODULE(Vtest_top_core_top) {
         IData/*31:0*/ __PVT__mem_reg_wdata_o;
         IData/*31:0*/ __PVT__mem_wb_reg_wdata_o;
         IData/*31:0*/ __PVT__exe_exe_mem_wdata;
-    };
-    struct {
         IData/*31:0*/ __PVT__exe_mem_mem_wdata;
         IData/*31:0*/ __PVT__mem_wb_wdata;
         IData/*31:0*/ __PVT__wb_csr_wdata;
         IData/*31:0*/ __PVT__csr_exe_rdata;
+        IData/*31:0*/ __PVT__id_exe_exe_exception;
+        IData/*31:0*/ __PVT__exe_mem_mem_exception;
+        IData/*31:0*/ __PVT__mem_interrupt_ctrl_exception;
+        IData/*31:0*/ __PVT__exe_mem_mem_inst_addr;
+        IData/*31:0*/ __PVT__mem_interrupt_ctrl_inst_addr;
+        IData/*31:0*/ __PVT__mtvec;
+        IData/*31:0*/ __PVT__csr_interrupt_ctrl_mepc;
+        IData/*31:0*/ __PVT__interrupt_ctrl_csr_mepc;
+        IData/*31:0*/ __PVT__isr_addr;
         IData/*31:0*/ __PVT__id0__DOT__op1_o_final;
         IData/*31:0*/ __PVT__id0__DOT__op2_o_final;
         IData/*31:0*/ __PVT__id0__DOT__i_op2_o;
@@ -138,10 +173,16 @@ VL_MODULE(Vtest_top_core_top) {
         IData/*31:0*/ __PVT__csr0__DOT__sscratch;
         IData/*31:0*/ __PVT__csr0__DOT__sepc;
         IData/*31:0*/ __PVT__csr0__DOT__scause;
+    };
+    struct {
         IData/*31:0*/ __PVT__csr0__DOT__satp;
         QData/*63:0*/ __PVT__csr0__DOT__mcycle;
         QData/*63:0*/ __PVT__csr0__DOT__minstret;
     };
+    
+    // LOCAL VARIABLES
+    CData/*5:0*/ __Vtableidx1;
+    static CData/*3:0*/ __Vtable1___PVT__interrupt_ctrl0__DOT__S_nxt[64];
     
     // INTERNAL VARIABLES
   private:

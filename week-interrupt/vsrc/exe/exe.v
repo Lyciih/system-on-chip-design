@@ -11,8 +11,10 @@ module exe(
 		input	wire[`RDATA_WIDTH-1:0]	inst_i,
 		input	wire[`ADDR_WIDTH-1:0]	inst_addr_i,
 		
+		input 	wire[`DATA_WIDTH-1:0]	exception_i,
 
 
+		output	reg[`ADDR_WIDTH-1:0]	inst_addr_o,
 		output	reg[`RADDR_WIDTH-1:0]	reg_waddr_o,
 		output	reg			reg_we_o,
 		output	reg[`RDATA_WIDTH-1:0]	reg_wdata_o,
@@ -35,6 +37,8 @@ module exe(
 		output	reg[`DATA_WIDTH-1:0]		csr_wdata_o,
 		output	reg[`CSR_ADDR_WIDTH-1:0]	csr_waddr_o,
 		output	reg				csr_we_o,
+		
+		output	reg[`DATA_WIDTH-1:0]		exception_o,
 		
 		input	wire				mem_exe_csr_we_i,
 		input	wire[`CSR_ADDR_WIDTH-1:0]	mem_exe_csr_waddr_i,
@@ -140,10 +144,14 @@ module exe(
 			reg_waddr_o = `ZERO_REG;
 			reg_wdata_o = `ZERO;
 			reg_we_o = `WRITE_DISABLE;
+			exception_o = 0;
+			inst_addr_o = `ZERO;
 		end
 		else begin
 			reg_we_o = reg_we_i;
 			mem_op_o = `MEM_NOP;
+			
+			exception_o = exception_i;
 
 			//stallreq_o = 1'b0;
 			jump_enable_o = 1'b0;
@@ -153,6 +161,8 @@ module exe(
 			csr_raddr_o = 0;
 			csr_waddr_o = 0;
 			csr_wdata_o = `ZERO;
+
+			inst_addr_o = inst_addr_i;
 			
 			case(opcode)
 				`INST_TYPE_I: begin

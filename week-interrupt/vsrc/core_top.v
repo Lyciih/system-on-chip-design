@@ -14,6 +14,9 @@ module	core_top(
 		output	reg[`DATA_WIDTH-1:0]	ram_wdata_o,
 		input	wire[`DATA_WIDTH-1:0]	ram_rdata_i,
 
+		input	wire			timer_irq_i,
+		input	wire			software_irq_i,
+
 		// pc_reg
 		output	reg[`ADDR_WIDTH-1:0]	pc_wire_o,
 		output	reg			ce_wire_o,
@@ -107,7 +110,7 @@ module	core_top(
 	wire			mem_wb_reg_we_o;
 	wire[`RDATA_WIDTH-1:0]	mem_wb_reg_wdata_o;
 	
-
+	/*------- CSR -------------------------------------*/
 	//exe to exe_mem
 	wire				exe_exe_mem_we;
 	wire[`CSR_ADDR_WIDTH-1:0]	exe_exe_mem_waddr;
@@ -132,15 +135,56 @@ module	core_top(
 	//csr to exe
 	wire[`DATA_WIDTH-1:0]		csr_exe_rdata;
 	
+	/*------- exception ---------------------------------*/
+	wire[`DATA_WIDTH-1:0]		id_id_exe_exception;
+	wire[`DATA_WIDTH-1:0]		id_exe_exe_exception;
+	wire[`DATA_WIDTH-1:0]		exe_exe_mem_exception;
+	wire[`DATA_WIDTH-1:0]		exe_mem_mem_exception;
+	wire[`DATA_WIDTH-1:0]		mem_interrupt_ctrl_exception;
+
+	wire[`ADDR_WIDTH-1:0]		exe_exe_mem_inst_addr;
+	wire[`ADDR_WIDTH-1:0]		exe_mem_mem_inst_addr;
+	wire[`ADDR_WIDTH-1:0]		mem_interrupt_ctrl_inst_addr;
+	
+
+	wire	mstatus_ie;
+	wire	mie_external;
+	wire	mie_timer;
+	wire	mie_software;
+	
+	wire	mip_external;
+	wire	mip_timer;
+	wire	mip_software;
+	wire	[`ADDR_WIDTH-1:0]	mtvec;
+	wire	[`ADDR_WIDTH-1:0]	csr_interrupt_ctrl_mepc;
+	wire	[`ADDR_WIDTH-1:0]	interrupt_ctrl_csr_mepc;
+
+	wire	interrupt_type;
+	wire	cause_we;
+	wire[3:0]	cause;
+	wire	epc_we;
+	wire	mepc;
+	wire	mstatus_ie_clear;
+	wire	mstatus_ie_set;
+
+
+
+	wire	flush_int;
+	wire	interrupt_ctrl_pipe_ctrl_int_enable;
+	wire[`ADDR_WIDTH-1:0]	isr_addr;
+	
 	pipe_ctrl ctrl0(
 			.rst_i(rst_i),
 			.stallreq_from_id_i(id_pipe_ctrl_stallreq_o),
 			.stallreq_from_exe_i(exe_pipe_ctrl_stallreq_o),
 			.jump_enable_i(exe_pipe_ctrl_jump_enable_o),
+			.int_enable_i(interrupt_ctrl_pipe_ctrl_int_enable),
 			.jump_addr_i(exe_pipe_ctrl_jump_addr_o),
+			.isr_addr_i(isr_addr),
 
 			.stall_o(ctrl_stall_o),
 			.flush_jump_o(ctrl_flush_jump_o),
+			.flush_int_o(flush_int),
 			.new_pc_o(ctrl_new_pc_o)
 			);
 
@@ -151,6 +195,7 @@ module	core_top(
 			.clk_i(clk_i),
 			.stall_i(ctrl_stall_o),
 			.flush_jump_i(ctrl_flush_jump_o),
+			.flush_int_i(flush_int),
 			.new_pc_i(ctrl_new_pc_o),
 			.pc_o(pc_wire),
 			.ce_o(ce_wire)
@@ -164,6 +209,7 @@ module	core_top(
 			.rst_i(rst_i),
 			.stall_i(ctrl_stall_o),
 			.flush_jump_i(ctrl_flush_jump_o),
+			.flush_int_i(flush_int),
 			.inst_addr_i(if_inst_addr_o),
 			.inst_i(if_inst_i),
 			.inst_addr_o(if_id_inst_addr_o),
@@ -206,7 +252,9 @@ module	core_top(
 			.reg_we_o(id_reg_we_o),
 			.reg_waddr_o(id_reg_waddr_o),
 			
-			.stallreq_o(id_pipe_ctrl_stallreq_o)
+			.stallreq_o(id_pipe_ctrl_stallreq_o),
+
+			.exception_o(id_id_exe_exception)
 		   );
 
 	regfile	regfile0(
@@ -233,6 +281,7 @@ module	core_top(
 			.clk_i(clk_i),
 			.stall_i(ctrl_stall_o),
 			.flush_jump_i(ctrl_flush_jump_o),
+			.flush_int_i(flush_int),
 
 			.inst_i(id_inst_o),
 			.inst_addr_i(id_inst_addr_o),
@@ -248,7 +297,10 @@ module	core_top(
 			.inst_o(id_exe_inst_o),
 			.inst_addr_o(id_exe_inst_addr_o),
 			.inst_is_load_o(id_exe_id_inst_is_load_o),
-			.rd_o(id_exe_id_rd_o)
+			.rd_o(id_exe_id_rd_o),
+
+			.exception_i(id_id_exe_exception),
+			.exception_o(id_exe_exe_exception)
 		       );
 
 	exe	exe0(
@@ -282,13 +334,18 @@ module	core_top(
 
 			.mem_exe_csr_we_i(mem_wb_we),
 			.mem_exe_csr_waddr_i(mem_wb_waddr),
-			.mem_exe_csr_wdata_i(mem_wb_wdata)
+			.mem_exe_csr_wdata_i(mem_wb_wdata),
+
+			.exception_i(id_exe_exe_exception),
+			.exception_o(exe_exe_mem_exception),
+			.inst_addr_o(exe_exe_mem_inst_addr)
 		);
 
 	exe_mem	exe_mem0(
 			.rst_i(rst_i),
 			.clk_i(clk_i),
 			.stall_i(ctrl_stall_o),
+			.flush_int_i(flush_int),
 
 			.reg_waddr_i(exe_reg_waddr_o),
 			.reg_we_i(exe_reg_we_o),
@@ -312,7 +369,12 @@ module	core_top(
 			.csr_wdata_i(exe_exe_mem_wdata),
 			.csr_we_o(exe_mem_mem_we),
 			.csr_waddr_o(exe_mem_mem_waddr),
-			.csr_wdata_o(exe_mem_mem_wdata)
+			.csr_wdata_o(exe_mem_mem_wdata),
+	
+			.exception_i(exe_exe_mem_exception),
+			.exception_o(exe_mem_mem_exception),
+			.inst_addr_i(exe_exe_mem_inst_addr),
+			.inst_addr_o(exe_mem_mem_inst_addr)
 			);
 
 	//assign	halt_o = mem_halt_o;
@@ -349,7 +411,12 @@ module	core_top(
 			.csr_wdata_i(exe_mem_mem_wdata),
 			.csr_we_o(mem_wb_we),
 			.csr_waddr_o(mem_wb_waddr),
-			.csr_wdata_o(mem_wb_wdata)
+			.csr_wdata_o(mem_wb_wdata),
+
+			.exception_i(exe_mem_mem_exception),
+			.exception_o(mem_interrupt_ctrl_exception),
+			.inst_addr_i(exe_mem_mem_inst_addr),
+			.inst_addr_o(mem_interrupt_ctrl_inst_addr)
 		);
 
 
@@ -357,6 +424,7 @@ module	core_top(
 			.rst_i(rst_i),
 			.clk_i(clk_i),
 			.stall_i(ctrl_stall_o),
+			.flush_int_i(flush_int),
 
 			.reg_waddr_i(mem_reg_waddr_o),
 			.reg_we_i(mem_reg_we_o),
@@ -384,8 +452,72 @@ module	core_top(
 			.we_i(wb_csr_we),
 			.waddr_i(wb_csr_waddr),
 			.wdata_i(wb_csr_wdata),
-			.instret_incr_i(wb_csr_instret_incr)
+			.instret_incr_i(wb_csr_instret_incr),
+
+			//from clint plic
+			.irq_timer_i(timer_irq_i),
+			.irq_software_i(software_irq_i),
+			.irq_external_i(),
+
+			//between interrupt_ctrl
+			//to interrupt_ctrl
+			.mstatus_ie_o(mstatus_ie),
+			.mie_external_o(mie_external),
+			.mie_timer_o(mie_timer),
+			.mie_software_o(mie_software),
+
+			.mip_external_o(mip_external),
+			.mip_timer_o(mip_timer),
+			.mip_software_o(mip_software),
+			.mtvec_o(mtvec),
+			.mepc_o(csr_interrupt_ctrl_mepc),
+
+			//from interrupt_ctrl
+			.interrupt_type_i(interrupt_type),
+			.cause_we_i(cause_we),
+			.cause_i(cause),
+			.epc_we_i(epc_we),
+			.epc_i(interrupt_ctrl_csr_mepc),
+			.mstatus_ie_clear_i(mstatus_ie_clear),
+			.mstatus_ie_set_i(mstatus_ie_set)
 		    );
+
+
+
+	interrupt_ctrl interrupt_ctrl0(
+			.rst_i(rst_i),
+			.clk_i(clk_i),
+
+			.exception_i(mem_interrupt_ctrl_exception),
+			.pc_i(mem_interrupt_ctrl_inst_addr),
+
+			//from csr
+			.mstatus_ie_i(mstatus_ie),
+			.mie_external_i(mie_external),
+			.mie_timer_i(mie_timer),
+			.mie_sw_i(mie_software),
+
+			.mip_external_i(mip_external),
+			.mip_timer_i(mip_timer),
+			.mip_sw_i(mip_software),
+
+			.mtvec_i(mtvec),
+			.epc_i(csr_interrupt_ctrl_mepc),
+
+			//to csr
+			.interrupt_type_o(interrupt_type),
+			.cause_we_o(cause_we),
+			.trap_cause_o(cause),
+
+			.epc_we_o(epc_we),
+			.epc_o(interrupt_ctrl_csr_mepc),
+
+			.mstatus_ie_clear_o(mstatus_ie_clear),
+			.mstatus_ie_set_o(mstatus_ie_set),
+
+			.flush_o(interrupt_ctrl_pipe_ctrl_int_enable),
+			.new_pc_o(isr_addr)
+			);
 
 
 endmodule

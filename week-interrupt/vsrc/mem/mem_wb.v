@@ -4,6 +4,7 @@ module	mem_wb(
 		input	wire	rst_i,
 		input	wire	clk_i,
 		input	wire[5:0]	stall_i,
+		input	wire		flush_int_i,
 
 		input	wire[`RADDR_WIDTH-1:0]	reg_waddr_i,
 		input	wire			reg_we_i,
@@ -26,6 +27,14 @@ module	mem_wb(
 
 	always@(posedge clk_i) begin
 		if(rst_i == 1) begin
+			reg_waddr_o <= `ZERO_REG;
+			reg_we_o <= `WRITE_ENABLE;
+			reg_wdata_o <= `ZERO;
+			csr_we_o <= `WRITE_DISABLE;
+			csr_waddr_o <= 0;
+			csr_wdata_o <= `ZERO;
+		end
+		else if(flush_int_i) begin
 			reg_waddr_o <= `ZERO_REG;
 			reg_we_o <= `WRITE_ENABLE;
 			reg_wdata_o <= `ZERO;

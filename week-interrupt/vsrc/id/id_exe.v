@@ -5,6 +5,7 @@ module	id_exe(
 		input	wire		clk_i,
 		input	wire[5:0]	stall_i,
 		input	wire		flush_jump_i,
+		input	wire		flush_int_i,
 
 		input	wire[`RDATA_WIDTH-1:0]	op1_i,
 		input	wire[`RDATA_WIDTH-1:0]	op2_i,
@@ -13,6 +14,7 @@ module	id_exe(
 		input	wire[`DATA_WIDTH-1:0]	inst_i,
 		input	wire[`ADDR_WIDTH-1:0]	inst_addr_i,
 
+		input	wire[`DATA_WIDTH-1:0]	exception_i,
 
 
 
@@ -24,7 +26,9 @@ module	id_exe(
 		output	reg[`ADDR_WIDTH-1:0]	inst_addr_o,
 		//to id
 		output	reg			inst_is_load_o,
-		output	reg[`RADDR_WIDTH-1:0]	rd_o
+		output	reg[`RADDR_WIDTH-1:0]	rd_o,
+		
+		output	reg[`DATA_WIDTH-1:0]	exception_o
 	      );
 
 	wire[6:0] opcode = inst_i[6:0];
@@ -41,6 +45,7 @@ module	id_exe(
 			reg_waddr_o	<=	`ZERO_REG;
 			inst_is_load_o	<=	0;
 			rd_o		<=	`ZERO_REG;
+			exception_o	<=	0;
 			end
 		else if(stall_i[2] == `STOP && stall_i[3] == `STOP)
 			begin
@@ -52,6 +57,7 @@ module	id_exe(
 			reg_waddr_o	<=	reg_waddr_o;
 			inst_is_load_o	<=	inst_is_load_o;
 			rd_o		<=	rd_o;
+			exception_o	<=	exception_o;
 			end
 		else if(stall_i[2] == `STOP && stall_i[3] == `NOSTOP)
 			begin
@@ -63,8 +69,9 @@ module	id_exe(
 			reg_waddr_o	<=	`ZERO_REG;
 			inst_is_load_o	<=	1'b0;
 			rd_o		<=	`ZERO_REG;
+			exception_o	<=	0;
 			end
-		else if(flush_jump_i == 1'b1)
+		else if(flush_jump_i | flush_int_i)
 			begin
 			inst_o		<=	`NOP;
 			inst_addr_o	<=	`ZERO;
@@ -74,6 +81,7 @@ module	id_exe(
 			reg_waddr_o	<=	`ZERO_REG;
 			inst_is_load_o	<=	1'b0;
 			rd_o		<=	`ZERO_REG;
+			exception_o	<=	0;
 			end
 		else
 			begin
@@ -85,6 +93,7 @@ module	id_exe(
 			reg_waddr_o	<=	reg_waddr_i;
 			inst_is_load_o	<=	(opcode == `INST_TYPE_L);
 			rd_o		<=	inst_i[11:7];
+			exception_o	<=	exception_i;
 			end
 	end
 endmodule

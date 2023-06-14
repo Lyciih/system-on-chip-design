@@ -13,7 +13,34 @@ module	csr(
 		input 	wire				we_i,
 		input	wire[`CSR_ADDR_WIDTH-1:0]	waddr_i,
 		input	wire[`DATA_WIDTH-1:0]		wdata_i,
-		input	wire				instret_incr_i
+		input	wire				instret_incr_i,
+			
+		//from clint plic
+		input	wire				irq_timer_i,
+		input	wire				irq_software_i,
+		input	wire				irq_external_i,
+
+		//between interrupt_ctrl
+		//to interrupt_ctrl
+		output	reg				mstatus_ie_o,
+		output	reg				mie_external_o,
+		output	reg				mie_timer_o,
+		output	reg				mie_software_o,
+
+		output	reg				mip_external_o,
+		output	reg				mip_timer_o,
+		output	reg				mip_software_o,
+		output	reg[`DATA_WIDTH-1:0]		mtvec_o,
+		output	reg[`DATA_WIDTH-1:0]		mepc_o,
+
+		//from interrupt_ctrl
+		input	wire				interrupt_type_i,
+		input	wire				cause_we_i,
+		input	wire[3:0]			cause_i,
+		input	wire				epc_we_i,
+		input	wire[`DATA_WIDTH-1:0]		epc_i,
+		input	wire				mstatus_ie_clear_i,
+		input	wire				mstatus_ie_set_i
 	   );
 
 	localparam	CSR_MVENDORID_VALUE	=	32'b0;
@@ -64,6 +91,10 @@ module	csr(
 	//mie
 	reg[`RDATA_WIDTH-1:0]	mie;
 
+	assign	mie_external_o = mie[11];
+	assign	mie_timer_o = mie[7];
+	assign	mie_sw_o = mie[3];
+
 	wire w_mie;
 	assign w_mie = ((waddr_i == `CSR_MIE_ADDR) && we_i == `WRITE_ENABLE);
 	always@(posedge clk_i) begin
@@ -77,6 +108,8 @@ module	csr(
 
 	//mtvec
 	reg[`RDATA_WIDTH-1:0]	mtvec;
+
+	assign mtvec_o = mtvec;
 
 	wire w_mtvec;
 	assign w_mtvec = ((waddr_i == `CSR_MTVEC_ADDR) && we_i == `WRITE_ENABLE);
@@ -106,11 +139,16 @@ module	csr(
 	//mepc
 	reg[`RDATA_WIDTH-1:0]	mepc;
 
+	assign	epc_o = mepc;
+
 	wire w_mepc;
 	assign w_mepc = ((waddr_i == `CSR_MEPC_ADDR) && we_i == `WRITE_ENABLE);
 	always@(posedge clk_i) begin
 		if(rst_i == 1'b1) begin
 			mepc <= `ZERO;
+		end
+		else if(epc_we_i) begin
+			mepc <= {epc_i[31:2], 2'b00};
 		end
 		else if(w_mepc) begin
 			mepc <= wdata_i;

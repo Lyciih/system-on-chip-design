@@ -5,6 +5,7 @@ module if_id(
 		input	wire		rst_i,
 		input	wire[5:0]	stall_i,
 		input	wire		flush_jump_i,
+		input	wire		flush_int_i,
 
 		input	wire[`ADDR_WIDTH-1:0]	inst_addr_i,
 		input	wire[`DATA_WIDTH-1:0]	inst_i,
@@ -27,7 +28,7 @@ module if_id(
 			inst_addr_o <= 0;
 			inst_o <= `NOP;
 		end
-		else if(flush_jump_i == 1'b1) begin
+		else if(flush_jump_i | flush_int_i) begin
 			inst_addr_o <= 0;
 			inst_o <= `NOP;
 		end

@@ -6,15 +6,32 @@ module	pipe_ctrl(
 		input	wire	stallreq_from_id_i,	//load hazard
 		input	wire	stallreq_from_exe_i,	//load hazard
 		input	wire	jump_enable_i,
+		input	wire	int_enable_i,
 		input	wire[`ADDR_WIDTH-1:0]	jump_addr_i,
+		input	wire[`ADDR_WIDTH-1:0]	isr_addr_i,
 
 		output	reg[5:0]	stall_o,
 		output	reg		flush_jump_o,
+		output	reg		flush_int_o,
 		output	reg[`ADDR_WIDTH-1:0]	new_pc_o
 		);
 
 	assign	flush_jump_o = jump_enable_i;
-	assign	new_pc_o = jump_addr_i;
+	assign	flush_int_o = int_enable_i;
+	//assign	new_pc_o = jump_addr_i;
+
+
+	always@(*)begin
+		if(int_enable_i)begin
+			new_pc_o = isr_addr_i;
+		end
+		else if(jump_enable_i)begin
+			new_pc_o = jump_addr_i;
+		end
+		else begin
+			new_pc_o = `ZERO;
+		end
+	end
 
 	always@(*)begin
 		if(rst_i == 1'b1)begin
