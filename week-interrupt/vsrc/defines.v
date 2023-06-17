@@ -101,6 +101,12 @@
 
 //CSR
 `define INST_TYPE_SYSTEM	7'b1110011	//opcode
+
+`define	ECALL	32'h00000073
+`define	MRET	32'h30200073
+
+`define	INST_ECALL	3'b000
+
 `define	INST_CSRRW	3'b001
 `define	INST_CSRRS	3'b010
 `define	INST_CSRRC	3'b011

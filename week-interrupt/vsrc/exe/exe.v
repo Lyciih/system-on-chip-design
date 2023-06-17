@@ -11,6 +11,8 @@ module exe(
 		input	wire[`RDATA_WIDTH-1:0]	inst_i,
 		input	wire[`ADDR_WIDTH-1:0]	inst_addr_i,
 		
+		output	reg[`RDATA_WIDTH-1:0]	inst_o,
+		output	reg[`ADDR_WIDTH-1:0]	inst_addr_o,
 
 
 		output	reg[`RADDR_WIDTH-1:0]	reg_waddr_o,
@@ -140,9 +142,15 @@ module exe(
 			reg_waddr_o = `ZERO_REG;
 			reg_wdata_o = `ZERO;
 			reg_we_o = `WRITE_DISABLE;
+			inst_o = `ZERO;
+			inst_addr_o = `ZERO;
 		end
 		else begin
 			reg_we_o = reg_we_i;
+
+			inst_o = inst_i;
+			inst_addr_o = inst_addr_i;
+
 			mem_op_o = `MEM_NOP;
 
 			//stallreq_o = 1'b0;

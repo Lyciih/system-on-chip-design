@@ -13,7 +13,10 @@ module	csr(
 		input 	wire				we_i,
 		input	wire[`CSR_ADDR_WIDTH-1:0]	waddr_i,
 		input	wire[`DATA_WIDTH-1:0]		wdata_i,
-		input	wire				instret_incr_i
+		input	wire				instret_incr_i,
+		
+		//to interrupt ctrl
+		output	reg[`DATA_WIDTH-1:0]		mepc_o
 	   );
 
 	localparam	CSR_MVENDORID_VALUE	=	32'b0;
@@ -105,6 +108,7 @@ module	csr(
 
 	//mepc
 	reg[`RDATA_WIDTH-1:0]	mepc;
+	assign mepc_o = mepc;
 
 	wire w_mepc;
 	assign w_mepc = ((waddr_i == `CSR_MEPC_ADDR) && we_i == `WRITE_ENABLE);

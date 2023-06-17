@@ -131,7 +131,20 @@ module	core_top(
 
 	//csr to exe
 	wire[`DATA_WIDTH-1:0]		csr_exe_rdata;
-	
+
+
+	//for ecall
+	wire[`DATA_WIDTH-1:0]		exe_exe_mem_inst;
+	wire[`ADDR_WIDTH-1:0]		exe_exe_mem_inst_addr;
+	wire[`DATA_WIDTH-1:0]		exe_mem_mem_inst;
+	wire[`ADDR_WIDTH-1:0]		exe_mem_mem_inst_addr;
+	wire[`DATA_WIDTH-1:0]		mem_interrupt_inst;
+	wire[`ADDR_WIDTH-1:0]		mem_interrupt_inst_addr;
+	wire				interrupt_pipe_ctrl_enable;
+	wire[`ADDR_WIDTH-1:0]		interrupt_pipe_ctrl_mtvec_addr;
+	wire				flush_interrupt;
+	wire[`ADDR_WIDTH-1:0]		csr_interrupt_mepc;
+
 	pipe_ctrl ctrl0(
 			.rst_i(rst_i),
 			.stallreq_from_id_i(id_pipe_ctrl_stallreq_o),
@@ -141,7 +154,11 @@ module	core_top(
 
 			.stall_o(ctrl_stall_o),
 			.flush_jump_o(ctrl_flush_jump_o),
-			.new_pc_o(ctrl_new_pc_o)
+			.new_pc_o(ctrl_new_pc_o),
+
+			.interrupt_enable_i(interrupt_pipe_ctrl_enable),
+			.mtvec_addr_i(interrupt_pipe_ctrl_mtvec_addr),
+			.flush_interrupt_o(flush_interrupt)
 			);
 
 	assign	pc_wire_o = pc_wire;
@@ -151,6 +168,7 @@ module	core_top(
 			.clk_i(clk_i),
 			.stall_i(ctrl_stall_o),
 			.flush_jump_i(ctrl_flush_jump_o),
+			.flush_interrupt_i(flush_interrupt),
 			.new_pc_i(ctrl_new_pc_o),
 			.pc_o(pc_wire),
 			.ce_o(ce_wire)
@@ -164,6 +182,7 @@ module	core_top(
 			.rst_i(rst_i),
 			.stall_i(ctrl_stall_o),
 			.flush_jump_i(ctrl_flush_jump_o),
+			.flush_interrupt_i(flush_interrupt),
 			.inst_addr_i(if_inst_addr_o),
 			.inst_i(if_inst_i),
 			.inst_addr_o(if_id_inst_addr_o),
@@ -233,6 +252,7 @@ module	core_top(
 			.clk_i(clk_i),
 			.stall_i(ctrl_stall_o),
 			.flush_jump_i(ctrl_flush_jump_o),
+			.flush_interrupt_i(flush_interrupt),
 
 			.inst_i(id_inst_o),
 			.inst_addr_i(id_inst_addr_o),
@@ -251,6 +271,7 @@ module	core_top(
 			.rd_o(id_exe_id_rd_o)
 		       );
 
+
 	exe	exe0(
 			.rst_i(rst_i),
 			.clk_i(clk_i),
@@ -261,6 +282,9 @@ module	core_top(
 			.reg_waddr_i(id_exe_reg_waddr_o),
 			.inst_i(id_exe_inst_o),
 			.inst_addr_i(id_exe_inst_addr_o),
+			
+			.inst_o(exe_exe_mem_inst),
+			.inst_addr_o(exe_exe_mem_inst_addr),
 
 			.reg_waddr_o(exe_reg_waddr_o),
 			.reg_we_o(exe_reg_we_o),
@@ -289,11 +313,18 @@ module	core_top(
 			.rst_i(rst_i),
 			.clk_i(clk_i),
 			.stall_i(ctrl_stall_o),
+			.flush_interrupt_i(flush_interrupt),
 
 			.reg_waddr_i(exe_reg_waddr_o),
 			.reg_we_i(exe_reg_we_o),
 			.reg_wdata_i(exe_reg_wdata_o),
 
+			.inst_i(exe_exe_mem_inst),
+			.inst_addr_i(exe_exe_mem_inst_addr),
+			
+			.inst_o(exe_mem_mem_inst),
+			.inst_addr_o(exe_mem_mem_inst_addr),
+			
 			.mem_addr_i(exe_mem_addr_o),
 			.mem_data_i(exe_mem_data_o),
 			.mem_we_i(exe_mem_we_o),
@@ -326,6 +357,12 @@ module	core_top(
 			.reg_we_i(exe_mem_reg_we_o),
 			.reg_wdata_i(exe_mem_reg_wdata_o),
 
+			.inst_i(exe_mem_mem_inst),
+			.inst_addr_i(exe_mem_mem_inst_addr),
+			
+			.inst_o(mem_interrupt_inst),
+			.inst_addr_o(mem_interrupt_inst_addr),
+			
 			.mem_addr_i(exe_mem_mem_addr_o),
 			.mem_data_i(exe_mem_mem_data_o),
 			.mem_we_i(exe_mem_mem_we_o),
@@ -357,6 +394,7 @@ module	core_top(
 			.rst_i(rst_i),
 			.clk_i(clk_i),
 			.stall_i(ctrl_stall_o),
+			.flush_interrupt_i(flush_interrupt),
 
 			.reg_waddr_i(mem_reg_waddr_o),
 			.reg_we_i(mem_reg_we_o),
@@ -384,8 +422,24 @@ module	core_top(
 			.we_i(wb_csr_we),
 			.waddr_i(wb_csr_waddr),
 			.wdata_i(wb_csr_wdata),
-			.instret_incr_i(wb_csr_instret_incr)
+			.instret_incr_i(wb_csr_instret_incr),
+
+			.mepc_o(csr_interrupt_mepc)
 		    );
 
+
+
+	interrupt	interrupt0(
+			.rst_i(rst_i),
+			.clk_i(clk_i),
+			
+			.inst_i(mem_interrupt_inst),
+			.inst_addr_i(mem_interrupt_inst_addr),
+
+			.interrupt_enable_o(interrupt_pipe_ctrl_enable),
+			.int_addr_o(interrupt_pipe_ctrl_mtvec_addr),
+
+			.mepc_i(csr_interrupt_mepc)
+		    );
 
 endmodule

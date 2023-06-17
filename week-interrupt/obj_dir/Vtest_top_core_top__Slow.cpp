@@ -53,27 +53,7 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
                                                       ? 
                                                      ((1U 
                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                       ? 
-                                                      ((0x4000U 
-                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                        ? 
-                                                       ((0x2000U 
-                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                         ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o
-                                                         : 
-                                                        ((0x1000U 
-                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                          ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o
-                                                          : 0x13U))
-                                                        : 
-                                                       ((0x2000U 
-                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                         ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o
-                                                         : 
-                                                        ((0x1000U 
-                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                          ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o
-                                                          : 0x13U)))
+                                                       ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o
                                                        : 0x13U)
                                                       : 0x13U)))
                                                    : 
@@ -779,27 +759,7 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
                                                       ? 
                                                      ((1U 
                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                       ? 
-                                                      ((0x4000U 
-                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                        ? 
-                                                       ((0x2000U 
-                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                         ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                         : 
-                                                        ((0x1000U 
-                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                          ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                          : 0U))
-                                                        : 
-                                                       ((0x2000U 
-                                                         & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                         ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                         : 
-                                                        ((0x1000U 
-                                                          & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
-                                                          ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
-                                                          : 0U)))
+                                                       ? vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_addr_o
                                                        : 0U)
                                                       : 0U)))
                                                    : 
@@ -1120,118 +1080,6 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
         }
     }
     if (vlTOPp->rst_i) {
-        vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
-    } else {
-        if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-            vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
-                = ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                    ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                        ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                     ? 0U : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                              ? ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                  ? 
-                                                 ((0x4000U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                   ? 
-                                                  ((0x2000U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                    ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                    : 
-                                                   ((0x1000U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                     ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                     : 0U))
-                                                   : 
-                                                  ((0x2000U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                    ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                    : 
-                                                   ((0x1000U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                     ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                     : 0U)))
-                                                  : 0U)
-                                              : 0U)))
-                        : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                            ? ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                    ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                        ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                        : 0U) : 0U)
-                                : 0U) : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                          ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                              ? ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                  ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                  : 0U)
-                                              : 0U)
-                                          : 0U))) : 0U);
-        } else {
-            if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                    if ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
-                    } else {
-                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                            vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
-                                = ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                    ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                        ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                        : 0U) : 0U);
-                        } else {
-                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                if ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                    if ((0x2000000U 
-                                         & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                        if ((0x2000000U 
-                                             & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
-                                            vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
-                                                = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d_ready)
-                                                    ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                    : 0U);
-                                        }
-                                    } else {
-                                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
-                                            = vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o;
-                                    }
-                                } else {
-                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
-                                }
-                            } else {
-                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
-                            }
-                        }
-                    }
-                } else {
-                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
-                }
-            } else {
-                vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
-                    = ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                        ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                     ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                         ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                             ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                             : 0U) : 0U)
-                                     : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                         ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                             ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                             : 0U) : 0U)))
-                        : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                     ? 0U : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                              ? ((1U 
-                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
-                                                  ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
-                                                  : 0U)
-                                              : 0U))));
-            }
-        }
-    }
-    if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o = 0U;
     } else {
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o 
@@ -1366,6 +1214,118 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
             }
         }
     }
+    if (vlTOPp->rst_i) {
+        vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
+    } else {
+        if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+            vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
+                = ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                    ? ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                        ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                     ? 0U : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                              ? ((1U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                  ? 
+                                                 ((0x4000U 
+                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                   ? 
+                                                  ((0x2000U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                    ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                    : 
+                                                   ((0x1000U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                     ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                     : 0U))
+                                                   : 
+                                                  ((0x2000U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                    ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                    : 
+                                                   ((0x1000U 
+                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                     ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                     : 0U)))
+                                                  : 0U)
+                                              : 0U)))
+                        : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                            ? ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                    ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                        ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                        : 0U) : 0U)
+                                : 0U) : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                          ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                              ? ((1U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                  ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                  : 0U)
+                                              : 0U)
+                                          : 0U))) : 0U);
+        } else {
+            if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                if ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                    if ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
+                    } else {
+                        if ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                            vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
+                                = ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                    ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                        ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                        : 0U) : 0U);
+                        } else {
+                            if ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                if ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                    if ((0x2000000U 
+                                         & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                        if ((0x2000000U 
+                                             & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
+                                            vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
+                                                = ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d_ready)
+                                                    ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                    : 0U);
+                                        }
+                                    } else {
+                                        vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
+                                            = vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o;
+                                    }
+                                } else {
+                                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
+                                }
+                            } else {
+                                vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
+                            }
+                        }
+                    }
+                } else {
+                    vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o = 0U;
+                }
+            } else {
+                vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o 
+                    = ((0x10U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                        ? ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                     ? ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                         ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                             ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                             : 0U) : 0U)
+                                     : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                         ? ((1U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                             ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                             : 0U) : 0U)))
+                        : ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                            ? 0U : ((4U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                     ? 0U : ((2U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                              ? ((1U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
+                                                  ? (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_waddr_o)
+                                                  : 0U)
+                                              : 0U))));
+            }
+        }
+    }
     if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
         if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                       >> 6U)))) {
@@ -1470,6 +1430,8 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
                                              >> 0x1fU)))) 
                            << 0xcU)) | (0xfffU & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                                   >> 0x14U)));
+    vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst 
+        = ((IData)(vlTOPp->rst_i) ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_inst);
     if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
         if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                       >> 6U)))) {
@@ -2048,23 +2010,8 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
     }
     vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_we_o 
         = ((~ (IData)(vlTOPp->rst_i)) & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_we_o));
-    if (vlTOPp->rst_i) {
-        vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_waddr_o = 0U;
-        vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_wdata = 0U;
-        vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_waddr = 0U;
-    } else {
-        vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_waddr_o 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_waddr_o;
-        vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_wdata 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_wdata;
-        vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_waddr 
-            = vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_waddr;
-    }
-    vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_we 
-        = ((~ (IData)(vlTOPp->rst_i)) & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_we));
-    vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__w_sepc 
-        = ((0x141U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_waddr)) 
-           & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_we));
+    vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_waddr_o 
+        = ((IData)(vlTOPp->rst_i) ? 0U : (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_waddr_o));
     if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__ram_we_o = 0U;
     } else {
@@ -2156,6 +2103,20 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
             }
         }
     }
+    if (vlTOPp->rst_i) {
+        vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_wdata = 0U;
+        vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_waddr = 0U;
+    } else {
+        vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_wdata 
+            = vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_wdata;
+        vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_waddr 
+            = vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_waddr;
+    }
+    vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_we 
+        = ((~ (IData)(vlTOPp->rst_i)) & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_we));
+    vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__w_sepc 
+        = ((0x141U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_waddr)) 
+           & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_we));
     if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
         if ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
             if ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)) {
@@ -2308,6 +2269,10 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
             }
         }
     }
+    vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable 
+        = ((~ (IData)(vlTOPp->rst_i)) & ((0x73U == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst) 
+                                         | (0x30200073U 
+                                            == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst)));
     vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o 
         = ((IData)(vlTOPp->rst_i) ? 0U : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_stallreq_o)
                                            ? 0xfU : 
@@ -2932,6 +2897,10 @@ void Vtest_top_core_top::_ctor_var_reset() {
     __PVT__wb_csr_wdata = VL_RAND_RESET_I(32);
     __PVT__wb_csr_instret_incr = VL_RAND_RESET_I(1);
     __PVT__csr_exe_rdata = VL_RAND_RESET_I(32);
+    __PVT__exe_mem_mem_inst = VL_RAND_RESET_I(32);
+    __PVT__exe_mem_mem_inst_addr = VL_RAND_RESET_I(32);
+    __PVT__mem_interrupt_inst = VL_RAND_RESET_I(32);
+    __PVT__interrupt_pipe_ctrl_enable = VL_RAND_RESET_I(1);
     __PVT__id0__DOT__op1_o_final = VL_RAND_RESET_I(32);
     __PVT__id0__DOT__op2_o_final = VL_RAND_RESET_I(32);
     __PVT__id0__DOT__i_op2_o = VL_RAND_RESET_I(32);
@@ -2970,4 +2939,5 @@ void Vtest_top_core_top::_ctor_var_reset() {
     __PVT__csr0__DOT__w_sepc = VL_RAND_RESET_I(1);
     __PVT__csr0__DOT__scause = VL_RAND_RESET_I(32);
     __PVT__csr0__DOT__satp = VL_RAND_RESET_I(32);
+    __PVT__interrupt0__DOT__interrupt_signal = VL_RAND_RESET_I(1);
 }

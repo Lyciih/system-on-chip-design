@@ -5,6 +5,7 @@ module pc_reg(
 		input 	wire 			rst_i,
 		input 	wire[5:0]		stall_i,	
 		input	wire			flush_jump_i,
+		input	wire			flush_interrupt_i,
 		input	wire[`ADDR_WIDTH-1:0]	new_pc_i,
 
 		output	reg[`ADDR_WIDTH-1:0]	pc_o,
@@ -34,7 +35,7 @@ module pc_reg(
 		begin
 		pc_o <= pc_o;
 		end
-	else if(flush_jump_i == 1'b1)
+	else if(flush_jump_i | flush_interrupt_i)
 		begin
 		pc_o <= new_pc_i;
 		end

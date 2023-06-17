@@ -323,8 +323,8 @@ module	id(
 							op2_o_final = `ZERO;
 						end
 						default: begin
-							inst_o = `NOP;
-							inst_addr_o = `ZERO;
+							inst_o = inst_i;
+							inst_addr_o = inst_addr_i;
 							reg1_raddr_o = `ZERO_REG;
 							reg2_raddr_o = `ZERO_REG;
 							reg1_re_o = `READ_DISABLE;

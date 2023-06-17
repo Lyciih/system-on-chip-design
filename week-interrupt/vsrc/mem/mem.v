@@ -8,6 +8,14 @@ module mem(
 		input	wire[`RADDR_WIDTH-1:0]	reg_waddr_i,
 		input	wire			reg_we_i,
 		input	wire[`RDATA_WIDTH-1:0]	reg_wdata_i,
+		
+		input	wire[`RDATA_WIDTH-1:0]	inst_i,
+		input	wire[`ADDR_WIDTH-1:0]	inst_addr_i,
+		
+		output	reg[`RDATA_WIDTH-1:0]	inst_o,
+		output	reg[`ADDR_WIDTH-1:0]	inst_addr_o,
+		//output	reg[`RDATA_WIDTH-1:0]	inst_o,
+		//output	reg[`ADDR_WIDTH-1:0]	inst_addr_o,
 
 		input	wire[`ADDR_WIDTH-1:0]	mem_addr_i,
 		input	wire[`DATA_WIDTH-1:0]	mem_data_i,
@@ -56,6 +64,9 @@ module mem(
 			reg_waddr_o = `ZERO_REG;
 			reg_we_o = `WRITE_DISABLE;
 			reg_wdata_o = `ZERO;
+
+			inst_o = `ZERO;
+			inst_addr_o = `ZERO;
 			
 			ram_addr_o = `ZERO;
 			ram_data_o = 0;
@@ -68,6 +79,10 @@ module mem(
 		else begin
 			reg_waddr_o = reg_waddr_i;
 			reg_we_o = reg_we_i;
+
+			inst_o = inst_i;
+			inst_addr_o = inst_addr_i;
+
 			ram_w_request_o = mem_we_i;
 			ram_addr_o = mem_addr_i;
 			csr_we_o = csr_we_i;
