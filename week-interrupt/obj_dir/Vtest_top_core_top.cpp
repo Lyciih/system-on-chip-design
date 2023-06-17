@@ -822,9 +822,9 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
         vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__rs2_temp = 0U;
     }
     vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_we_o 
-        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable)) 
+        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept)) 
            | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o));
-    if (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))) {
+    if (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))) {
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_waddr_o = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_reg_wdata_o = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_inst_addr = 0U;
@@ -850,7 +850,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                                     >> 3U))))
                                                ? 0U
                                                : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
-                                                   | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+                                                   | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
                                                    ? 0U
                                                    : (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg_waddr_o)))));
     vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_reg_we_o 
@@ -866,7 +866,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                                      >> 3U)))) 
                                              & ((~ 
                                                  ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
-                                                  | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))) 
+                                                  | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))) 
                                                 & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg_we_o)))));
     vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_id_rd_o 
         = ((IData)(vlTOPp->rst_i) ? 0U : (0x1fU & (
@@ -886,7 +886,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                                      ? 0U
                                                      : 
                                                     (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
-                                                      | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+                                                      | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
                                                       ? 0U
                                                       : 
                                                      (vlSymsp->TOP__test_top__core_top0.__PVT__id_inst_o 
@@ -904,7 +904,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                                      >> 3U)))) 
                                              & ((~ 
                                                  ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
-                                                  | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))) 
+                                                  | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))) 
                                                 & (3U 
                                                    == 
                                                    (0x7fU 
@@ -921,7 +921,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                            >> 1U) & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                         >> 2U)))) ? 0U
                     : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
-                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
                         ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__pc_wire)));
         vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_addr_o 
             = ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
@@ -931,17 +931,17 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                            >> 2U) & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                         >> 3U)))) ? 0U
                     : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
-                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
                         ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__id_inst_addr_o)));
     }
     vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_waddr 
-        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
             ? 0U : (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_waddr));
     vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_we 
-        = ((~ ((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))) 
+        = ((~ ((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))) 
            & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_we));
     vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_wdata 
-        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
             ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_exe_mem_wdata);
     if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op2_o = 0U;
@@ -955,7 +955,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                            >> 2U) & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                         >> 3U)))) ? 0U
                     : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
-                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
                         ? 0U : ((IData)(vlTOPp->rst_i)
                                  ? 0U : ((((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_re_o) 
                                            & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o)) 
@@ -995,10 +995,10 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
         }
     }
     vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_we_o 
-        = ((~ ((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))) 
+        = ((~ ((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))) 
            & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_we_o));
     vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_data_o 
-        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
             ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_data_o);
     if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtval = 0U;
@@ -1082,15 +1082,6 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
         }
     }
     if (vlTOPp->rst_i) {
-        vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec = 0U;
-    } else {
-        if (((0x305U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_waddr)) 
-             & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_we))) {
-            vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec 
-                = vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_wdata;
-        }
-    }
-    if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mie = 0U;
     } else {
         if (((0x304U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_waddr)) 
@@ -1125,7 +1116,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                                      ? 0x13U
                                                      : 
                                                     (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
-                                                      | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+                                                      | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
                                                       ? 0x13U
                                                       : 
                                                      ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ce_wire)
@@ -1199,22 +1190,27 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
             ? ((1U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o))
                 ? vlSymsp->TOP__test_top__core_top0.__PVT__pc_wire
                 : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
-                    | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+                    | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
                     ? ((IData)(vlTOPp->rst_i) ? 0U : 
-                       ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable)
+                       ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept)
                          ? ((IData)(vlTOPp->rst_i) ? 0U
-                             : ((0x73U == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst)
-                                 ? 0x64U : ((0x30200073U 
-                                             == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst)
-                                             ? vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mepc
-                                             : 0U)))
-                         : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
-                             ? vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_addr_o
-                             : 0U))) : ((IData)(4U) 
-                                        + vlSymsp->TOP__test_top__core_top0.__PVT__pc_wire)))
+                             : ((0x30200073U == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst)
+                                 ? vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mepc
+                                 : ((0U == (3U & vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec))
+                                     ? vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec
+                                     : ((1U == (3U 
+                                                & vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec))
+                                         ? ((0xfffffffcU 
+                                             & vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec) 
+                                            + (vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mcause 
+                                               << 2U))
+                                         : 0U)))) : 
+                        ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
+                          ? vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_addr_o
+                          : 0U))) : ((IData)(4U) + vlSymsp->TOP__test_top__core_top0.__PVT__pc_wire)))
             : 0U);
     vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_inst 
-        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
             ? 0x13U : ((IData)(vlTOPp->rst_i) ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o));
     if (vlTOPp->rst_i) {
         vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o = 0x13U;
@@ -1228,7 +1224,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                            >> 2U) & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                         >> 3U)))) ? 0x13U
                     : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
-                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
                         ? 0x13U : vlSymsp->TOP__test_top__core_top0.__PVT__id_inst_o)));
         vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
             = ((1U & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
@@ -1238,7 +1234,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                            >> 2U) & (~ ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o) 
                                         >> 3U)))) ? 0U
                     : (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o) 
-                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+                        | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
                         ? 0U : ((IData)(vlTOPp->rst_i)
                                  ? 0U : (((((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_re_o) 
                                             & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o)) 
@@ -1256,7 +1252,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                               : vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__op1_o_final))))));
     }
     vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o 
-        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))
+        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))
             ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_addr_o);
     vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__minstret 
         = __Vdly__csr0__DOT__minstret;
@@ -1337,6 +1333,15 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                 = vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_wdata;
         }
     }
+    if (vlTOPp->rst_i) {
+        vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec = 0U;
+    } else {
+        if (((0x305U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_waddr)) 
+             & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_we))) {
+            vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec 
+                = vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_wdata;
+        }
+    }
     vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__load_addr_offset 
         = ((0xfffff000U & ((- (IData)((1U & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                              >> 0x1fU)))) 
@@ -1355,7 +1360,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
                                               | (0x1eU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                                     >> 7U))))));
-    if (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))) {
+    if (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))) {
         vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_wdata = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_waddr = 0U;
     } else {
@@ -1365,7 +1370,7 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__4(Vte
             = vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_waddr;
     }
     vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_we 
-        = ((~ ((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))) 
+        = ((~ ((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))) 
            & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_we));
     vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__w_sepc 
         = ((0x141U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_waddr)) 
@@ -1377,9 +1382,9 @@ VL_INLINE_OPT void Vtest_top_core_top::_sequent__TOP__test_top__core_top0__5(Vte
     Vtest_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_we_o 
-        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable)) 
+        = (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept)) 
            | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_we_o));
-    if (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable))) {
+    if (((IData)(vlTOPp->rst_i) | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept))) {
         vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_waddr_o = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__mem_wb_reg_wdata_o = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o = 0U;
@@ -3555,10 +3560,15 @@ VL_INLINE_OPT void Vtest_top_core_top::_combo__TOP__test_top__core_top0__6(Vtest
             }
         }
     }
-    vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable 
-        = ((~ (IData)(vlTOPp->rst_i)) & ((0x73U == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst) 
-                                         | (0x30200073U 
-                                            == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst)));
+    vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept 
+        = ((~ (IData)(vlTOPp->rst_i)) & ((0U != vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__exception_i) 
+                                         | ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__csr_interrupt_mstatus)
+                                             ? ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__external_interrupt_i) 
+                                                | ((0x73U 
+                                                    == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst) 
+                                                   | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__timer_interrupt_i)))
+                                             : (0x30200073U 
+                                                == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst))));
     vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o 
         = ((IData)(vlTOPp->rst_i) ? 0U : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_stallreq_o)
                                            ? 0xfU : 
@@ -3796,7 +3806,11 @@ VL_INLINE_OPT void Vtest_top_core_top::_combo__TOP__test_top__core_top0__6(Vtest
                                                         : 
                                                        ((2U 
                                                          & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_csr_raddr))
-                                                         ? 0U
+                                                         ? 
+                                                        ((1U 
+                                                          & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_csr_raddr))
+                                                          ? 0U
+                                                          : vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mcause)
                                                          : 
                                                         ((1U 
                                                           & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_csr_raddr))

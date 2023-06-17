@@ -144,8 +144,11 @@ module	core_top(
 	wire[`ADDR_WIDTH-1:0]		interrupt_pipe_ctrl_mtvec_addr;
 	wire				flush_interrupt;
 	wire[`ADDR_WIDTH-1:0]		csr_interrupt_mepc;
+	wire[`ADDR_WIDTH-1:0]		csr_interrupt_mtvec;
+	wire[`DATA_WIDTH-1:0]		csr_interrupt_mcause;
+	wire[`DATA_WIDTH-1:0]		csr_interrupt_mstatus;
 
-	pipe_ctrl ctrl0(
+	pipe_ctrl pipe_ctrl0(
 			.rst_i(rst_i),
 			.stallreq_from_id_i(id_pipe_ctrl_stallreq_o),
 			.stallreq_from_exe_i(exe_pipe_ctrl_stallreq_o),
@@ -424,7 +427,10 @@ module	core_top(
 			.wdata_i(wb_csr_wdata),
 			.instret_incr_i(wb_csr_instret_incr),
 
-			.mepc_o(csr_interrupt_mepc)
+			.mepc_o(csr_interrupt_mepc),
+			.mtvec_o(csr_interrupt_mtvec),
+			.mcause_o(csr_interrupt_mcause),
+			.mstatus_o(csr_interrupt_mstatus)
 		    );
 
 
@@ -435,11 +441,17 @@ module	core_top(
 			
 			.inst_i(mem_interrupt_inst),
 			.inst_addr_i(mem_interrupt_inst_addr),
+			.exception_i(),
+			.external_interrupt_i(),
+			.timer_interrupt_i(),
 
 			.interrupt_enable_o(interrupt_pipe_ctrl_enable),
 			.int_addr_o(interrupt_pipe_ctrl_mtvec_addr),
 
-			.mepc_i(csr_interrupt_mepc)
+			.mepc_i(csr_interrupt_mepc),
+			.mtvec_i(csr_interrupt_mtvec),
+			.mcause_i(csr_interrupt_mcause),
+			.mstatus_i(csr_interrupt_mstatus)
 		    );
 
 endmodule

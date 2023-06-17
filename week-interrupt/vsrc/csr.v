@@ -16,7 +16,10 @@ module	csr(
 		input	wire				instret_incr_i,
 		
 		//to interrupt ctrl
-		output	reg[`DATA_WIDTH-1:0]		mepc_o
+		output	reg[`ADDR_WIDTH-1:0]		mepc_o,
+		output	reg[`ADDR_WIDTH-1:0]		mtvec_o,
+		output	reg[`DATA_WIDTH-1:0]		mcause_o,
+		output	reg[`DATA_WIDTH-1:0]		mstatus_o
 	   );
 
 	localparam	CSR_MVENDORID_VALUE	=	32'b0;
@@ -81,6 +84,8 @@ module	csr(
 	//mtvec
 	reg[`RDATA_WIDTH-1:0]	mtvec;
 
+	assign mtvec_o = mtvec;
+
 	wire w_mtvec;
 	assign w_mtvec = ((waddr_i == `CSR_MTVEC_ADDR) && we_i == `WRITE_ENABLE);
 	always@(posedge clk_i) begin
@@ -123,7 +128,7 @@ module	csr(
 
 	//mcause
 	reg[`RDATA_WIDTH-1:0]	mcause;
-	assign mcause = {32'b0};
+	assign mcause_o = mcause;
 
 	/*
 	wire w_mcause;

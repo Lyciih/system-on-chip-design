@@ -1430,8 +1430,6 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
                                              >> 0x1fU)))) 
                            << 0xcU)) | (0xfffU & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                                   >> 0x14U)));
-    vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst 
-        = ((IData)(vlTOPp->rst_i) ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_inst);
     if ((1U & (~ (IData)(vlTOPp->rst_i)))) {
         if ((1U & (~ (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                       >> 6U)))) {
@@ -1474,9 +1472,12 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                                     >> 7U))))));
     if (vlTOPp->rst_i) {
+        vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o = 0U;
         vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_addr_o = 0U;
     } else {
+        vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst 
+            = vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_inst;
         vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o 
             = (0x1fU & ((0x40U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
                          ? ((0x20U & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
@@ -2269,10 +2270,6 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
             }
         }
     }
-    vlSymsp->TOP__test_top__core_top0.__PVT__interrupt_pipe_ctrl_enable 
-        = ((~ (IData)(vlTOPp->rst_i)) & ((0x73U == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst) 
-                                         | (0x30200073U 
-                                            == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst)));
     vlSymsp->TOP__test_top__core_top0.__PVT__ctrl_stall_o 
         = ((IData)(vlTOPp->rst_i) ? 0U : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_stallreq_o)
                                            ? 0xfU : 
@@ -2401,6 +2398,15 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
             }
         }
     }
+    vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept 
+        = ((~ (IData)(vlTOPp->rst_i)) & ((0U != vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__exception_i) 
+                                         | ((8U & vlSymsp->TOP__test_top__core_top0.__PVT__csr_interrupt_mstatus)
+                                             ? ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__external_interrupt_i) 
+                                                | ((0x73U 
+                                                    == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst) 
+                                                   | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__timer_interrupt_i)))
+                                             : (0x30200073U 
+                                                == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst))));
     vlSymsp->TOP__test_top__core_top0.__PVT__csr_exe_rdata 
         = ((((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_waddr) 
              == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_csr_raddr)) 
@@ -2625,7 +2631,11 @@ void Vtest_top_core_top::_settle__TOP__test_top__core_top0__1(Vtest_top__Syms* _
                                                         : 
                                                        ((2U 
                                                          & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_csr_raddr))
-                                                         ? 0U
+                                                         ? 
+                                                        ((1U 
+                                                          & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_csr_raddr))
+                                                          ? 0U
+                                                          : vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mcause)
                                                          : 
                                                         ((1U 
                                                           & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_csr_raddr))
@@ -2900,7 +2910,7 @@ void Vtest_top_core_top::_ctor_var_reset() {
     __PVT__exe_mem_mem_inst = VL_RAND_RESET_I(32);
     __PVT__exe_mem_mem_inst_addr = VL_RAND_RESET_I(32);
     __PVT__mem_interrupt_inst = VL_RAND_RESET_I(32);
-    __PVT__interrupt_pipe_ctrl_enable = VL_RAND_RESET_I(1);
+    __PVT__csr_interrupt_mstatus = VL_RAND_RESET_I(32);
     __PVT__id0__DOT__op1_o_final = VL_RAND_RESET_I(32);
     __PVT__id0__DOT__op2_o_final = VL_RAND_RESET_I(32);
     __PVT__id0__DOT__i_op2_o = VL_RAND_RESET_I(32);
@@ -2928,6 +2938,7 @@ void Vtest_top_core_top::_ctor_var_reset() {
     __PVT__csr0__DOT__mtvec = VL_RAND_RESET_I(32);
     __PVT__csr0__DOT__mscratch = VL_RAND_RESET_I(32);
     __PVT__csr0__DOT__mepc = VL_RAND_RESET_I(32);
+    __PVT__csr0__DOT__mcause = VL_RAND_RESET_I(32);
     __PVT__csr0__DOT__mtval = VL_RAND_RESET_I(32);
     __PVT__csr0__DOT__medeleg = VL_RAND_RESET_I(32);
     __PVT__csr0__DOT__mideleg = VL_RAND_RESET_I(32);
@@ -2939,5 +2950,8 @@ void Vtest_top_core_top::_ctor_var_reset() {
     __PVT__csr0__DOT__w_sepc = VL_RAND_RESET_I(1);
     __PVT__csr0__DOT__scause = VL_RAND_RESET_I(32);
     __PVT__csr0__DOT__satp = VL_RAND_RESET_I(32);
-    __PVT__interrupt0__DOT__interrupt_signal = VL_RAND_RESET_I(1);
+    __PVT__interrupt0__DOT__exception_i = VL_RAND_RESET_I(32);
+    __PVT__interrupt0__DOT__external_interrupt_i = VL_RAND_RESET_I(1);
+    __PVT__interrupt0__DOT__timer_interrupt_i = VL_RAND_RESET_I(1);
+    __PVT__interrupt0__DOT__interrupt_accept = VL_RAND_RESET_I(1);
 }

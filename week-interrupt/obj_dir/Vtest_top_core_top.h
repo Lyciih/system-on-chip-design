@@ -73,7 +73,6 @@ VL_MODULE(Vtest_top_core_top) {
         CData/*0:0*/ __PVT__mem_wb_we;
         CData/*0:0*/ __PVT__wb_csr_we;
         CData/*0:0*/ __PVT__wb_csr_instret_incr;
-        CData/*0:0*/ __PVT__interrupt_pipe_ctrl_enable;
         CData/*1:0*/ __PVT__exe0__DOT__m_d_op;
         CData/*0:0*/ __PVT__exe0__DOT__rs1_signed_i;
         CData/*0:0*/ __PVT__exe0__DOT__rs2_signed_i;
@@ -82,7 +81,9 @@ VL_MODULE(Vtest_top_core_top) {
         CData/*0:0*/ __PVT__exe0__DOT__m_d__DOT__rs1_is_neg;
         CData/*0:0*/ __PVT__exe0__DOT__m_d__DOT__rs2_is_neg;
         CData/*0:0*/ __PVT__csr0__DOT__w_sepc;
-        CData/*0:0*/ __PVT__interrupt0__DOT__interrupt_signal;
+        CData/*0:0*/ __PVT__interrupt0__DOT__external_interrupt_i;
+        CData/*0:0*/ __PVT__interrupt0__DOT__timer_interrupt_i;
+        CData/*0:0*/ __PVT__interrupt0__DOT__interrupt_accept;
         SData/*11:0*/ __PVT__exe_csr_raddr;
         SData/*11:0*/ __PVT__exe_exe_mem_waddr;
         SData/*11:0*/ __PVT__exe_mem_mem_waddr;
@@ -104,9 +105,9 @@ VL_MODULE(Vtest_top_core_top) {
         IData/*31:0*/ __PVT__exe_mem_reg_wdata_o;
         IData/*31:0*/ __PVT__exe_mem_mem_addr_o;
         IData/*31:0*/ __PVT__exe_mem_mem_data_o;
-        IData/*31:0*/ __PVT__mem_reg_wdata_o;
     };
     struct {
+        IData/*31:0*/ __PVT__mem_reg_wdata_o;
         IData/*31:0*/ __PVT__mem_wb_reg_wdata_o;
         IData/*31:0*/ __PVT__exe_exe_mem_wdata;
         IData/*31:0*/ __PVT__exe_mem_mem_wdata;
@@ -116,6 +117,7 @@ VL_MODULE(Vtest_top_core_top) {
         IData/*31:0*/ __PVT__exe_mem_mem_inst;
         IData/*31:0*/ __PVT__exe_mem_mem_inst_addr;
         IData/*31:0*/ __PVT__mem_interrupt_inst;
+        IData/*31:0*/ __PVT__csr_interrupt_mstatus;
         IData/*31:0*/ __PVT__id0__DOT__op1_o_final;
         IData/*31:0*/ __PVT__id0__DOT__op2_o_final;
         IData/*31:0*/ __PVT__id0__DOT__i_op2_o;
@@ -134,6 +136,7 @@ VL_MODULE(Vtest_top_core_top) {
         IData/*31:0*/ __PVT__csr0__DOT__mtvec;
         IData/*31:0*/ __PVT__csr0__DOT__mscratch;
         IData/*31:0*/ __PVT__csr0__DOT__mepc;
+        IData/*31:0*/ __PVT__csr0__DOT__mcause;
         IData/*31:0*/ __PVT__csr0__DOT__mtval;
         IData/*31:0*/ __PVT__csr0__DOT__medeleg;
         IData/*31:0*/ __PVT__csr0__DOT__mideleg;
@@ -144,6 +147,7 @@ VL_MODULE(Vtest_top_core_top) {
         IData/*31:0*/ __PVT__csr0__DOT__sepc;
         IData/*31:0*/ __PVT__csr0__DOT__scause;
         IData/*31:0*/ __PVT__csr0__DOT__satp;
+        IData/*31:0*/ __PVT__interrupt0__DOT__exception_i;
         QData/*63:0*/ __PVT__csr0__DOT__mcycle;
         QData/*63:0*/ __PVT__csr0__DOT__minstret;
     };
