@@ -83,17 +83,18 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
             tracep->chgIData(oldp+48,(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_inst_addr),32);
             tracep->chgIData(oldp+49,(vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mepc),32);
             tracep->chgIData(oldp+50,(vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec),32);
-            tracep->chgCData(oldp+51,((0x7fU & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)),7);
-            tracep->chgCData(oldp+52,((0x1fU & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+            tracep->chgIData(oldp+51,(vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mstatus),32);
+            tracep->chgCData(oldp+52,((0x7fU & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)),7);
+            tracep->chgCData(oldp+53,((0x1fU & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
                                                 >> 7U))),5);
-            tracep->chgCData(oldp+53,((7U & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+            tracep->chgCData(oldp+54,((7U & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
                                              >> 0xcU))),3);
-            tracep->chgCData(oldp+54,((0x1fU & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
-                                                >> 0xfU))),5);
             tracep->chgCData(oldp+55,((0x1fU & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
+                                                >> 0xfU))),5);
+            tracep->chgCData(oldp+56,((0x1fU & (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
                                                 >> 0x14U))),5);
-            tracep->chgIData(oldp+56,(vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__i_op2_o),32);
-            tracep->chgCData(oldp+57,((0x1fU & ((0x4000U 
+            tracep->chgIData(oldp+57,(vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__i_op2_o),32);
+            tracep->chgCData(oldp+58,((0x1fU & ((0x4000U 
                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o)
                                                  ? 
                                                 ((0x2000U 
@@ -137,19 +138,19 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                                    : 
                                                   (vlSymsp->TOP__test_top__core_top0.__PVT__if_id_inst_o 
                                                    >> 7U)))))),5);
-            tracep->chgCData(oldp+58,((0x7fU & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)),7);
-            tracep->chgCData(oldp+59,((7U & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+            tracep->chgCData(oldp+59,((0x7fU & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)),7);
+            tracep->chgCData(oldp+60,((7U & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                              >> 0xcU))),3);
-            tracep->chgCData(oldp+60,((0x7fU & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+            tracep->chgCData(oldp+61,((0x7fU & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                                 >> 0x19U))),7);
-            tracep->chgCData(oldp+61,((0x1fU & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+            tracep->chgCData(oldp+62,((0x1fU & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                                 >> 0x14U))),5);
-            tracep->chgBit(oldp+62,((1U & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
-                                           >> 0xeU))));
             tracep->chgBit(oldp+63,((1U & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+                                           >> 0xeU))));
+            tracep->chgBit(oldp+64,((1U & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                            >> 0x1eU))));
-            tracep->chgIData(oldp+64,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__b_type_offset),32);
-            tracep->chgIData(oldp+65,((vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_addr_o 
+            tracep->chgIData(oldp+65,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__b_type_offset),32);
+            tracep->chgIData(oldp+66,((vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_addr_o 
                                        + ((0xfff00000U 
                                            & ((- (IData)(
                                                          (1U 
@@ -164,7 +165,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                                 | (0x7feU 
                                                    & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                                       >> 0x14U))))))),32);
-            tracep->chgIData(oldp+66,(((0xfffff000U 
+            tracep->chgIData(oldp+67,(((0xfffff000U 
                                         & ((- (IData)(
                                                       (1U 
                                                        & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
@@ -176,26 +177,25 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                           | (0x1fU 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                                 >> 7U))))),32);
-            tracep->chgIData(oldp+67,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__load_addr_offset),32);
-            tracep->chgBit(oldp+68,((1U & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+            tracep->chgIData(oldp+68,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__load_addr_offset),32);
+            tracep->chgBit(oldp+69,((1U & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                            >> 0x19U))));
-            tracep->chgIData(oldp+69,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d_high_result),32);
-            tracep->chgIData(oldp+70,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d_low_result),32);
-            tracep->chgBit(oldp+71,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d_ready));
-            tracep->chgCData(oldp+72,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d_count),6);
-            tracep->chgSData(oldp+73,((0xfffU & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+            tracep->chgIData(oldp+70,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d_high_result),32);
+            tracep->chgIData(oldp+71,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d_low_result),32);
+            tracep->chgBit(oldp+72,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d_ready));
+            tracep->chgCData(oldp+73,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d_count),6);
+            tracep->chgSData(oldp+74,((0xfffU & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                                  >> 0x14U))),12);
-            tracep->chgWData(oldp+74,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__long_temp),65);
-            tracep->chgIData(oldp+77,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__rs1_temp),32);
-            tracep->chgIData(oldp+78,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__rs2_temp),32);
-            tracep->chgBit(oldp+79,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__rs1_is_neg));
-            tracep->chgBit(oldp+80,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__rs2_is_neg));
-            tracep->chgBit(oldp+81,((1U & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
+            tracep->chgWData(oldp+75,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__long_temp),65);
+            tracep->chgIData(oldp+78,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__rs1_temp),32);
+            tracep->chgIData(oldp+79,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__rs2_temp),32);
+            tracep->chgBit(oldp+80,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__rs1_is_neg));
+            tracep->chgBit(oldp+81,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__m_d__DOT__rs2_is_neg));
+            tracep->chgBit(oldp+82,((1U & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                            >> 0xeU))));
-            tracep->chgCData(oldp+82,((3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o)),2);
-            tracep->chgQData(oldp+83,(vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mcycle),64);
-            tracep->chgQData(oldp+85,(vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__minstret),64);
-            tracep->chgIData(oldp+87,(vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mstatus),32);
+            tracep->chgCData(oldp+83,((3U & vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_addr_o)),2);
+            tracep->chgQData(oldp+84,(vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mcycle),64);
+            tracep->chgQData(oldp+86,(vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__minstret),64);
             tracep->chgBit(oldp+88,(((0x300U == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_waddr)) 
                                      & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__wb_csr_we))));
             tracep->chgIData(oldp+89,(vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mie),32);
@@ -377,157 +377,159 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
             tracep->chgCData(oldp+241,((0x7fU & vlSymsp->TOP__test_top__core_top0.__PVT__id_inst_o)),7);
             tracep->chgIData(oldp+242,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__compare_sub_type_i),32);
             tracep->chgIData(oldp+243,(vlSymsp->TOP__test_top__core_top0.__PVT__exe0__DOT__csr_rdata),32);
-            tracep->chgBit(oldp+244,(vlSymsp->TOP__test_top.__PVT__device_we
+            tracep->chgIData(oldp+244,(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__exception),32);
+            tracep->chgIData(oldp+245,(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__mtvec_select),32);
+            tracep->chgBit(oldp+246,(vlSymsp->TOP__test_top.__PVT__device_we
                                      [0U]));
-            tracep->chgBit(oldp+245,(vlSymsp->TOP__test_top.__PVT__device_req
+            tracep->chgBit(oldp+247,(vlSymsp->TOP__test_top.__PVT__device_req
                                      [0U]));
-            tracep->chgIData(oldp+246,(vlSymsp->TOP__test_top.__PVT__device_addr
+            tracep->chgIData(oldp+248,(vlSymsp->TOP__test_top.__PVT__device_addr
                                        [0U]),32);
-            tracep->chgIData(oldp+247,(vlSymsp->TOP__test_top.__PVT__device_wdata
+            tracep->chgIData(oldp+249,(vlSymsp->TOP__test_top.__PVT__device_wdata
                                        [0U]),32);
-            tracep->chgIData(oldp+248,(vlSymsp->TOP__test_top__dpram0.__PVT__data_o),32);
-            tracep->chgCData(oldp+249,((3U & vlSymsp->TOP__test_top.__PVT__device_addr
+            tracep->chgIData(oldp+250,(vlSymsp->TOP__test_top__dpram0.__PVT__data_o),32);
+            tracep->chgCData(oldp+251,((3U & vlSymsp->TOP__test_top.__PVT__device_addr
                                         [0U])),2);
-            tracep->chgQData(oldp+250,(vlSymsp->TOP__test_top__dpram0.__PVT__data_temp),64);
-            tracep->chgIData(oldp+252,((0x3ffffcU & 
+            tracep->chgQData(oldp+252,(vlSymsp->TOP__test_top__dpram0.__PVT__data_temp),64);
+            tracep->chgIData(oldp+254,((0x3ffffcU & 
                                         vlSymsp->TOP__test_top.__PVT__device_addr
                                         [0U])),22);
-            tracep->chgIData(oldp+253,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[0]),32);
-            tracep->chgIData(oldp+254,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[1]),32);
-            tracep->chgIData(oldp+255,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[2]),32);
-            tracep->chgIData(oldp+256,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[3]),32);
-            tracep->chgIData(oldp+257,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[4]),32);
-            tracep->chgIData(oldp+258,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[5]),32);
-            tracep->chgIData(oldp+259,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[6]),32);
-            tracep->chgIData(oldp+260,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[7]),32);
-            tracep->chgIData(oldp+261,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[8]),32);
-            tracep->chgIData(oldp+262,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[9]),32);
-            tracep->chgIData(oldp+263,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[10]),32);
-            tracep->chgIData(oldp+264,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[11]),32);
-            tracep->chgIData(oldp+265,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[12]),32);
-            tracep->chgIData(oldp+266,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[13]),32);
-            tracep->chgIData(oldp+267,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[14]),32);
-            tracep->chgIData(oldp+268,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[15]),32);
-            tracep->chgIData(oldp+269,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[16]),32);
-            tracep->chgIData(oldp+270,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[17]),32);
-            tracep->chgIData(oldp+271,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[18]),32);
-            tracep->chgIData(oldp+272,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[19]),32);
-            tracep->chgIData(oldp+273,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[20]),32);
-            tracep->chgIData(oldp+274,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[21]),32);
-            tracep->chgIData(oldp+275,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[22]),32);
-            tracep->chgIData(oldp+276,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[23]),32);
-            tracep->chgIData(oldp+277,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[24]),32);
-            tracep->chgIData(oldp+278,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[25]),32);
-            tracep->chgIData(oldp+279,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[26]),32);
-            tracep->chgIData(oldp+280,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[27]),32);
-            tracep->chgIData(oldp+281,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[28]),32);
-            tracep->chgIData(oldp+282,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[29]),32);
-            tracep->chgIData(oldp+283,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[30]),32);
-            tracep->chgIData(oldp+284,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[31]),32);
-            tracep->chgIData(oldp+285,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[0]),32);
-            tracep->chgIData(oldp+286,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[1]),32);
-            tracep->chgIData(oldp+287,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[2]),32);
-            tracep->chgIData(oldp+288,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[3]),32);
-            tracep->chgIData(oldp+289,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[4]),32);
-            tracep->chgIData(oldp+290,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[5]),32);
-            tracep->chgIData(oldp+291,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[6]),32);
-            tracep->chgIData(oldp+292,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[7]),32);
-            tracep->chgIData(oldp+293,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[8]),32);
-            tracep->chgIData(oldp+294,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[9]),32);
-            tracep->chgIData(oldp+295,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[10]),32);
-            tracep->chgIData(oldp+296,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[11]),32);
-            tracep->chgIData(oldp+297,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[12]),32);
-            tracep->chgIData(oldp+298,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[13]),32);
-            tracep->chgIData(oldp+299,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[14]),32);
-            tracep->chgIData(oldp+300,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[15]),32);
-            tracep->chgIData(oldp+301,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[16]),32);
-            tracep->chgIData(oldp+302,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[17]),32);
-            tracep->chgIData(oldp+303,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[18]),32);
-            tracep->chgIData(oldp+304,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[19]),32);
-            tracep->chgIData(oldp+305,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[20]),32);
-            tracep->chgIData(oldp+306,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[21]),32);
-            tracep->chgIData(oldp+307,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[22]),32);
-            tracep->chgIData(oldp+308,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[23]),32);
-            tracep->chgIData(oldp+309,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[24]),32);
-            tracep->chgIData(oldp+310,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[25]),32);
-            tracep->chgIData(oldp+311,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[26]),32);
-            tracep->chgIData(oldp+312,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[27]),32);
-            tracep->chgIData(oldp+313,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[28]),32);
-            tracep->chgIData(oldp+314,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[29]),32);
-            tracep->chgIData(oldp+315,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[30]),32);
-            tracep->chgIData(oldp+316,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[31]),32);
-            tracep->chgIData(oldp+317,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[0]),32);
-            tracep->chgIData(oldp+318,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[1]),32);
-            tracep->chgIData(oldp+319,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[2]),32);
-            tracep->chgIData(oldp+320,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[3]),32);
-            tracep->chgIData(oldp+321,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[4]),32);
-            tracep->chgIData(oldp+322,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[5]),32);
-            tracep->chgIData(oldp+323,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[6]),32);
-            tracep->chgIData(oldp+324,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[7]),32);
-            tracep->chgIData(oldp+325,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[8]),32);
-            tracep->chgIData(oldp+326,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[9]),32);
-            tracep->chgIData(oldp+327,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[10]),32);
-            tracep->chgIData(oldp+328,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[11]),32);
-            tracep->chgIData(oldp+329,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[12]),32);
-            tracep->chgIData(oldp+330,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[13]),32);
-            tracep->chgIData(oldp+331,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[14]),32);
-            tracep->chgIData(oldp+332,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[15]),32);
-            tracep->chgIData(oldp+333,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[16]),32);
-            tracep->chgIData(oldp+334,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[17]),32);
-            tracep->chgIData(oldp+335,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[18]),32);
-            tracep->chgIData(oldp+336,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[19]),32);
-            tracep->chgIData(oldp+337,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[20]),32);
-            tracep->chgIData(oldp+338,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[21]),32);
-            tracep->chgIData(oldp+339,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[22]),32);
-            tracep->chgIData(oldp+340,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[23]),32);
-            tracep->chgIData(oldp+341,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[24]),32);
-            tracep->chgIData(oldp+342,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[25]),32);
-            tracep->chgIData(oldp+343,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[26]),32);
-            tracep->chgIData(oldp+344,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[27]),32);
-            tracep->chgIData(oldp+345,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[28]),32);
-            tracep->chgIData(oldp+346,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[29]),32);
-            tracep->chgIData(oldp+347,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[30]),32);
-            tracep->chgIData(oldp+348,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[31]),32);
-            tracep->chgIData(oldp+349,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[0]),32);
-            tracep->chgIData(oldp+350,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[1]),32);
-            tracep->chgIData(oldp+351,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[2]),32);
-            tracep->chgIData(oldp+352,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[3]),32);
-            tracep->chgIData(oldp+353,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[4]),32);
-            tracep->chgIData(oldp+354,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[5]),32);
-            tracep->chgIData(oldp+355,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[6]),32);
-            tracep->chgIData(oldp+356,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[7]),32);
-            tracep->chgIData(oldp+357,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[8]),32);
-            tracep->chgIData(oldp+358,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[9]),32);
-            tracep->chgIData(oldp+359,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[10]),32);
-            tracep->chgIData(oldp+360,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[11]),32);
-            tracep->chgIData(oldp+361,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[12]),32);
-            tracep->chgIData(oldp+362,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[13]),32);
-            tracep->chgIData(oldp+363,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[14]),32);
-            tracep->chgIData(oldp+364,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[15]),32);
-            tracep->chgIData(oldp+365,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[16]),32);
-            tracep->chgIData(oldp+366,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[17]),32);
-            tracep->chgIData(oldp+367,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[18]),32);
-            tracep->chgIData(oldp+368,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[19]),32);
-            tracep->chgIData(oldp+369,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[20]),32);
-            tracep->chgIData(oldp+370,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[21]),32);
-            tracep->chgIData(oldp+371,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[22]),32);
-            tracep->chgIData(oldp+372,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[23]),32);
-            tracep->chgIData(oldp+373,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[24]),32);
-            tracep->chgIData(oldp+374,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[25]),32);
-            tracep->chgIData(oldp+375,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[26]),32);
-            tracep->chgIData(oldp+376,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[27]),32);
-            tracep->chgIData(oldp+377,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[28]),32);
-            tracep->chgIData(oldp+378,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[29]),32);
-            tracep->chgIData(oldp+379,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[30]),32);
-            tracep->chgIData(oldp+380,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[31]),32);
+            tracep->chgIData(oldp+255,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[0]),32);
+            tracep->chgIData(oldp+256,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[1]),32);
+            tracep->chgIData(oldp+257,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[2]),32);
+            tracep->chgIData(oldp+258,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[3]),32);
+            tracep->chgIData(oldp+259,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[4]),32);
+            tracep->chgIData(oldp+260,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[5]),32);
+            tracep->chgIData(oldp+261,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[6]),32);
+            tracep->chgIData(oldp+262,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[7]),32);
+            tracep->chgIData(oldp+263,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[8]),32);
+            tracep->chgIData(oldp+264,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[9]),32);
+            tracep->chgIData(oldp+265,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[10]),32);
+            tracep->chgIData(oldp+266,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[11]),32);
+            tracep->chgIData(oldp+267,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[12]),32);
+            tracep->chgIData(oldp+268,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[13]),32);
+            tracep->chgIData(oldp+269,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[14]),32);
+            tracep->chgIData(oldp+270,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[15]),32);
+            tracep->chgIData(oldp+271,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[16]),32);
+            tracep->chgIData(oldp+272,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[17]),32);
+            tracep->chgIData(oldp+273,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[18]),32);
+            tracep->chgIData(oldp+274,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[19]),32);
+            tracep->chgIData(oldp+275,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[20]),32);
+            tracep->chgIData(oldp+276,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[21]),32);
+            tracep->chgIData(oldp+277,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[22]),32);
+            tracep->chgIData(oldp+278,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[23]),32);
+            tracep->chgIData(oldp+279,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[24]),32);
+            tracep->chgIData(oldp+280,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[25]),32);
+            tracep->chgIData(oldp+281,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[26]),32);
+            tracep->chgIData(oldp+282,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[27]),32);
+            tracep->chgIData(oldp+283,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[28]),32);
+            tracep->chgIData(oldp+284,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[29]),32);
+            tracep->chgIData(oldp+285,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[30]),32);
+            tracep->chgIData(oldp+286,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_l_temp[31]),32);
+            tracep->chgIData(oldp+287,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[0]),32);
+            tracep->chgIData(oldp+288,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[1]),32);
+            tracep->chgIData(oldp+289,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[2]),32);
+            tracep->chgIData(oldp+290,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[3]),32);
+            tracep->chgIData(oldp+291,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[4]),32);
+            tracep->chgIData(oldp+292,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[5]),32);
+            tracep->chgIData(oldp+293,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[6]),32);
+            tracep->chgIData(oldp+294,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[7]),32);
+            tracep->chgIData(oldp+295,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[8]),32);
+            tracep->chgIData(oldp+296,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[9]),32);
+            tracep->chgIData(oldp+297,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[10]),32);
+            tracep->chgIData(oldp+298,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[11]),32);
+            tracep->chgIData(oldp+299,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[12]),32);
+            tracep->chgIData(oldp+300,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[13]),32);
+            tracep->chgIData(oldp+301,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[14]),32);
+            tracep->chgIData(oldp+302,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[15]),32);
+            tracep->chgIData(oldp+303,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[16]),32);
+            tracep->chgIData(oldp+304,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[17]),32);
+            tracep->chgIData(oldp+305,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[18]),32);
+            tracep->chgIData(oldp+306,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[19]),32);
+            tracep->chgIData(oldp+307,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[20]),32);
+            tracep->chgIData(oldp+308,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[21]),32);
+            tracep->chgIData(oldp+309,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[22]),32);
+            tracep->chgIData(oldp+310,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[23]),32);
+            tracep->chgIData(oldp+311,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[24]),32);
+            tracep->chgIData(oldp+312,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[25]),32);
+            tracep->chgIData(oldp+313,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[26]),32);
+            tracep->chgIData(oldp+314,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[27]),32);
+            tracep->chgIData(oldp+315,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[28]),32);
+            tracep->chgIData(oldp+316,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[29]),32);
+            tracep->chgIData(oldp+317,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[30]),32);
+            tracep->chgIData(oldp+318,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp[31]),32);
+            tracep->chgIData(oldp+319,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[0]),32);
+            tracep->chgIData(oldp+320,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[1]),32);
+            tracep->chgIData(oldp+321,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[2]),32);
+            tracep->chgIData(oldp+322,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[3]),32);
+            tracep->chgIData(oldp+323,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[4]),32);
+            tracep->chgIData(oldp+324,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[5]),32);
+            tracep->chgIData(oldp+325,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[6]),32);
+            tracep->chgIData(oldp+326,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[7]),32);
+            tracep->chgIData(oldp+327,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[8]),32);
+            tracep->chgIData(oldp+328,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[9]),32);
+            tracep->chgIData(oldp+329,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[10]),32);
+            tracep->chgIData(oldp+330,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[11]),32);
+            tracep->chgIData(oldp+331,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[12]),32);
+            tracep->chgIData(oldp+332,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[13]),32);
+            tracep->chgIData(oldp+333,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[14]),32);
+            tracep->chgIData(oldp+334,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[15]),32);
+            tracep->chgIData(oldp+335,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[16]),32);
+            tracep->chgIData(oldp+336,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[17]),32);
+            tracep->chgIData(oldp+337,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[18]),32);
+            tracep->chgIData(oldp+338,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[19]),32);
+            tracep->chgIData(oldp+339,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[20]),32);
+            tracep->chgIData(oldp+340,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[21]),32);
+            tracep->chgIData(oldp+341,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[22]),32);
+            tracep->chgIData(oldp+342,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[23]),32);
+            tracep->chgIData(oldp+343,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[24]),32);
+            tracep->chgIData(oldp+344,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[25]),32);
+            tracep->chgIData(oldp+345,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[26]),32);
+            tracep->chgIData(oldp+346,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[27]),32);
+            tracep->chgIData(oldp+347,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[28]),32);
+            tracep->chgIData(oldp+348,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[29]),32);
+            tracep->chgIData(oldp+349,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[30]),32);
+            tracep->chgIData(oldp+350,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp[31]),32);
+            tracep->chgIData(oldp+351,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[0]),32);
+            tracep->chgIData(oldp+352,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[1]),32);
+            tracep->chgIData(oldp+353,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[2]),32);
+            tracep->chgIData(oldp+354,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[3]),32);
+            tracep->chgIData(oldp+355,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[4]),32);
+            tracep->chgIData(oldp+356,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[5]),32);
+            tracep->chgIData(oldp+357,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[6]),32);
+            tracep->chgIData(oldp+358,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[7]),32);
+            tracep->chgIData(oldp+359,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[8]),32);
+            tracep->chgIData(oldp+360,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[9]),32);
+            tracep->chgIData(oldp+361,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[10]),32);
+            tracep->chgIData(oldp+362,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[11]),32);
+            tracep->chgIData(oldp+363,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[12]),32);
+            tracep->chgIData(oldp+364,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[13]),32);
+            tracep->chgIData(oldp+365,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[14]),32);
+            tracep->chgIData(oldp+366,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[15]),32);
+            tracep->chgIData(oldp+367,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[16]),32);
+            tracep->chgIData(oldp+368,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[17]),32);
+            tracep->chgIData(oldp+369,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[18]),32);
+            tracep->chgIData(oldp+370,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[19]),32);
+            tracep->chgIData(oldp+371,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[20]),32);
+            tracep->chgIData(oldp+372,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[21]),32);
+            tracep->chgIData(oldp+373,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[22]),32);
+            tracep->chgIData(oldp+374,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[23]),32);
+            tracep->chgIData(oldp+375,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[24]),32);
+            tracep->chgIData(oldp+376,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[25]),32);
+            tracep->chgIData(oldp+377,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[26]),32);
+            tracep->chgIData(oldp+378,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[27]),32);
+            tracep->chgIData(oldp+379,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[28]),32);
+            tracep->chgIData(oldp+380,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[29]),32);
+            tracep->chgIData(oldp+381,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[30]),32);
+            tracep->chgIData(oldp+382,(vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp[31]),32);
         }
-        tracep->chgBit(oldp+381,(vlTOPp->rst_i));
-        tracep->chgBit(oldp+382,(vlTOPp->clk_i));
-        tracep->chgBit(oldp+383,(vlTOPp->halt_o));
-        tracep->chgIData(oldp+384,(vlSymsp->TOP__test_top.__PVT__device_rdata[0]),32);
-        tracep->chgIData(oldp+385,(vlSymsp->TOP__test_top.__PVT__device_rdata[1]),32);
-        tracep->chgIData(oldp+386,(vlSymsp->TOP__test_top.__PVT__device_rdata[2]),32);
-        tracep->chgIData(oldp+387,(((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ce_wire)
+        tracep->chgBit(oldp+383,(vlTOPp->rst_i));
+        tracep->chgBit(oldp+384,(vlTOPp->clk_i));
+        tracep->chgBit(oldp+385,(vlTOPp->halt_o));
+        tracep->chgIData(oldp+386,(vlSymsp->TOP__test_top.__PVT__device_rdata[0]),32);
+        tracep->chgIData(oldp+387,(vlSymsp->TOP__test_top.__PVT__device_rdata[1]),32);
+        tracep->chgIData(oldp+388,(vlSymsp->TOP__test_top.__PVT__device_rdata[2]),32);
+        tracep->chgIData(oldp+389,(((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__ce_wire)
                                      ? ((((0x2fffffU 
                                            >= (0x3ffffcU 
                                                & vlSymsp->TOP__test_top__core_top0.__PVT__pc_wire))
@@ -581,9 +583,9 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                                        & vlSymsp->TOP__test_top__core_top0.__PVT__pc_wire)))]
                                                   : 0U))))
                                      : 0U)),32);
-        tracep->chgBit(oldp+388,(((~ (IData)(vlTOPp->rst_i)) 
+        tracep->chgBit(oldp+390,(((~ (IData)(vlTOPp->rst_i)) 
                                   & (IData)(vlSymsp->TOP__test_top.__PVT__u_bus__DOT__host_sel_req))));
-        tracep->chgBit(oldp+389,((1U & ((~ (IData)(vlTOPp->rst_i)) 
+        tracep->chgBit(oldp+391,((1U & ((~ (IData)(vlTOPp->rst_i)) 
                                         & ((8U & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
                                             ? ((4U 
                                                 & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))
@@ -599,37 +601,47 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                                & (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o) 
                                                    >> 1U) 
                                                   | (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_op_o))))))));
-        tracep->chgIData(oldp+390,(vlSymsp->TOP__test_top__core_top0.__PVT__ram_wdata_o),32);
-        tracep->chgIData(oldp+391,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+392,(vlSymsp->TOP__test_top__core_top0.__PVT__ram_wdata_o),32);
+        tracep->chgIData(oldp+393,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__interrupt_accept)
                                               ? ((IData)(vlTOPp->rst_i)
                                                   ? 0U
                                                   : 
-                                                 ((0x30200073U 
-                                                   == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst)
-                                                   ? vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mepc
-                                                   : 
-                                                  ((0U 
-                                                    == 
-                                                    (3U 
-                                                     & vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec))
-                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec
+                                                 ((0U 
+                                                   != vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__exception)
+                                                   ? 
+                                                  ((0x73U 
+                                                    == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst)
+                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__mtvec_select
                                                     : 
-                                                   ((1U 
-                                                     == 
-                                                     (3U 
-                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec))
-                                                     ? 
-                                                    ((0xfffffffcU 
-                                                      & vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec) 
-                                                     + 
-                                                     (vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mcause 
-                                                      << 2U))
-                                                     : 0U))))
+                                                   ((0x30200073U 
+                                                     == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst)
+                                                     ? vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mepc
+                                                     : vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__mtvec_select))
+                                                   : 
+                                                  ((8U 
+                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mstatus)
+                                                    ? 
+                                                   (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__external_interrupt_i) 
+                                                     & (vlSymsp->TOP__test_top__core_top0.__PVT__csr_interrupt_mie 
+                                                        >> 0xbU))
+                                                     ? vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__mtvec_select
+                                                     : 
+                                                    (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__software_interrupt) 
+                                                      & (vlSymsp->TOP__test_top__core_top0.__PVT__csr_interrupt_mie 
+                                                         >> 3U))
+                                                      ? vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__mtvec_select
+                                                      : 
+                                                     (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__timer_interrupt_i) 
+                                                       & (vlSymsp->TOP__test_top__core_top0.__PVT__csr_interrupt_mie 
+                                                          >> 7U))
+                                                       ? vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__mtvec_select
+                                                       : 0U)))
+                                                    : 0U)))
                                               : ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_enable_o)
                                                   ? vlSymsp->TOP__test_top__core_top0.__PVT__exe_pipe_ctrl_jump_addr_o
                                                   : 0U)))),32);
-        tracep->chgIData(oldp+392,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+394,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (((((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_re_o) 
                                                 & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o)) 
                                                & ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o) 
@@ -646,7 +658,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                                      != (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg1_addr_o)))
                                                   ? vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_wdata_o
                                                   : vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__op1_o_final)))),32);
-        tracep->chgIData(oldp+393,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+395,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_re_o) 
                                                & (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_we_o)) 
                                               & ((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__exe_reg_waddr_o) 
@@ -658,34 +670,42 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                                      == (IData)(vlSymsp->TOP__test_top__core_top0.__PVT__id_reg2_addr_o)))
                                                   ? vlSymsp->TOP__test_top__core_top0.__PVT__mem_reg_wdata_o
                                                   : vlSymsp->TOP__test_top__core_top0.__PVT__id0__DOT__op2_o_final)))),32);
-        tracep->chgIData(oldp+394,(((IData)(vlTOPp->rst_i)
-                                     ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)),32);
-        tracep->chgIData(oldp+395,(((IData)(vlTOPp->rst_i)
-                                     ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_addr_o)),32);
         tracep->chgIData(oldp+396,(((IData)(vlTOPp->rst_i)
-                                     ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_inst_addr)),32);
+                                     ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)),32);
         tracep->chgIData(oldp+397,(((IData)(vlTOPp->rst_i)
-                                     ? 0U : ((0x30200073U 
-                                              == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst)
-                                              ? vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mepc
-                                              : ((0U 
-                                                  == 
-                                                  (3U 
-                                                   & vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec))
-                                                  ? vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec
-                                                  : 
-                                                 ((1U 
-                                                   == 
-                                                   (3U 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec))
-                                                   ? 
-                                                  ((0xfffffffcU 
-                                                    & vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mtvec) 
-                                                   + 
-                                                   (vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mcause 
-                                                    << 2U))
-                                                   : 0U))))),32);
+                                     ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_addr_o)),32);
         tracep->chgIData(oldp+398,(((IData)(vlTOPp->rst_i)
+                                     ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__exe_mem_mem_inst_addr)),32);
+        tracep->chgIData(oldp+399,(((IData)(vlTOPp->rst_i)
+                                     ? 0U : ((0U != vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__exception)
+                                              ? ((0x73U 
+                                                  == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst)
+                                                  ? vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__mtvec_select
+                                                  : 
+                                                 ((0x30200073U 
+                                                   == vlSymsp->TOP__test_top__core_top0.__PVT__mem_interrupt_inst)
+                                                   ? vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mepc
+                                                   : vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__mtvec_select))
+                                              : ((8U 
+                                                  & vlSymsp->TOP__test_top__core_top0.__PVT__csr0__DOT__mstatus)
+                                                  ? 
+                                                 (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__external_interrupt_i) 
+                                                   & (vlSymsp->TOP__test_top__core_top0.__PVT__csr_interrupt_mie 
+                                                      >> 0xbU))
+                                                   ? vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__mtvec_select
+                                                   : 
+                                                  (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__software_interrupt) 
+                                                    & (vlSymsp->TOP__test_top__core_top0.__PVT__csr_interrupt_mie 
+                                                       >> 3U))
+                                                    ? vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__mtvec_select
+                                                    : 
+                                                   (((IData)(vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__timer_interrupt_i) 
+                                                     & (vlSymsp->TOP__test_top__core_top0.__PVT__csr_interrupt_mie 
+                                                        >> 7U))
+                                                     ? vlSymsp->TOP__test_top__core_top0.__PVT__interrupt0__DOT__mtvec_select
+                                                     : 0U)))
+                                                  : 0U)))),32);
+        tracep->chgIData(oldp+400,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x4000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_i_type.__PVT__shift_r_temp
@@ -696,7 +716,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                              [(0x1fU 
                                                & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o 
                                                   >> 0x14U))]))),32);
-        tracep->chgIData(oldp+399,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+401,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x4000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_r_temp
@@ -705,133 +725,133 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : vlSymsp->TOP__test_top__core_top0__exe0__DOT__shift_r_type.__PVT__shift_l_temp
                                              [(0x1fU 
                                                & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op2_o)]))),32);
-        tracep->chgIData(oldp+400,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+402,(((IData)(vlTOPp->rst_i)
                                      ? 0U : vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o)),32);
-        tracep->chgIData(oldp+401,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+403,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfffffffeU 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 1U)))),32);
-        tracep->chgIData(oldp+402,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+404,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfffffffcU 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 2U)))),32);
-        tracep->chgIData(oldp+403,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+405,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfffffff8U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 3U)))),32);
-        tracep->chgIData(oldp+404,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+406,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfffffff0U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 4U)))),32);
-        tracep->chgIData(oldp+405,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+407,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xffffffe0U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 5U)))),32);
-        tracep->chgIData(oldp+406,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+408,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xffffffc0U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 6U)))),32);
-        tracep->chgIData(oldp+407,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+409,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xffffff80U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 7U)))),32);
-        tracep->chgIData(oldp+408,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+410,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xffffff00U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 8U)))),32);
-        tracep->chgIData(oldp+409,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+411,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfffffe00U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 9U)))),32);
-        tracep->chgIData(oldp+410,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+412,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfffffc00U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0xaU)))),32);
-        tracep->chgIData(oldp+411,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+413,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfffff800U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0xbU)))),32);
-        tracep->chgIData(oldp+412,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+414,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfffff000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0xcU)))),32);
-        tracep->chgIData(oldp+413,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+415,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xffffe000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0xdU)))),32);
-        tracep->chgIData(oldp+414,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+416,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xffffc000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0xeU)))),32);
-        tracep->chgIData(oldp+415,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+417,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xffff8000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0xfU)))),32);
-        tracep->chgIData(oldp+416,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+418,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xffff0000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x10U)))),32);
-        tracep->chgIData(oldp+417,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+419,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfffe0000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x11U)))),32);
-        tracep->chgIData(oldp+418,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+420,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfffc0000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x12U)))),32);
-        tracep->chgIData(oldp+419,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+421,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfff80000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x13U)))),32);
-        tracep->chgIData(oldp+420,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+422,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfff00000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x14U)))),32);
-        tracep->chgIData(oldp+421,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+423,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xffe00000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x15U)))),32);
-        tracep->chgIData(oldp+422,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+424,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xffc00000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x16U)))),32);
-        tracep->chgIData(oldp+423,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+425,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xff800000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x17U)))),32);
-        tracep->chgIData(oldp+424,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+426,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xff000000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x18U)))),32);
-        tracep->chgIData(oldp+425,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+427,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfe000000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x19U)))),32);
-        tracep->chgIData(oldp+426,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+428,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xfc000000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x1aU)))),32);
-        tracep->chgIData(oldp+427,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+429,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xf8000000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x1bU)))),32);
-        tracep->chgIData(oldp+428,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+430,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xf0000000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x1cU)))),32);
-        tracep->chgIData(oldp+429,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+431,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xe0000000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x1dU)))),32);
-        tracep->chgIData(oldp+430,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+432,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0xc0000000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x1eU)))),32);
-        tracep->chgIData(oldp+431,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+433,(((IData)(vlTOPp->rst_i)
                                      ? 0U : (0x80000000U 
                                              & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                 << 0x1fU)))),32);
-        tracep->chgIData(oldp+432,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+434,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0x80000000U 
@@ -842,7 +862,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x7fffffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 1U))))),32);
-        tracep->chgIData(oldp+433,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+435,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xc0000000U 
@@ -857,7 +877,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x3fffffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 2U))))),32);
-        tracep->chgIData(oldp+434,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+436,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xe0000000U 
@@ -872,7 +892,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x1fffffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 3U))))),32);
-        tracep->chgIData(oldp+435,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+437,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xf0000000U 
@@ -887,7 +907,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0xfffffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 4U))))),32);
-        tracep->chgIData(oldp+436,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+438,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xf8000000U 
@@ -902,7 +922,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x7ffffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 5U))))),32);
-        tracep->chgIData(oldp+437,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+439,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfc000000U 
@@ -917,7 +937,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x3ffffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 6U))))),32);
-        tracep->chgIData(oldp+438,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+440,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfe000000U 
@@ -932,7 +952,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x1ffffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 7U))))),32);
-        tracep->chgIData(oldp+439,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+441,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xff000000U 
@@ -947,7 +967,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0xffffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 8U))))),32);
-        tracep->chgIData(oldp+440,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+442,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xff800000U 
@@ -962,7 +982,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x7fffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 9U))))),32);
-        tracep->chgIData(oldp+441,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+443,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xffc00000U 
@@ -977,7 +997,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x3fffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0xaU))))),32);
-        tracep->chgIData(oldp+442,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+444,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xffe00000U 
@@ -992,7 +1012,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x1fffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0xbU))))),32);
-        tracep->chgIData(oldp+443,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+445,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfff00000U 
@@ -1007,7 +1027,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0xfffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0xcU))))),32);
-        tracep->chgIData(oldp+444,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+446,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfff80000U 
@@ -1022,7 +1042,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x7ffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0xdU))))),32);
-        tracep->chgIData(oldp+445,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+447,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfffc0000U 
@@ -1037,7 +1057,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x3ffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0xeU))))),32);
-        tracep->chgIData(oldp+446,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+448,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfffe0000U 
@@ -1052,7 +1072,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x1ffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0xfU))))),32);
-        tracep->chgIData(oldp+447,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+449,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xffff0000U 
@@ -1067,7 +1087,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0xffffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x10U))))),32);
-        tracep->chgIData(oldp+448,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+450,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xffff8000U 
@@ -1082,7 +1102,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x7fffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x11U))))),32);
-        tracep->chgIData(oldp+449,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+451,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xffffc000U 
@@ -1097,7 +1117,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x3fffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x12U))))),32);
-        tracep->chgIData(oldp+450,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+452,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xffffe000U 
@@ -1112,7 +1132,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x1fffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x13U))))),32);
-        tracep->chgIData(oldp+451,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+453,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfffff000U 
@@ -1127,7 +1147,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0xfffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x14U))))),32);
-        tracep->chgIData(oldp+452,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+454,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfffff800U 
@@ -1142,7 +1162,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x7ffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x15U))))),32);
-        tracep->chgIData(oldp+453,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+455,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfffffc00U 
@@ -1157,7 +1177,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x3ffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x16U))))),32);
-        tracep->chgIData(oldp+454,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+456,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfffffe00U 
@@ -1172,7 +1192,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x1ffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x17U))))),32);
-        tracep->chgIData(oldp+455,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+457,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xffffff00U 
@@ -1187,7 +1207,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0xffU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x18U))))),32);
-        tracep->chgIData(oldp+456,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+458,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xffffff80U 
@@ -1202,7 +1222,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x7fU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x19U))))),32);
-        tracep->chgIData(oldp+457,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+459,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xffffffc0U 
@@ -1217,7 +1237,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x3fU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x1aU))))),32);
-        tracep->chgIData(oldp+458,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+460,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xffffffe0U 
@@ -1232,7 +1252,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0x1fU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x1bU))))),32);
-        tracep->chgIData(oldp+459,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+461,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfffffff0U 
@@ -1247,7 +1267,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (0xfU 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x1cU))))),32);
-        tracep->chgIData(oldp+460,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+462,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfffffff8U 
@@ -1262,7 +1282,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (7U 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x1dU))))),32);
-        tracep->chgIData(oldp+461,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+463,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfffffffcU 
@@ -1277,7 +1297,7 @@ void Vtest_top::traceChgSub0(void* userp, VerilatedVcd* tracep) {
                                               : (3U 
                                                  & (vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_op1_o 
                                                     >> 0x1eU))))),32);
-        tracep->chgIData(oldp+462,(((IData)(vlTOPp->rst_i)
+        tracep->chgIData(oldp+464,(((IData)(vlTOPp->rst_i)
                                      ? 0U : ((0x40000000U 
                                               & vlSymsp->TOP__test_top__core_top0.__PVT__id_exe_inst_o)
                                               ? ((0xfffffffeU 

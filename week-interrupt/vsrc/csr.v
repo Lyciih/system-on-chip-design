@@ -19,7 +19,8 @@ module	csr(
 		output	reg[`ADDR_WIDTH-1:0]		mepc_o,
 		output	reg[`ADDR_WIDTH-1:0]		mtvec_o,
 		output	reg[`DATA_WIDTH-1:0]		mcause_o,
-		output	reg[`DATA_WIDTH-1:0]		mstatus_o
+		output	reg[`DATA_WIDTH-1:0]		mstatus_o,
+		output	reg[`DATA_WIDTH-1:0]		mie_o
 	   );
 
 	localparam	CSR_MVENDORID_VALUE	=	32'b0;
@@ -55,9 +56,11 @@ module	csr(
 	//mstatus
 	reg[`RDATA_WIDTH-1:0]	mstatus;
 	
+	assign mstatus_o = mstatus;
+
 	wire w_mstatus;
 	assign w_mstatus = ((waddr_i == `CSR_MSTATUS_ADDR) && we_i == `WRITE_ENABLE);
-	always@(posedge clk_i) begin
+	always@(posedge	clk_i) begin
 		if(rst_i == 1'b1) begin
 			mstatus <= `ZERO;
 		end

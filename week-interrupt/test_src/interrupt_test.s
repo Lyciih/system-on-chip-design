@@ -5,6 +5,7 @@ _start:
 	li x3, 1
 	csrrw x3, mscratch, x3
 	csrrw x6, mscratch, x6
+	csrrwi x0, mstatus, 8
 	ecall
 	mret
 	li x3, 2

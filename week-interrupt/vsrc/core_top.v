@@ -147,6 +147,7 @@ module	core_top(
 	wire[`ADDR_WIDTH-1:0]		csr_interrupt_mtvec;
 	wire[`DATA_WIDTH-1:0]		csr_interrupt_mcause;
 	wire[`DATA_WIDTH-1:0]		csr_interrupt_mstatus;
+	wire[`DATA_WIDTH-1:0]		csr_interrupt_mie;
 
 	pipe_ctrl pipe_ctrl0(
 			.rst_i(rst_i),
@@ -430,7 +431,8 @@ module	core_top(
 			.mepc_o(csr_interrupt_mepc),
 			.mtvec_o(csr_interrupt_mtvec),
 			.mcause_o(csr_interrupt_mcause),
-			.mstatus_o(csr_interrupt_mstatus)
+			.mstatus_o(csr_interrupt_mstatus),
+			.mie_o(csr_interrupt_mie)
 		    );
 
 
@@ -451,7 +453,8 @@ module	core_top(
 			.mepc_i(csr_interrupt_mepc),
 			.mtvec_i(csr_interrupt_mtvec),
 			.mcause_i(csr_interrupt_mcause),
-			.mstatus_i(csr_interrupt_mstatus)
+			.mstatus_i(csr_interrupt_mstatus),
+			.mie_i(csr_interrupt_mie)
 		    );
 
 endmodule
